@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Metrics:Metrics xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Metrics="Metrics" TrafoName="ATOM2RSS" trafoKind="3">
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Units" Value="1"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Unit Refs"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Unused Units"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Input Models" Value="1"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Output Models" Value="1"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Involved Metamodels" Value="2"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Transformation Rules" Value="3"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Matched Rules (Excluding Lazy Matched Rules)" Value="3"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Matched Rules (Including Lazy Matched Rules)" Value="3"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Lazy Matched Rules (Excluding Unique)"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Lazy Matched Rules (Including Unique)"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Unique Lazy Matched Rules"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Called Rules"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Abstract Transformation Rules"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Inheriting Transformation Rules"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Abstract Matched Rules"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Abstract Lazy Matched Rules"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Abstract Unique Lazy Matched Rules"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Rule Inheritance Trees" Value="3"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Helpers"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Helpers with Context"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Helpers without Context"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Attribute Helpers"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Attribute Helpers with Context"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Attribute Helpers without Context"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Operation Helpers"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Operation Helpers with Context"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Operation Helpers without Context"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Overloaded Helpers"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Variables With the Same Name but a Different Type"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Rules with a Filter Condition on the Input Pattern"/>
+</Metrics:Metrics>

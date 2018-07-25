@@ -1,0 +1,106 @@
+MT,source,MMs
+A2B,ATLzoo/A2B.tar.gz,TypeA.ecore TypeB.ecore
+AssertionModification,ATLzoo/AssertionModification.tar.gz,
+ATL2BindingDebugger,ATLzoo/ATL2BindingDebugger.tar.gz,
+ATL2Tracer,ATLzoo/ATL2Tracer.tar.gz,
+ATLCopier,ATLzoo/ATLCopier.tar.gz,ATLCopier.ecore ATLCopier.ecore
+ATOM2RSS,ATLzoo/ATOM2RSS.tar.gz,ATOM.ecore RSS.ecore
+ATOM2XML,ATLzoo/ATOM2XML.tar.gz,ATOM.ecore XML.ecore
+Book2Publication,ATLzoo/Book2Publication.tar.gz, Book.ecore
+CloneDr2CodeClone,ATLzoo/CloneDr2CodeClone.tar.gz,CloneDr.ecore CodeClone.ecore
+CodeClone2SVG2,ATLzoo/CodeClone2SVG2.tar.gz, CodeClone.ecore
+CodeClone2SVG,ATLzoo/CodeClone2SVG.tar.gz,CodeClone.ecore SVG.ecore
+conf4MADL,ATLzoo/conf4MADL.tar.gz,conf4MADL.ecore conf4MADL.ecore
+CPL2SPL,ATLzoo/CPL2SPL.tar.gz,CPL.ecore SPL.ecore
+Disaggregation,ATLzoo/Disaggregation.tar.gz,
+DOT2Text,ATLzoo/DOT2Text.tar.gz, DOT.ecore
+EMF2KM3,ATLzoo/EMF2KM3.tar.gz, KM3.ecore
+EMOOSE4KM3,ATLzoo/EMOOSE4KM3.tar.gz,
+EMOOSE4UML2,ATLzoo/EMOOSE4UML2.tar.gz,
+equivalenceOfAttributeAndAssociations,ATLzoo/equivalenceOfAttributeAndAssociations.tar.gz,
+Families2Persons,ATLzoo/Families2Persons.tar.gz,Families.ecore Persons.ecore
+FLAME4KM3,ATLzoo/FLAME4KM3.tar.gz,
+FLAME4UML2,ATLzoo/FLAME4UML2.tar.gz,
+ForeignKey,ATLzoo/ForeignKey.tar.gz,
+HTML2XML,ATLzoo/HTML2XML.tar.gz,HTML.ecore XML.ecore
+IEEE1471_2_MoDAF,ATLzoo/IEEE1471_2_MoDAF.tar.gz,
+introducingAnInterface,ATLzoo/introducingAnInterface.tar.gz,
+JavaSource2Table,ATLzoo/JavaSource2Table.tar.gz,JavaSource.ecore Table.ecore
+KM32ATLCopier,ATLzoo/KM32ATLCopier.tar.gz,KM3.ecore ATLCopier.ecore
+KM32CONFATL,ATLzoo/KM32CONFATL.tar.gz, KM3.ecore
+KM32DOT,ATLzoo/KM32DOT.tar.gz,KM3.ecore DOT.ecore
+KM32EMF,ATLzoo/KM32EMF.tar.gz, KM3.ecore
+KM32Measure,ATLzoo/KM32Measure.tar.gz,KM3.ecore Measure.ecore
+KM32OWL,ATLzoo/KM32OWL.tar.gz,KM3.ecore OWL.ecore
+KM32SimpleClass,ATLzoo/KM32SimpleClass.tar.gz,KM3.ecore SimpleClass.ecore
+KM32XML,ATLzoo/KM32XML.tar.gz,KM3.ecore XML.ecore
+Lib4MMTree,ATLzoo/Lib4MMTree.tar.gz, MMTree.ecore
+LibFQL,ATLzoo/LibFQL.tar.gz,
+MADL2DOT,ATLzoo/MADL2DOT.tar.gz,MADL.ecore DOT.ecore
+Measure2Table,ATLzoo/Measure2Table.tar.gz,Measure.ecore Table.ecore
+Measure2XHTML,ATLzoo/Measure2XHTML.tar.gz,Measure.ecore XHTML.ecore
+MeasureHelpers,ATLzoo/MeasureHelpers.tar.gz,
+MergingPartialClasses,ATLzoo/MergingPartialClasses.tar.gz,
+MOOD4KM3,ATLzoo/MOOD4KM3.tar.gz,
+MOOD4UML2,ATLzoo/MOOD4UML2.tar.gz,
+MySQL2KM3,ATLzoo/MySQL2KM3.tar.gz,MySQL.ecore KM3.ecore
+OCL2R2ML,ATLzoo/OCL2R2ML.tar.gz, OCL.ecore
+OWL2XML,ATLzoo/OWL2XML.tar.gz,OWL.ecore XML.ecore
+partial2totalRole,ATLzoo/partial2totalRole.tar.gz,
+PartialRolesTotalB,ATLzoo/PartialRolesTotalB.tar.gz,
+PrimaryKey,ATLzoo/PrimaryKey.tar.gz,
+Public2Private,ATLzoo/Public2Private.tar.gz,
+QMOOD4KM3,ATLzoo/QMOOD4KM3.tar.gz,
+QMOOD4UML2,ATLzoo/QMOOD4UML2.tar.gz,
+R2ML2RDM,ATLzoo/R2ML2RDM.tar.gz,
+R2ML2WSDL,ATLzoo/R2ML2WSDL.tar.gz,
+R2ML2XML,ATLzoo/R2ML2XML.tar.gz, XML.ecore
+RaiseSupplier,ATLzoo/RaiseSupplier.tar.gz,
+RDM2XML,ATLzoo/RDM2XML.tar.gz, XML.ecore
+RedundantClassRemovable,ATLzoo/RedundantClassRemovable.tar.gz,
+RedundantInheritance,ATLzoo/RedundantInheritance.tar.gz,
+RefineAndMergeMeasure,ATLzoo/RefineAndMergeMeasure.tar.gz,
+RemovingAnAssociationClass,ATLzoo/RemovingAnAssociationClass.tar.gz,
+Removing,ATLzoo/Removing.tar.gz,
+Replace,ATLzoo/Replace.tar.gz,
+RSS2ATOM,ATLzoo/RSS2ATOM.tar.gz,RSS.ecore ATOM.ecore
+RSS2XML,ATLzoo/RSS2XML.tar.gz,RSS.ecore XML.ecore
+Simian2CodeClone,ATLzoo/Simian2CodeClone.tar.gz,Simian.ecore CodeClone.ecore
+SimpleClass2SimpleRDBMS,ATLzoo/SimpleClass2SimpleRDBMS.tar.gz,SimpleClass.ecore SimpleRDBMS.ecore
+SimpleSBVR2SimpleUML,ATLzoo/SimpleSBVR2SimpleUML.tar.gz,SimpleSBVR.ecore SimpleUML.ecore
+SimScan2CodeClone,ATLzoo/SimScan2CodeClone.tar.gz,SimScan.ecore CodeClone.ecore
+SVG2XML,ATLzoo/SVG2XML.tar.gz,SVG.ecore XML.ecore
+Syntax2SimpleSBVR,ATLzoo/Syntax2SimpleSBVR.tar.gz,Syntax.ecore SimpleSBVR.ecore
+Table2SVGBarChart,ATLzoo/Table2SVGBarChart.tar.gz, Table.ecore
+Table2SVGPieChart,ATLzoo/Table2SVGPieChart.tar.gz, Table.ecore
+Table2TabularHTML,ATLzoo/Table2TabularHTML.tar.gz, Table.ecore
+TableHelpers,ATLzoo/TableHelpers.tar.gz,
+Tree2List,ATLzoo/Tree2List.tar.gz,MMTree.ecore MMElementList.ecore
+Tree2List_usingATLResolveAlgorithm,ATLzoo/Tree2List_usingATLResolveAlgorithm.tar.gz,MMTree.ecore MMElementList.ecore
+TT2BDD,ATLzoo/TT2BDD.tar.gz,TT.ecore BDD.ecore
+TypeA2TypeB_v1,ATLzoo/TypeA2TypeB_v1.tar.gz, TypeA.ecore
+TypeA2TypeB_v2,ATLzoo/TypeA2TypeB_v2.tar.gz, TypeA.ecore
+TypeA2TypeB_v3,ATLzoo/TypeA2TypeB_v3.tar.gz, TypeA.ecore
+TypeA2TypeB_v3_firstStep,ATLzoo/TypeA2TypeB_v3_firstStep.tar.gz, TypeA.ecore
+TypeA2TypeB_v3_secondStep,ATLzoo/TypeA2TypeB_v3_secondStep.tar.gz, TypeA.ecore
+TypeA2TypeB_v4,ATLzoo/TypeA2TypeB_v4.tar.gz, TypeA.ecore
+UML22Measure,ATLzoo/UML22Measure.tar.gz, Measure.ecore
+UML2KM3,ATLzoo/UML2KM3.tar.gz, KM3.ecore
+UML2OWL,ATLzoo/UML2OWL.tar.gz, OWL.ecore
+UMLDI2SVG,ATLzoo/UMLDI2SVG.tar.gz, SVG.ecore
+WSDL2R2ML,ATLzoo/WSDL2R2ML.tar.gz,
+WSDL2XML,ATLzoo/WSDL2XML.tar.gz, XML.ecore
+XHTML2XML,ATLzoo/XHTML2XML.tar.gz,XHTML.ecore XML.ecore
+XML2ATOM,ATLzoo/XML2ATOM.tar.gz,XML.ecore ATOM.ecore
+XML2CPL,ATLzoo/XML2CPL.tar.gz,XML.ecore CPL.ecore
+XML2KML,ATLzoo/XML2KML.tar.gz,XML.ecore KML.ecore
+XML2MySQL,ATLzoo/XML2MySQL.tar.gz,XML.ecore MySQL.ecore
+XML2R2ML,ATLzoo/XML2R2ML.tar.gz, XML.ecore
+XML2RSS,ATLzoo/XML2RSS.tar.gz,XML.ecore RSS.ecore
+XML2Text,ATLzoo/XML2Text.tar.gz, XML.ecore
+XML2WSDL,ATLzoo/XML2WSDL.tar.gz, XML.ecore
+XML2XML,ATLzoo/XML2XML.tar.gz,XML.ecore XML.ecore
+XML2XSLT,ATLzoo/XML2XSLT.tar.gz,XML.ecore XSLT.ecore
+XMLHelpers,ATLzoo/XMLHelpers.tar.gz,
+XQuery2Code,ATLzoo/XQuery2Code.tar.gz, XQuery.ecore
+XSLT2XQuery,ATLzoo/XSLT2XQuery.tar.gz,XSLT.ecore XQuery.ecore

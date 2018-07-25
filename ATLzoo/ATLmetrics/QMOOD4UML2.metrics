@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Metrics:Metrics xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Metrics="Metrics" TrafoName="QMOOD4UML2" trafoKind="2">
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Units" Value="1"/>
+  <SimpleMetrics xsi:type="Metrics:SimpleIntegerMetric" Metric="Number of Helpers" Value="36"/>
+</Metrics:Metrics>
