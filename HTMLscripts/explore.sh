@@ -3,6 +3,7 @@
 echo "Genrate <explore.html> page..."
 
 explore='../explore-tmp.html'
+explorePage='../explore.html'
 
 #getting the list of criteria from criterai file
 #it uses the first line of this file
@@ -86,7 +87,7 @@ for line in $(tail -n+2 ../ATLzoo/output/all-MT-full); do
 	echo '                                   </ul>' >> $explore
 	echo '                               </div>' >> $explore
 	echo '                               <div class="col-lg-3">' >> $explore
-	echo '                                   <img src="spiderweb.png" alt="MTname-spiderweb" class="center-img img-thumbnail" />' >> $explore
+	echo '                                   <img src="ATLzoo/kiviatCharts/'$nameMt'.png" alt="'$nameMt'-spiderweb" class="center-img img-thumbnail" />' >> $explore
 	echo '                               </div>' >> $explore
 	echo '                           </div>' >> $explore
 	echo '                           <div class="row titre">' >> $explore
@@ -116,3 +117,5 @@ echo '</div>' >> $explore
 #
 echo '</body>' >> $explore
 echo '</html>' >> $explore
+
+mv $explore $explorePage
