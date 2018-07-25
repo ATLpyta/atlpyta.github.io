@@ -29,12 +29,59 @@ echo '<!-- Custom styles for this template -->' >> $explore
 echo '<link href="atlpyta.css" rel="stylesheet">' >> $explore
 echo '</head>' >> $explore
 
-#begin menu
-#
-
 #begin body
 #
 echo '<body>' >> $explore
+
+#begin menu
+#
+echo '' >> $explore
+
+echo '   <nav class="navbar navbar-inverse navbar-fixed-top">' >> $explore
+echo '     <div class="container">' >> $explore
+echo '       <div class="navbar-header">' >> $explore
+echo '         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">' >> $explore
+echo '           <span class="sr-only">Toggle navigation</span>' >> $explore
+echo '           <span class="icon-bar"></span>' >> $explore
+echo '           <span class="icon-bar"></span>' >> $explore
+echo '           <span class="icon-bar"></span>' >> $explore
+echo '         </button>' >> $explore
+echo '         <a class="navbar-brand" href="index.html">ATLpyta</a>' >> $explore
+echo '       </div>' >> $explore
+echo '       <div id="navbar" class="collapse navbar-collapse">' >> $explore
+echo '         <ul class="nav navbar-nav">' >> $explore
+echo '           <li class="active"><a href="index.html">Home</a></li>' >> $explore
+echo '           <li><a href="index.html#about">About</a></li>' >> $explore
+echo '           <li><a href="index.html#features">Features</a></li>' >> $explore
+echo '           <li><a href="index.html#resources">Resources</a></li>' >> $explore
+echo '           <li><a href="index.html#team">Team</a></li>' >> $explore
+echo '           <li><a href="index.html#contact">Contact</a></li>' >> $explore
+echo '         </ul>' >> $explore
+echo '       </div><!--/.nav-collapse -->' >> $explore
+echo '     </div>' >> $explore
+echo '   </nav>' >> $explore
+
+echo '' >> $explore
+
+echo '<div class="page-header">' >> $explore
+echo '	<div class="jumbotron">' >> $explore
+echo '		<div class="container">' >> $explore
+echo '' >> $explore
+echo '			<div class="row titre">' >> $explore
+echo '   			<div class="col-sm-5"></div>' >> $explore
+echo '        		<div class="col-sm-2">' >> $explore
+echo '        			<img src="img/atlpyta.png" class="center-img" alt="ATLpyta Logo"/>' >> $explore
+echo '    			</div>' >> $explore
+echo '    			<div class="col-sm-5"></div>' >> $explore
+echo '      	</div>' >> $explore
+echo '' >> $explore
+echo ' 		</div>' >> $explore
+echo '	</div>' >> $explore
+echo '</div>' >> $explore
+
+
+#begin content
+#
 echo '    <div class="container">' >> $explore
 echo '        <div class="row">' >> $explore
 echo '            <a href="#" class="btn btn-primary btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> $explore
