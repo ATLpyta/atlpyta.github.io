@@ -94,10 +94,10 @@ for line in $(tail -n+2 ../ATLzoo/output/all-MT-full); do
 	echo '                                   <a href="ATLzoo/sources/'$nameMt'.tar.gz" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> source files</a>' >> $explore
 	echo '                               </div>' >> $explore
 	echo '                               <div class="col-lg-2">' >> $explore
-	echo '                                   <a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> metrics</a>' >> $explore
+	echo '                                   <a href="ATLzoo/ATLmetrics/'$nameMt'.metrics" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> metrics</a>' >> $explore
 	echo '                               </div>' >> $explore
 	echo '                               <div class="col-lg-2">' >> $explore
-	echo '                                   <a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> Kiviat chart</a>' >> $explore
+	echo '                                   <a href="ATLzoo/kiviatCharts/'$nameMt'.png" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> Kiviat chart</a>' >> $explore
 	echo '                               </div>' >> $explore
 	echo '                           </div>' >> $explore
 	echo '                       </div>' >> $explore
