@@ -49,9 +49,15 @@ echo '            <a href="#" class="btn btn-default btn-lg active" role="button
 echo '        </div>' >> $explore
 echo '    </div> ' >> $explore
 
+
+
+
 #begin All MT print
 #
 echo '<div class="container">' >> $explore
+
+echo '<h2>Model transformations</h2>' >> $explore
+
 echo '<br />' >> $explore
 
 #Load csv file for transformations
@@ -64,7 +70,7 @@ for line in $(tail -n+2 ../ATLzoo/output/all-MT-full); do
 
 	echo '	        <div class="row">' >> $explore
 	echo '            <div class="panel-group">' >> $explore
-	echo '                <div class="panel panel-primary">' >> $explore
+	echo '                <div class="panel panel-default">' >> $explore
 	echo '                    <div class="panel-heading">' >> $explore
 	echo '                        <h4 class="panel-title"><a data-toggle="collapse" href="#collapse'$numMT'">+ '$nameMt'</a></h4>' >> $explore
 	echo '                    </div>' >> $explore
