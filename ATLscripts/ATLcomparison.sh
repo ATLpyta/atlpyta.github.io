@@ -3,52 +3,66 @@
 ## if parameter 1= --help, print help 
 ## else collect metrics from transformations folder
 
-if [ "$1" = "--help" ]; then
+if [ "$1" = "--help" -o "$1" = "" ]; then
 
-echo "compareATL"
+echo "ATL Compare"
 echo ""
 echo "	This tool collects metrics about the complexity of ATL transformations."
 echo "	The final goal is to compare them and to select a set of diverse ones."
 echo ""
+echo "PARAMETERS"
+echo "	#1: folder containing .metrics files"
 echo ""
-echo "	Required"
 echo ""
-echo "		Please make sure that these different software/libs are available on your computer:"
-echo "			xmllint"
-echo "			R"
-echo "			radarchart package"
-
-
+echo "OUTPUT"
+echo ""
+echo "	The results are saved in $1/outputs"
+echo ""
+echo "REQUIRED"
+echo ""
+echo "	Please make sure that these different software/libs"
+echo "	are available on your computer:"
+echo ""
+echo "		xmllint"
+echo "		R"
+echo "		radarchart package for R"
 
 else
 
 folder=$1"/"
-mkdir -p output
+output=$folder"../output"
+mkdir -p $output
 
-echo "...I'm trying to collect ALT metrics in folder: ./transformations/"	
+criteria=$output"/criteria"
+MT=$output"/MT"
+MTs=$output"/MTs"
+allMT=$output"/all-MT"
+allMTfull=$output"/all-MT-full"
+
+
+echo "...I'm trying to collect ALT metrics in folder: "$1	
 
 metricFile=$(ls $folder)
 
 echo ""
-echo "Rules" > "output/criteria"
-echo "MatchedRules" >> "output/criteria"
-echo "LazyRules" >> "output/criteria"
-echo "Helpers" >> "output/criteria"
-echo "HelpersWContext" >> "output/criteria"
-echo "RulesInhTrees" >> "output/criteria"
-echo "InhRules" >> "output/criteria"
+echo "Rules" > $criteria
+echo "MatchedRules" >> $criteria
+echo "LazyRules" >> $criteria
+echo "Helpers" >> $criteria
+echo "HelpersWContext" >> $criteria
+echo "RulesInhTrees" >> $criteria
+echo "InhRules" >> $criteria
 
-:> "output/MT"
-:> "output/MTs"
-:> "output/all-MT"
-:> "output/all-MT-full"
+:> $MT
+:> $MTs
+:> $allMT
+:> $allMTfull
 
 
-echo "MT,Rules,MatchedRules,LazyRules,Helpers,HelpersWContext,RulesInhTrees,InhRules" > "output/all-MT-full"
+echo "MT,Module,Rules,MatchedRules,LazyRules,Helpers,HelpersWContext,RulesInhTrees,InhRules" > $allMTfull
 
 	for file in $metricFile; do
 
-		echo "	"$file
 		transfoName=$(xmllint --xpath "string(//@TrafoName)" $folder$file)
 		Rules=$(xmllint --xpath 'string(//SimpleMetrics[@Metric="Number of Transformation Rules"]/@Value)' $folder$file)
 		MatchedRules=$(xmllint --xpath 'string(//SimpleMetrics[@Metric="Number of Matched Rules (Excluding Lazy Matched Rules)"]/@Value)' $folder$file)
@@ -87,29 +101,31 @@ echo "MT,Rules,MatchedRules,LazyRules,Helpers,HelpersWContext,RulesInhTrees,InhR
 		fi;	
 
 		mtName="${file%%.*}"
+		echo "	"$mtName
 
-		echo "      fileName="$mtName
-		echo "		name="$transfoName
-		echo "		Rules="$Rules
-		echo "		MatchedRules="$MatchedRules
-		echo "		LazyRules="$LazyRules
-		echo "		Helpers="$Helpers
-		echo "		HelpersWContext="$HelpersWContext
-		echo "		RulesInhTrees="$RulesInhTrees
-		echo "		InhRules="$InhRules
-		echo ""
-
-		echo $transfoName >> "output/MT"
-		echo $mtName >> "output/MTs"
+		# echo "      fileName="$mtName
+		# echo "		name="$transfoName
+		# echo "		Rules="$Rules
+		# echo "		MatchedRules="$MatchedRules
+		# echo "		LazyRules="$LazyRules
+		# echo "		Helpers="$Helpers
+		# echo "		HelpersWContext="$HelpersWContext
+		# echo "		RulesInhTrees="$RulesInhTrees
+		# echo "		InhRules="$InhRules
+		# echo ""
+		echo $transfoName >> $MT
+		echo $mtName >> $MTs
         echo $Rules","$MatchedRules","$LazyRules","$Helpers","$HelpersWContext","$RulesInhTrees","$InhRules > "compare"
-		echo $Rules","$MatchedRules","$LazyRules","$Helpers","$HelpersWContext","$RulesInhTrees","$InhRules >> "output/all-MT"
-		echo $transfoName","$Rules","$MatchedRules","$LazyRules","$Helpers","$HelpersWContext","$RulesInhTrees","$InhRules >> "output/all-MT-full"
-
-		#cp "compare" "./output/"$transfoName
-		rm "compare"
-
-		mkdir -p "kiviatCharts"
+		echo $Rules","$MatchedRules","$LazyRules","$Helpers","$HelpersWContext","$RulesInhTrees","$InhRules >> $allMT
+		echo $mtName","$transfoName","$Rules","$MatchedRules","$LazyRules","$Helpers","$HelpersWContext","$RulesInhTrees","$InhRules >> $allMTfull
 
 	done
+
+	#cp "compare" "./output/"$transfoName
+		rm "compare"
+
+		mkdir -p $folder"/../kiviatCharts"
+
+		echo "Results are in: "$output
 
 fi;

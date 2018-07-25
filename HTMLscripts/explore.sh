@@ -5,12 +5,6 @@ echo "Genrate <explore.html> page..."
 explore='../explore-tmp.html'
 explorePage='../explore.html'
 
-#getting the list of criteria from criterai file
-#it uses the first line of this file
-for cline in $(cat ../ATLzoo/output/criteria); do
-	echo $cline
-done
-
 numMT=1
 :> $explore
 
@@ -67,6 +61,13 @@ for line in $(tail -n+2 ../ATLzoo/output/all-MT-full); do
 
 	#Collect info on the MT (name criteria)
 	nameMt="$(echo $line | cut -d, -f1)"
+	rules="$(echo $line | cut -d, -f3)"
+	mrules="$(echo $line | cut -d, -f4)"
+	lrules="$(echo $line | cut -d, -f5)"
+	helpers="$(echo $line | cut -d, -f6)"
+	helperswc="$(echo $line | cut -d, -f7)"
+	inhTress="$(echo $line | cut -d, -f8)"
+	inhRules="$(echo $line | cut -d, -f9)"
 
 	echo '	        <div class="row">' >> $explore
 	echo '            <div class="panel-group">' >> $explore
@@ -77,19 +78,19 @@ for line in $(tail -n+2 ../ATLzoo/output/all-MT-full); do
 	echo '                    <div id="collapse'$numMT'" class="panel-collapse collapse">' >> $explore
 	echo '                        <div class="panel-body">' >> $explore
 	echo '                            <div class="row titre">' >> $explore
-	echo '                                <div class="col-lg-2"><h3>ATL metrics</h3></div>' >> $explore
+	echo '                                <div class="col-lg-3"><h3>ATL metrics</h3></div>' >> $explore
 	echo '                                <div class="col-lg-3"><h3>Kiviat chart</h3></div>' >> $explore
 	echo '                            </div>' >> $explore
 	echo '                            <div class="row titre">' >> $explore
-	echo '                               <div class="col-lg-2">' >> $explore
+	echo '                               <div class="col-lg-3" style="text-align:left;">' >> $explore
 	echo '                                    <ul>' >> $explore
-	echo '                                       <li>Rules' >> $explore
-	echo '                                       <li>MatchedRules' >> $explore
-	echo '                                       <li>LazyRules' >> $explore
-	echo '                                       <li>Helpers' >> $explore
-	echo '                                       <li>HelpersWContext' >> $explore
-	echo '                                       <li>RulesInhTrees' >> $explore
-	echo '                                       <li>InhRules' >> $explore
+	echo '                                       <li>Rules: '$rules >> $explore
+	echo '                                       <li>Matched Rules: '$mrules >> $explore
+	echo '                                       <li>Lazy Rules: '$lrules >> $explore
+	echo '                                       <li>Helpers: '$helpers >> $explore
+	echo '                                       <li>Helpers With Context: '$helperswc >> $explore
+	echo '                                       <li>Rule Inheritance Trees: '$inhTress >> $explore
+	echo '                                       <li>Inheriting Transformation Rules: '$inhRules >> $explore
 	echo '                                   </ul>' >> $explore
 	echo '                               </div>' >> $explore
 	echo '                               <div class="col-lg-3">' >> $explore
