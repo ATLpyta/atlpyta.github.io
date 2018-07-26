@@ -1,6 +1,6 @@
 # ATLpyta
 
-The main purpose of **ATLpyta** (**p**ick **y**ou **t**ransformations) is to allow ATL users to select Model Transformations for their experiment among the transformations of the ATL zoo.
+The main purpose of **ATLpyta** (**p**ick **y**ou **t**ransform**a**tions) is to allow ATL users to select Model Transformations for their experiment among the transformations of the ATL zoo.
 
 Model Transformations are compared according to some metrics (#rules, helpers, ...). Users have access to all comparison data and to a user-friendly data visualisation. 
 
