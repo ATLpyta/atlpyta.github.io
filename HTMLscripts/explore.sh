@@ -17,6 +17,7 @@
 #					     
 
 
+##Which explore page do you want to create (depend on $2)
 :> buttons
 
 echo '<div class="container">' >> buttons
@@ -32,7 +33,7 @@ echo '</div>' >> buttons
 echo '<div class="row">' >> buttons
 echo '	<div class="list-group list-group-horizontal">' >> buttons
 echo '	<div class="col-sm-3">' >> buttons
-##Which explore page do you want to create (depend on $2)
+
 if [ "$2" = "default" ]; then
 	explorePage='../explore.html'
 	echo '		<a href="explore.html" class="list-group-item active">A&rarr;Z</a>' >> buttons
