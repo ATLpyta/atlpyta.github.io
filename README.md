@@ -4,7 +4,7 @@ The main purpose of **ATLpyta** (**p**ick **y**ou **t**ransformations) is to all
 
 Model Transformations are compared according to some metrics (#rules, helpers, ...). Users have access to all comparison data and to a user-friendly data visualisation. 
 
-![Learn more on our website](https://atlpyta.github.io/)
+[Learn more on our website](https://atlpyta.github.io/)
 
 ## Explore the zoo
 
