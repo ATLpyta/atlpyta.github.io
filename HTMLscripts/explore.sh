@@ -18,39 +18,51 @@
 
 
 :> buttons
-echo '    <div class="container">' >> buttons
-echo '        <div class="row">' >> buttons
 
+echo '<div class="container">' >> buttons
+
+echo '<br />' >> buttons
+
+echo '<div class="row">' >> buttons
+echo '	<div class="col-sm-3">' >> buttons
+echo '		Sort Model Transformations' >> buttons
+echo '	</div>' >> buttons
+echo '</div>' >> buttons
+
+echo '<div class="row">' >> buttons
+echo '	<div class="list-group list-group-horizontal">' >> buttons
+echo '	<div class="col-sm-3">' >> buttons
 ##Which explore page do you want to create (depend on $2)
 if [ "$2" = "default" ]; then
 	explorePage='../explore.html'
-	echo '            <a href="explore.html" class="btn btn-primary btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> buttons
-	echo '            <a href="explore-rules.html" class="btn btn-default btn-lg active" role="button" title="sort-rules">rules &#8599;</a>' >> buttons
-	echo '            <a href="explore-helpers.html" class="btn btn-default btn-lg active" role="button" title="sort-helpers">helpers &#8599;</a>' >> buttons
+	echo '		<a href="explore.html" class="list-group-item active">A&rarr;Z</a>' >> buttons
+	echo '		<a href="explore-rules.html" class="list-group-item">rules &#8599;</a>' >> buttons
+	echo '		<a href="explore-helpers.html" class="list-group-item">helpers &#8599;</a>' >> buttons
 else
 	if [ "$2" = "rules" ]; then
 		explorePage='../explore-rules.html'
-		echo '            <a href="explore.html" class="btn btn-default btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> buttons
-		echo '            <a href="explore-rules.html" class="btn btn-primary btn-lg active" role="button" title="sort-rules">rules &#8599;</a>' >> buttons
-		echo '            <a href="explore-helpers.html" class="btn btn-default btn-lg active" role="button" title="sort-helpers">helpers &#8599;</a>' >> buttons
+		echo '		<a href="explore.html" class="list-group-item">A&rarr;Z</a>' >> buttons
+		echo '		<a href="explore-rules.html" class="list-group-item active">rules &#8599;</a>' >> buttons
+		echo '		<a href="explore-helpers.html" class="list-group-item">helpers &#8599;</a>' >> buttons
 	else
 		if [ "$2" = "helpers" ]; then
 			explorePage='../explore-helpers.html'
-			echo '            <a href="explore.html" class="btn btn-default btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> buttons
-			echo '            <a href="explore-rules.html" class="btn btn-default btn-lg active" role="button" title="sort-rules">rules &#8599;</a>' >> buttons
-			echo '            <a href="explore-helpers.html" class="btn btn-primary btn-lg active" role="button" title="sort-helpers">helpers &#8599;</a>' >> buttons
+			echo ' 		<a href="explore.html" class="list-group-item">A&rarr;Z</a>' >> buttons
+			echo '		<a href="explore-rules.html" class="list-group-item">rules &#8599;</a>' >> buttons
+			echo '		<a href="explore-helpers.html" class="list-group-item active">helpers &#8599;</a>' >> buttons
 		else
 			explorePage='../explore.html'
-			echo '            <a href="explore.html" class="btn btn-primary btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> buttons
-			echo '            <a href="explore-rules.html" class="btn btn-default btn-lg active" role="button" title="sort-rules">rules &#8599;</a>' >> buttons
-			echo '            <a href="explore-helpers.html" class="btn btn-default btn-lg active" role="button" title="sort-helpers">helpers &#8599;</a>' >> buttons
+			echo '		<a href="explore.html" class="list-group-item active">A&rarr;Z</a>' >> buttons
+			echo ' 		<a href="explore-rules.html" class="list-group-item">rules &#8599;</a>' >> buttons
+			echo ' 		<a href="explore-helpers.html" class="list-group-item">helpers &#8599;</a>' >> buttons
 		fi
 	fi
 fi
 
-
-echo '        </div>' >> buttons
-echo '    </div> ' >> buttons
+echo '	</div>' >> buttons
+echo '	</div>' >> buttons
+echo '</div>' >> buttons
+echo '</div> ' >> buttons
 
 ## Begin page generation
 #
@@ -146,7 +158,17 @@ rm buttons
 #
 echo '<div class="container">' >> $explore
 
-echo '<h2>Model transformations</h2>' >> $explore
+
+#Count number of MTs and create a badge (nb)
+nbMts=$(tail -n+2 "../ATLzoo/output/"$1 | wc -l)
+
+echo '<br />' >> $explore
+
+
+echo '<div class="row">' >> $explore
+echo '	<div class="col-lg-3"><span style="font-size:20px;">All Model Transformations</span> ' >> $explore
+echo '	<span class="badge">'$nbMts'</span></div>' >> $explore
+echo '</div>' >> $explore
 
 echo '<br />' >> $explore
 
