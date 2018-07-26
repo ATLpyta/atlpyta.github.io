@@ -1,9 +1,63 @@
 #!/bin/bash
 
-echo "Genrate <explore.html> page..."
+######
+#This script creates .html pages for exploration of MTs with different sorting.
+#
+#PARAMETERS
+#	$1 csv file to use e.g. all-MT-full (located in ../ATLzoo/output/)
+#	$2 in {alpha,rules,helpers}. Which sorting button to activate
+#
+#HOW IT WORKS
+#
+#	Each call to this script creates only one .html file but links to two other file. 
+#	The three files are always called as follows:
+#		explore.html
+#		explore-rules.html
+#		explore-helpers.html
+#					     
+
+
+:> buttons
+echo '    <div class="container">' >> buttons
+echo '        <div class="row">' >> buttons
+
+##Which explore page do you want to create (depend on $2)
+if [ "$2" = "default" ]; then
+	explorePage='../explore.html'
+	echo '            <a href="explore.html" class="btn btn-primary btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> buttons
+	echo '            <a href="explore-rules.html" class="btn btn-default btn-lg active" role="button" title="sort-rules">rules &#8599;</a>' >> buttons
+	echo '            <a href="explore-helpers.html" class="btn btn-default btn-lg active" role="button" title="sort-helpers">helpers &#8599;</a>' >> buttons
+else
+	if [ "$2" = "rules" ]; then
+		explorePage='../explore-rules.html'
+		echo '            <a href="explore.html" class="btn btn-default btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> buttons
+		echo '            <a href="explore-rules.html" class="btn btn-primary btn-lg active" role="button" title="sort-rules">rules &#8599;</a>' >> buttons
+		echo '            <a href="explore-helpers.html" class="btn btn-default btn-lg active" role="button" title="sort-helpers">helpers &#8599;</a>' >> buttons
+	else
+		if [ "$2" = "helpers" ]; then
+			explorePage='../explore-helpers.html'
+			echo '            <a href="explore.html" class="btn btn-default btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> buttons
+			echo '            <a href="explore-rules.html" class="btn btn-default btn-lg active" role="button" title="sort-rules">rules &#8599;</a>' >> buttons
+			echo '            <a href="explore-helpers.html" class="btn btn-primary btn-lg active" role="button" title="sort-helpers">helpers &#8599;</a>' >> buttons
+		else
+			explorePage='../explore.html'
+			echo '            <a href="explore.html" class="btn btn-primary btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> buttons
+			echo '            <a href="explore-rules.html" class="btn btn-default btn-lg active" role="button" title="sort-rules">rules &#8599;</a>' >> buttons
+			echo '            <a href="explore-helpers.html" class="btn btn-default btn-lg active" role="button" title="sort-helpers">helpers &#8599;</a>' >> buttons
+		fi
+	fi
+fi
+
+
+echo '        </div>' >> buttons
+echo '    </div> ' >> buttons
+
+## Begin page generation
+#
+echo "Genrate <"$explorePage"> page..."
 
 explore='../explore-tmp.html'
-explorePage='../explore.html'
+
 
 numMT=1
 :> $explore
@@ -82,16 +136,11 @@ echo '</div>' >> $explore
 
 #begin content
 #
-echo '    <div class="container">' >> $explore
-echo '        <div class="row">' >> $explore
-echo '            <a href="#" class="btn btn-primary btn-lg active" role="button" title="sort-alpha">A&rarr;Z</a>' >> $explore
-echo '            <a href="#" class="btn btn-default btn-lg active" role="button" title="sort-rules">rules &#8599;</a>' >> $explore
-echo '            <a href="#" class="btn btn-default btn-lg active" role="button" title="sort-helpers">helpers &#8599;</a>' >> $explore
-echo '        </div>' >> $explore
-echo '    </div> ' >> $explore
 
-
-
+#sort buttons
+##
+cat buttons >> $explore
+rm buttons
 
 #begin All MT print
 #
@@ -102,7 +151,7 @@ echo '<h2>Model transformations</h2>' >> $explore
 echo '<br />' >> $explore
 
 #Load csv file for transformations
-for line in $(tail -n+2 ../ATLzoo/output/all-MT-full); do
+for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 
 	#echo $numMT
 
