@@ -128,4 +128,6 @@ echo "MT,Module,Rules,MatchedRules,LazyRules,Helpers,HelpersWContext,RulesInhTre
 
 		echo "Results are in: "$output
 
+		./sort-MTs.sh $output
+
 fi;
