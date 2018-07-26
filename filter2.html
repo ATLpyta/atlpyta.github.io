@@ -15,6 +15,10 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- Custom styles for this template -->
 <link href="atlpyta.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 
@@ -59,6 +63,40 @@
 </div>
 <div class="container">
 <br />
+
+
+<!-- Criteria block -->
+
+<div id="contact" class="panel panel-default">
+      <div class="panel-heading"><h1>Filtering criteria</h1></div>
+      <div class="panel-body">
+        <div class="row titre">
+          
+          <div class="col-sm-4">
+            <div data-role="rangeslider">
+              <label for="rules-min">Rules:</label>
+              <input type="range" name="rules-min" id="rules-min" value="0" min="0" max="100">
+              <label for="rules-max">Rules:</label>
+              <input type="range" name="rules-max" id="rules-max" value="100" min="0" max="100">
+            </div>
+
+          </div>
+            
+          <div class="col-sm-4">
+             <div data-role="rangeslider">
+              <label for="helpers-min">Helpers:</label>
+              <input type="range" name="helpers-min" id="helpers-min" value="0" min="0" max="100">
+              <label for="helpers-max">Helpers:</label>
+              <input type="range" name="helpers-max" id="helpers-max" value="100" min="0" max="100">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+<!-- end criteria block -->
+
 <div class="row">
 	<div class="col-lg-3"><span style="font-size:20px;">Model Transformations</span> 
 	<span id="nbMT" class="badge">105</span></div>

@@ -41,6 +41,9 @@ echo '<script src="bootstrap/js/jquery-3.3.1.min.js"></script>' >> $filter
 echo '<script src="bootstrap/js/bootstrap.min.js"></script>' >> $filter
 echo '<!-- Custom styles for this template -->' >> $filter
 echo '<link href="atlpyta.css" rel="stylesheet">' >> $filter
+echo '<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">' >> $filter
+echo '<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>' >> $filter
+echo '<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>' >> $filter
 echo '</head>' >> $filter
 
 #begin body
@@ -109,8 +112,8 @@ echo '<br />' >> $filter
 
 
 echo '<div class="row">' >> $filter
-echo '	<div class="col-lg-3"><span style="font-size:20px;">All Model Transformations</span> ' >> $filter
-echo '	<span class="badge">'$nbMts'</span></div>' >> $filter
+echo '	<div class="col-lg-3"><span style="font-size:20px;">Model Transformations</span> ' >> $filter
+echo '	<span id="nbMT" class="badge">'$nbMts'</span></div>' >> $filter
 echo '</div>' >> $filter
 
 echo '<br />' >> $filter
