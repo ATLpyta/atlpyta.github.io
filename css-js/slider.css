@@ -12,7 +12,7 @@
     position: absolute;
     left: 12%;
     right: 12%;
-    top: 26px;
+    top: 30px;
     background-color: #ff0000;
     width: 76%;
     outline: none;
@@ -24,7 +24,7 @@
 
 .slider-container span{
     position: absolute;
-    top:20px;
+    top:24px;
     width: 11%;
 }
 
@@ -44,9 +44,9 @@
     z-index: 1;
     outline: 0;
     -webkit-appearance: none;
-    height: 24px;
-    width: 24px;
-    border-radius: 12px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
     background-color: white;
     background-color: #ffffff;
     border: 2px solid #a7a7a7;
