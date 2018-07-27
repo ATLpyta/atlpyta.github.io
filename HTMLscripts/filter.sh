@@ -14,6 +14,8 @@
 
 ## Begin page generation
 #
+
+
 filter='../filter-tmp.html'
 filterPage='../filter.html'
 
@@ -34,16 +36,15 @@ echo '<link rel="icon" href="img/atlpyta.png">' >> $filter
 echo '<meta charset="utf-8">' >> $filter
 echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">' >> $filter
 echo '<meta name="viewport" content="width=device-width, initial-scale=1">' >> $filter
-echo '<title>ATLpyta - Explore</title>' >> $filter
+echo '<title>ATLpyta - Filter</title>' >> $filter
 echo '<!-- Bootstrap core CSS -->' >> $filter
 echo '<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">' >> $filter
 echo '<script src="bootstrap/js/jquery-3.3.1.min.js"></script>' >> $filter
 echo '<script src="bootstrap/js/bootstrap.min.js"></script>' >> $filter
 echo '<!-- Custom styles for this template -->' >> $filter
 echo '<link href="atlpyta.css" rel="stylesheet">' >> $filter
-echo '<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">' >> $filter
-echo '<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>' >> $filter
-echo '<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>' >> $filter
+echo '<link href="css-js/slider.css" rel="stylesheet">' >> $filter
+echo '<script src="css-js/slider.js"></script>' >> $filter
 echo '</head>' >> $filter
 
 #begin body
@@ -103,6 +104,41 @@ echo '</div>' >> $filter
 #begin All MT print
 #
 echo '<div class="container">' >> $filter
+
+echo '<br />' >> $filter
+
+echo '<div id="criteria" class="panel panel-default">' >> $filter
+echo '  <div class="panel-heading"><h1>Filtering criteria</h1></div>' >> $filter
+echo '  <div class="panel-body">' >> $filter
+echo '    <div class="row titre">' >> $filter
+
+echo '      <div class="col-sm-4">' >> $filter
+echo '          <div id="rules-slider" class="slider-container">' >> $filter
+echo '            Rules' >> $filter
+echo '            <span class="min badge badge-secondary">0</span>' >> $filter
+echo "            <input value=\"0\" min=\"0\" max=\"100\" step=\"1\" type=\"range\" oninput=\"updateLabels('rules-slider')\" >" >> $filter
+echo "            <input value=\"100\" min=\"0\" max=\"100\" step=\"1\" type=\"range\" oninput=\"updateLabels('rules-slider')\" >" >> $filter
+echo '            <span class="max badge badge-secondary">100</span>' >> $filter
+echo '          </div>' >> $filter
+echo '     </div>' >> $filter
+
+echo '     <div class="col-sm-4">' >> $filter
+echo '       <div id="helpers-slider" class="slider-container">' >> $filter
+echo '       Helpers' >> $filter
+echo '       <span class="min badge badge-secondary">0</span>' >> $filter
+echo "       <input value=\"0\" min=\"0\" max=\"100\" step=\"1\" type=\"range\" oninput=\"updateLabels('helpers-slider')\" >" >> $filter
+echo "       <input value=\"100\" min=\"0\" max=\"100\" step=\"1\" type=\"range\" oninput=\"updateLabels('helpers-slider')\" >" >> $filter
+echo '       <span class="max badge badge-secondary">100</span>' >> $filter
+echo '   	 </div>' >> $filter
+echo '     </div>' >> $filter
+
+echo '		<div class="col-sm-2">' >> $filter
+echo "			<button type=\"button\" class=\"btn btn-lg btn-primary btn-block\" onclick=\"alert('filtering ...');filterMTs();\">filter</button> " >> $filter  
+echo '		</div>' >> $filter
+
+echo '    </div>' >> $filter
+echo '  </div>' >> $filter
+echo '</div>' >> $filter
 
 
 #Count number of MTs and create a badge (nb)
