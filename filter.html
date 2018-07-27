@@ -17,6 +17,7 @@
 <link href="atlpyta.css" rel="stylesheet">
 <link href="css-js/slider.css" rel="stylesheet">
 <script src="css-js/slider.js"></script>
+<script src="css-js/filter.js"></script>
 </head>
 <body>
 
@@ -84,18 +85,23 @@
    	 </div>
      </div>
 		<div class="col-sm-2">
-			<button type="button" class="btn btn-lg btn-primary btn-block" onclick="alert('filtering ...');filterMTs();">filter</button> 
+			<button type="button" class="btn btn-lg btn-primary btn-block" onclick="filterMTs();">filter</button> 
 		</div>
     </div>
   </div>
 </div>
 <br />
 <div class="row">
-	<div class="col-lg-3"><span style="font-size:20px;">Model Transformations</span> 
-	<span id="nbMT" class="badge">105</span></div>
+	<div class="col-lg-4"><span style="font-size:20px;">Model Transformations</span> 
+	<span id="nbMT" class="badge">105</span>
+ / 
+	<span id="totalMT" class="badge">105</span>
 </div>
+</div>
+</div>
+<div id="MT-container" class="container">
 <br />
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -139,7 +145,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -183,7 +189,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -227,7 +233,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -271,7 +277,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -315,7 +321,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -359,7 +365,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -403,7 +409,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -447,7 +453,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -491,7 +497,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -535,7 +541,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -579,7 +585,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -623,7 +629,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -667,7 +673,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -711,7 +717,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -755,7 +761,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -799,7 +805,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -843,7 +849,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -887,7 +893,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -931,7 +937,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -975,7 +981,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1019,7 +1025,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1063,7 +1069,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1107,7 +1113,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1151,7 +1157,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1195,7 +1201,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1239,7 +1245,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1283,7 +1289,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1327,7 +1333,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1371,7 +1377,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1415,7 +1421,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1459,7 +1465,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1503,7 +1509,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1547,7 +1553,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1591,7 +1597,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1635,7 +1641,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1679,7 +1685,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1723,7 +1729,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1767,7 +1773,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1811,7 +1817,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1855,7 +1861,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1899,7 +1905,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1943,7 +1949,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1987,7 +1993,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2031,7 +2037,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2075,7 +2081,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2119,7 +2125,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2163,7 +2169,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2207,7 +2213,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2251,7 +2257,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2295,7 +2301,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2339,7 +2345,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2383,7 +2389,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2427,7 +2433,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2471,7 +2477,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2515,7 +2521,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2559,7 +2565,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2603,7 +2609,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2647,7 +2653,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2691,7 +2697,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2735,7 +2741,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2779,7 +2785,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2823,7 +2829,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2867,7 +2873,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2911,7 +2917,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2955,7 +2961,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -2999,7 +3005,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3043,7 +3049,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3087,7 +3093,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3131,7 +3137,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3175,7 +3181,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3219,7 +3225,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3263,7 +3269,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3307,7 +3313,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3351,7 +3357,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3395,7 +3401,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3439,7 +3445,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3483,7 +3489,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3527,7 +3533,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3571,7 +3577,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3615,7 +3621,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3659,7 +3665,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3703,7 +3709,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3747,7 +3753,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3791,7 +3797,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3835,7 +3841,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3879,7 +3885,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3923,7 +3929,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -3967,7 +3973,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4011,7 +4017,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4055,7 +4061,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4099,7 +4105,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4143,7 +4149,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4187,7 +4193,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4231,7 +4237,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4275,7 +4281,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4319,7 +4325,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4363,7 +4369,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4407,7 +4413,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4451,7 +4457,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4495,7 +4501,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4539,7 +4545,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4583,7 +4589,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4627,7 +4633,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -4671,7 +4677,7 @@
                </div>
            </div>
        </div>
-	        <div class="row">
+	        <div class="row MT">
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">

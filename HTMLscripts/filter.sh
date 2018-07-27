@@ -45,6 +45,7 @@ echo '<!-- Custom styles for this template -->' >> $filter
 echo '<link href="atlpyta.css" rel="stylesheet">' >> $filter
 echo '<link href="css-js/slider.css" rel="stylesheet">' >> $filter
 echo '<script src="css-js/slider.js"></script>' >> $filter
+echo '<script src="css-js/filter.js"></script>' >> $filter
 echo '</head>' >> $filter
 
 #begin body
@@ -133,7 +134,7 @@ echo '   	 </div>' >> $filter
 echo '     </div>' >> $filter
 
 echo '		<div class="col-sm-2">' >> $filter
-echo "			<button type=\"button\" class=\"btn btn-lg btn-primary btn-block\" onclick=\"alert('filtering ...');filterMTs();\">filter</button> " >> $filter  
+echo "			<button type=\"button\" class=\"btn btn-lg btn-primary btn-block\" onclick=\"filterMTs();\">filter</button> " >> $filter  
 echo '		</div>' >> $filter
 
 echo '    </div>' >> $filter
@@ -146,11 +147,20 @@ nbMts=$(tail -n+2 "../ATLzoo/output/"$1 | wc -l)
 
 echo '<br />' >> $filter
 
-
 echo '<div class="row">' >> $filter
-echo '	<div class="col-lg-3"><span style="font-size:20px;">Model Transformations</span> ' >> $filter
-echo '	<span id="nbMT" class="badge">'$nbMts'</span></div>' >> $filter
+echo '	<div class="col-lg-4"><span style="font-size:20px;">Model Transformations</span> ' >> $filter
+echo '	<span id="nbMT" class="badge">'$nbMts'</span>' >> $filter
+echo ' / ' >> $filter
+echo '	<span id="totalMT" class="badge">'$nbMts'</span>' >> $filter
 echo '</div>' >> $filter
+echo '</div>' >> $filter
+
+
+echo '</div>' >> $filter
+
+# Begin model transformation print
+#
+echo '<div id="MT-container" class="container">' >> $filter
 
 echo '<br />' >> $filter
 
@@ -169,7 +179,7 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 	inhTress="$(echo $line | cut -d, -f8)"
 	inhRules="$(echo $line | cut -d, -f9)"
 
-	echo '	        <div class="row">' >> $filter
+	echo '	        <div class="row MT">' >> $filter
 	echo '            <div class="panel-group">' >> $filter
 	echo '                <div class="panel panel-default">' >> $filter
 	echo '                    <div class="panel-heading">' >> $filter
