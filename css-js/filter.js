@@ -23,10 +23,13 @@ function filterMTs(){
 	//
 	var MTcontainer=document.getElementById("MT-container");
 
-	for (var i = 0; i<= MTcontainer.getElementsByClassName("row MT").length - 10; i++) {
+	for (var i = 0; i<= MTcontainer.getElementsByClassName("row MT").length - 25; i++) {
 			
 		nbMTs++;
 		MTcontainer.getElementsByClassName("row MT")[i].style.display = "none";
+
+
+		//MTcontainer.getElementsByClassName("row MT")[i].style.display = "block";
 	}
 
 
