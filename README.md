@@ -8,11 +8,11 @@ Model Transformations are compared according to some metrics (#rules, helpers, .
 
 ## Explore the zoo
 
-## Compare MTs
+## Visual comparison
 
-## Choose Manually MTs
+## Manual filtering
 
-## Pick Automatically MTs
+## Automatic pick-up
 
 ## Resources
 
