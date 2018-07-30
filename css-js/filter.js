@@ -46,9 +46,10 @@ function filterMTs(){
 	//
 	var MTcontainer=document.getElementById("MT-container");
 
-	for (var i = 0; i<= MTcontainer.getElementsByClassName("row MT").length - 105; i++) {
+	for (var i = 0; i<= MTcontainer.getElementsByClassName("row MT").length - 1; i++) {
 		
 		var criteriaList= MTcontainer.getElementsByClassName("row MT")[i].getElementsByTagName("span");
+		
 		var nbRules= parseInt(criteriaList[0].innerHTML);
 		var nbMatchedRules = parseInt(criteriaList[1].innerHTML);
 		var nbLazyRules = parseInt(criteriaList[2].innerHTML);
@@ -57,19 +58,23 @@ function filterMTs(){
 		var nbRulesInhTree= parseInt(criteriaList[5].innerHTML);
 		var nbInhRules= parseInt(criteriaList[6].innerHTML);
 
-		console.log("Rules="+nbRules);
-		console.log("MatchedRules="+nbMatchedRules);
-		console.log("LazyRules="+nbLazyRules);
-		console.log("Helpers="+nbHelpers);
-		console.log("HelpersWContext="+nbHelpersWContext);
-		console.log("RulesInhTree="+nbRulesInhTree);
-		console.log("InhRules="+nbInhRules);
+		// console.log("Rules="+nbRules);
+		// console.log("MatchedRules="+nbMatchedRules);
+		// console.log("LazyRules="+nbLazyRules);
+		// console.log("Helpers="+nbHelpers);
+		// console.log("HelpersWContext="+nbHelpersWContext);
+		// console.log("RulesInhTree="+nbRulesInhTree);
+		// console.log("InhRules="+nbInhRules);
 
 		if(    rulesMin <= nbRules && nbRules <= rulesMax
 			&& matchedRulesMin <= nbMatchedRules && nbMatchedRules <= matchedRulesMax
 			&& lazyRulesMin <= nbLazyRules && nbLazyRules <= lazyRulesMax	 
-			&& helpersMin <= nbHelpers && nbHelpers <= helpersMax 
+			&& helpersMin <= nbHelpers && nbHelpers <= helpersMax
+			&& helpersWContextMin <= nbHelpersWContext && nbHelpersWContext <= helpersWContextMax
+			&& rulesInhTreeMin <= nbRulesInhTree && nbRulesInhTree <= rulesInhTreeMax
+			&& InhRulesMin <= nbInhRules && nbInhRules <= InhRulesMax 
 			){
+			
 			nbMTs++;
 		    MTcontainer.getElementsByClassName("row MT")[i].style.display = "block";
 		}else{
