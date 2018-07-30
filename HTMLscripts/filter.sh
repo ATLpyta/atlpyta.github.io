@@ -141,6 +141,15 @@ echo '    </div>' >> $filter
 echo '  </div>' >> $filter
 echo '</div>' >> $filter
 
+#Create the range sliders for criteria
+
+for criteria in $(cat ../ATLzoo/output/criteriaMinMax); do
+
+	echo $criteria
+	
+done
+
+
 
 #Count number of MTs and create a badge (nb)
 nbMts=$(tail -n+2 "../ATLzoo/output/"$1 | wc -l)

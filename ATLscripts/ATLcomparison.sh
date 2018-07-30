@@ -58,6 +58,23 @@ echo "InhRules" >> $criteria
 :> $allMT
 :> $allMTfull
 
+# Find the minimum maximum for each criterion
+minRules=200
+minMatchedRules=200
+minLazyRules=200
+minHelpers=200
+minHelpersWContext=200
+minRulesInhTrees=200
+minInhRules=200
+
+maxRules=0
+maxMatchedRules=0
+maxLazyRules=0
+maxHelpers=0
+maxHelpersWContext=0
+maxRulesInhTrees=0
+maxInhRules=0
+
 
 echo "MT,Module,Rules,MatchedRules,LazyRules,Helpers,HelpersWContext,RulesInhTrees,InhRules" > $allMTfull
 
@@ -119,6 +136,62 @@ echo "MT,Module,Rules,MatchedRules,LazyRules,Helpers,HelpersWContext,RulesInhTre
 		echo $Rules","$MatchedRules","$LazyRules","$Helpers","$HelpersWContext","$RulesInhTrees","$InhRules >> $allMT
 		echo $mtName","$transfoName","$Rules","$MatchedRules","$LazyRules","$Helpers","$HelpersWContext","$RulesInhTrees","$InhRules >> $allMTfull
 
+		if [ $Rules -gt $maxRules ]; then
+			maxRules=$Rules
+		fi
+
+		if [ $Rules -lt $minRules ]; then
+			minRules=$Rules
+		fi
+
+		if [ $MatchedRules -gt $maxMatchedRules ]; then
+			maxMatchedRules=$MatchedRules
+		fi
+
+		if [ $MatchedRules -lt $minMatchedRules ]; then
+			minMatchedRules=$MatchedRules
+		fi
+
+		if [ $LazyRules -gt $maxLazyRules ]; then
+			maxLazyRules=$LazyRules
+		fi
+
+		if [ $LazyRules -lt $minLazyRules ]; then
+			minLazyRules=$LazyRules
+		fi
+
+		if [ $Helpers -gt $maxHelpers ]; then
+			maxHelpers=$Helpers
+		fi
+
+		if [ $Helpers -lt $minHelpers ]; then
+			minHelpers=$Helpers
+		fi
+
+		if [ $HelpersWContext -gt $maxHelpersWContext ]; then
+			maxHelpersWContext=$HelpersWContext
+		fi
+
+		if [ $HelpersWContext -lt $minHelpersWContext ]; then
+			minHelpersWContext=$HelpersWContext
+		fi
+
+		if [ $RulesInhTrees -gt $maxRulesInhTrees ]; then
+			maxRulesInhTrees=$RulesInhTrees
+		fi
+
+		if [ $RulesInhTrees -lt $minRulesInhTrees ]; then
+			minRulesInhTrees=$RulesInhTrees
+		fi
+
+		if [ $InhRules -gt $maxInhRules ]; then
+			maxInhRules=$InhRules
+		fi
+
+		if [ $InhRules -lt $minInhRules ]; then
+			minInhRules=$InhRules
+		fi
+
 	done
 
 	#cp "compare" "./output/"$transfoName
@@ -129,5 +202,21 @@ echo "MT,Module,Rules,MatchedRules,LazyRules,Helpers,HelpersWContext,RulesInhTre
 		echo "Results are in: "$output
 
 		./sort-MTs.sh $output
+
+
+	#Create a file gathering all the maximum and minimum values
+	# for comparison criteria
+
+	criteriaMinMax=$output"/criteriaMinMax"
+	:> $criteriaMinMax
+	echo "Rules,$minRules,$maxRules" >> $criteriaMinMax
+	echo "Matched rules,$minMatchedRules,$maxMatchedRules" >> $criteriaMinMax
+	echo "Lazy rules,$minLazyRules,$maxLazyRules" >> $criteriaMinMax 	
+	echo "Helpers,$minHelpers,$maxHelpers" >> $criteriaMinMax
+	echo "Helpers with context,$minHelpersWContext,$maxHelpersWContext" >> $criteriaMinMax
+	echo "Rule Inheritance Trees,$minRulesInhTrees,$maxRulesInhTrees" >> $criteriaMinMax
+	echo "Inheriting rules,$minInhRules,$maxInhRules" >> $criteriaMinMax
+
+	echo "<criteriaMinMax> file was created"
 
 fi;
