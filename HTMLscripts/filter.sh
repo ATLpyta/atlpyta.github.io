@@ -141,11 +141,11 @@ done
 echo '    <div class="row">' >> $filter
 
 echo '    </div>' >> $filter
-
-echo '		<div class="col-sm-4">' >> $filter
+echo '		<div class="col-sm-5"></div>' >> $filter			
+echo '		<div class="col-sm-2">' >> $filter
 echo "			<button type=\"button\" class=\"btn btn-lg btn-primary btn-block\" onclick=\"filterMTs();\">filter</button> " >> $filter  
 echo '		</div>' >> $filter
-
+echo '		<div class="col-sm-5"></div>' >> $filter			
 
 echo '  </div>' >> $filter
 echo '</div>' >> $filter
@@ -154,17 +154,16 @@ echo '</div>' >> $filter
 #Count number of MTs and create a badge (nb)
 nbMts=$(tail -n+2 "../ATLzoo/output/"$1 | wc -l)
 
+echo '</div>' >> $filter
+
 echo '<br />' >> $filter
 
 echo '<div class="row">' >> $filter
 echo '	<div class="col-lg-4"><span style="font-size:20px;">Model Transformations</span> ' >> $filter
-echo '	<span id="nbMT" class="badge">'$nbMts'</span>' >> $filter
-echo ' / ' >> $filter
-echo '	<span id="totalMT" class="badge">'$nbMts'</span>' >> $filter
-echo '</div>' >> $filter
-echo '</div>' >> $filter
-
-
+echo '		<span id="nbMT" class="badge">'$nbMts'</span>' >> $filter
+echo ' 		/ ' >> $filter
+echo '		<span id="totalMT" class="badge">'$nbMts'</span>' >> $filter
+echo '	</div>' >> $filter
 echo '</div>' >> $filter
 
 # Begin model transformation print
