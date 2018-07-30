@@ -104,6 +104,8 @@ echo '</div>' >> $filter
 
 #begin All MT print
 #
+#Create the range sliders for criteria
+
 echo '<div class="container">' >> $filter
 
 echo '<br />' >> $filter
@@ -111,44 +113,42 @@ echo '<br />' >> $filter
 echo '<div id="criteria" class="panel panel-default">' >> $filter
 echo '  <div class="panel-heading"><h1>Filtering criteria</h1></div>' >> $filter
 echo '  <div class="panel-body">' >> $filter
-echo '    <div class="row titre">' >> $filter
+echo '    <div class="row">' >> $filter
 
-echo '      <div class="col-sm-4">' >> $filter
-echo '          <div id="rules-slider" class="slider-container">' >> $filter
-echo '            Rules' >> $filter
-echo '            <span class="min badge badge-secondary">0</span>' >> $filter
-echo "            <input value=\"0\" min=\"0\" max=\"100\" step=\"1\" type=\"range\" oninput=\"updateLabels('rules-slider')\" >" >> $filter
-echo "            <input value=\"100\" min=\"0\" max=\"100\" step=\"1\" type=\"range\" oninput=\"updateLabels('rules-slider')\" >" >> $filter
-echo '            <span class="max badge badge-secondary">100</span>' >> $filter
-echo '          </div>' >> $filter
-echo '     </div>' >> $filter
 
-echo '     <div class="col-sm-4">' >> $filter
-echo '       <div id="helpers-slider" class="slider-container">' >> $filter
-echo '       Helpers' >> $filter
-echo '       <span class="min badge badge-secondary">0</span>' >> $filter
-echo "       <input value=\"0\" min=\"0\" max=\"100\" step=\"1\" type=\"range\" oninput=\"updateLabels('helpers-slider')\" >" >> $filter
-echo "       <input value=\"100\" min=\"0\" max=\"100\" step=\"1\" type=\"range\" oninput=\"updateLabels('helpers-slider')\" >" >> $filter
-echo '       <span class="max badge badge-secondary">100</span>' >> $filter
-echo '   	 </div>' >> $filter
-echo '     </div>' >> $filter
+cat "../ATLzoo/output/criteriaMinMax" | while read criterion 
+do
 
-echo '		<div class="col-sm-2">' >> $filter
+	criterionId=$(echo "$criterion" | cut -d, -f1)
+	criterionName="$(echo $criterion | cut -d, -f2)"
+	criterionMin=$(echo "$criterion" | cut -d, -f3)
+	criterionMax=$(echo "$criterion" | cut -d, -f4)
+
+#	echo "$criterionId,$criterionName,$criterionMin,$criterionMax"
+	
+echo "     <div class=\"col-sm-4\">" >> $filter
+echo "       <div id=\"$criterionId-slider\" class=\"slider-container\">" >> $filter
+echo "       	$criterionName" >> $filter
+echo "       	<span class=\"min badge badge-secondary\">$criterionMin</span>" >> $filter
+echo "       	<input value=\"$criterionMin\" min=\"$criterionMin\" max=\"$criterionMax\" step=\"1\" type=\"range\" oninput=\"updateLabels('$criterionId-slider')\" >" >> $filter
+echo "       	<input value=\"$criterionMax\" min=\"$criterionMin\" max=\"$criterionMax\" step=\"1\" type=\"range\" oninput=\"updateLabels('$criterionId-slider')\" >" >> $filter
+echo "       	<span class=\"max badge badge-secondary\">$criterionMax</span>" >> $filter
+echo "   	 </div>" >> $filter
+echo "     </div> ">> $filter		
+
+done
+
+echo '    <div class="row">' >> $filter
+
+echo '    </div>' >> $filter
+
+echo '		<div class="col-sm-4">' >> $filter
 echo "			<button type=\"button\" class=\"btn btn-lg btn-primary btn-block\" onclick=\"filterMTs();\">filter</button> " >> $filter  
 echo '		</div>' >> $filter
 
-echo '    </div>' >> $filter
+
 echo '  </div>' >> $filter
 echo '</div>' >> $filter
-
-#Create the range sliders for criteria
-
-for criteria in $(cat ../ATLzoo/output/criteriaMinMax); do
-
-	echo $criteria
-	
-done
-
 
 
 #Count number of MTs and create a badge (nb)

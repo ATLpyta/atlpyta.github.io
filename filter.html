@@ -65,29 +65,75 @@
 <div id="criteria" class="panel panel-default">
   <div class="panel-heading"><h1>Filtering criteria</h1></div>
   <div class="panel-body">
-    <div class="row titre">
-      <div class="col-sm-4">
-          <div id="rules-slider" class="slider-container">
-            Rules
-            <span class="min badge badge-secondary">0</span>
-            <input value="0" min="0" max="100" step="1" type="range" oninput="updateLabels('rules-slider')" >
-            <input value="100" min="0" max="100" step="1" type="range" oninput="updateLabels('rules-slider')" >
-            <span class="max badge badge-secondary">100</span>
-          </div>
-     </div>
+    <div class="row">
      <div class="col-sm-4">
-       <div id="helpers-slider" class="slider-container">
-       Helpers
-       <span class="min badge badge-secondary">0</span>
-       <input value="0" min="0" max="100" step="1" type="range" oninput="updateLabels('helpers-slider')" >
-       <input value="100" min="0" max="100" step="1" type="range" oninput="updateLabels('helpers-slider')" >
-       <span class="max badge badge-secondary">100</span>
+       <div id="Rules-slider" class="slider-container">
+       	Rules
+       	<span class="min badge badge-secondary">0</span>
+       	<input value="0" min="0" max="84" step="1" type="range" oninput="updateLabels('Rules-slider')" >
+       	<input value="84" min="0" max="84" step="1" type="range" oninput="updateLabels('Rules-slider')" >
+       	<span class="max badge badge-secondary">84</span>
    	 </div>
-     </div>
-		<div class="col-sm-2">
+     </div> 
+     <div class="col-sm-4">
+       <div id="Matchedrules-slider" class="slider-container">
+       	Matched rules
+       	<span class="min badge badge-secondary">0</span>
+       	<input value="0" min="0" max="84" step="1" type="range" oninput="updateLabels('Matchedrules-slider')" >
+       	<input value="84" min="0" max="84" step="1" type="range" oninput="updateLabels('Matchedrules-slider')" >
+       	<span class="max badge badge-secondary">84</span>
+   	 </div>
+     </div> 
+     <div class="col-sm-4">
+       <div id="Lazyrules-slider" class="slider-container">
+       	Lazy rules
+       	<span class="min badge badge-secondary">0</span>
+       	<input value="0" min="0" max="16" step="1" type="range" oninput="updateLabels('Lazyrules-slider')" >
+       	<input value="16" min="0" max="16" step="1" type="range" oninput="updateLabels('Lazyrules-slider')" >
+       	<span class="max badge badge-secondary">16</span>
+   	 </div>
+     </div> 
+     <div class="col-sm-4">
+       <div id="Helpers-slider" class="slider-container">
+       	Helpers
+       	<span class="min badge badge-secondary">0</span>
+       	<input value="0" min="0" max="93" step="1" type="range" oninput="updateLabels('Helpers-slider')" >
+       	<input value="93" min="0" max="93" step="1" type="range" oninput="updateLabels('Helpers-slider')" >
+       	<span class="max badge badge-secondary">93</span>
+   	 </div>
+     </div> 
+     <div class="col-sm-4">
+       <div id="Helperswithcontext-slider" class="slider-container">
+       	Helpers with context
+       	<span class="min badge badge-secondary">0</span>
+       	<input value="0" min="0" max="29" step="1" type="range" oninput="updateLabels('Helperswithcontext-slider')" >
+       	<input value="29" min="0" max="29" step="1" type="range" oninput="updateLabels('Helperswithcontext-slider')" >
+       	<span class="max badge badge-secondary">29</span>
+   	 </div>
+     </div> 
+     <div class="col-sm-4">
+       <div id="RuleInheritanceTrees-slider" class="slider-container">
+       	Rule Inheritance Trees
+       	<span class="min badge badge-secondary">0</span>
+       	<input value="0" min="0" max="84" step="1" type="range" oninput="updateLabels('RuleInheritanceTrees-slider')" >
+       	<input value="84" min="0" max="84" step="1" type="range" oninput="updateLabels('RuleInheritanceTrees-slider')" >
+       	<span class="max badge badge-secondary">84</span>
+   	 </div>
+     </div> 
+     <div class="col-sm-4">
+       <div id="Inheritingrules-slider" class="slider-container">
+       	Inheriting rules
+       	<span class="min badge badge-secondary">0</span>
+       	<input value="0" min="0" max="14" step="1" type="range" oninput="updateLabels('Inheritingrules-slider')" >
+       	<input value="14" min="0" max="14" step="1" type="range" oninput="updateLabels('Inheritingrules-slider')" >
+       	<span class="max badge badge-secondary">14</span>
+   	 </div>
+     </div> 
+    <div class="row">
+    </div>
+		<div class="col-sm-4">
 			<button type="button" class="btn btn-lg btn-primary btn-block" onclick="filterMTs();">filter</button> 
 		</div>
-    </div>
   </div>
 </div>
 <br />

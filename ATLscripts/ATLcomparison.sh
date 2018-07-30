@@ -209,13 +209,13 @@ echo "MT,Module,Rules,MatchedRules,LazyRules,Helpers,HelpersWContext,RulesInhTre
 
 	criteriaMinMax=$output"/criteriaMinMax"
 	:> $criteriaMinMax
-	echo "Rules,$minRules,$maxRules" >> $criteriaMinMax
-	echo "Matched rules,$minMatchedRules,$maxMatchedRules" >> $criteriaMinMax
-	echo "Lazy rules,$minLazyRules,$maxLazyRules" >> $criteriaMinMax 	
-	echo "Helpers,$minHelpers,$maxHelpers" >> $criteriaMinMax
-	echo "Helpers with context,$minHelpersWContext,$maxHelpersWContext" >> $criteriaMinMax
-	echo "Rule Inheritance Trees,$minRulesInhTrees,$maxRulesInhTrees" >> $criteriaMinMax
-	echo "Inheriting rules,$minInhRules,$maxInhRules" >> $criteriaMinMax
+	echo "Rules,Rules,$minRules,$maxRules" >> $criteriaMinMax
+	echo "Matchedrules,Matched rules,$minMatchedRules,$maxMatchedRules" >> $criteriaMinMax
+	echo "Lazyrules,Lazy rules,$minLazyRules,$maxLazyRules" >> $criteriaMinMax 	
+	echo "Helpers,Helpers,$minHelpers,$maxHelpers" >> $criteriaMinMax
+	echo "Helperswithcontext,Helpers with context,$minHelpersWContext,$maxHelpersWContext" >> $criteriaMinMax
+	echo "RuleInheritanceTrees,Rule Inheritance Trees,$minRulesInhTrees,$maxRulesInhTrees" >> $criteriaMinMax
+	echo "Inheritingrules,Inheriting rules,$minInhRules,$maxInhRules" >> $criteriaMinMax
 
 	echo "<criteriaMinMax> file was created"
 

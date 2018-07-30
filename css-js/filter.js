@@ -11,11 +11,20 @@ function filterMTs(){
 
 	//Load range slider values
 	//
-	var rulesSliderInputs= document.getElementById("rules-slider").getElementsByTagName('input');
+	var rulesSliderInputs= document.getElementById("Rules-slider").getElementsByTagName('input');
+
+	var helpersSliderInputs= document.getElementById("Helpers-slider").getElementsByTagName('input');
+
+	var MatchedRulesSliderInputs= document.getElementById("MatchedRules-slider").getElementsByTagName('input');
+
+	var allSliderDivs= document.getElementsByClassName("slider-container");
+
+	console.log("Nb sliders= "+allSliderDivs.length);
+	
+
 	var rulesMin=rulesSliderInputs[0].value;
 	var rulesMax=rulesSliderInputs[1].value;
 
-	var helpersSliderInputs= document.getElementById("helpers-slider").getElementsByTagName('input');
 	var helpersMin= parseInt(helpersSliderInputs[0].value);
 	var helpersMax= parseInt(helpersSliderInputs[1].value);
 
