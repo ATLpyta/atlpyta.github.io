@@ -203,13 +203,13 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 	echo '                            <div class="row titre">' >> $explore
 	echo '                               <div class="col-lg-3" style="text-align:left;">' >> $explore
 	echo '                                    <ul>' >> $explore
-	echo '                                       <li>Rules: '$rules >> $explore
-	echo '                                       <li>Matched Rules: '$mrules >> $explore
-	echo '                                       <li>Lazy Rules: '$lrules >> $explore
-	echo '                                       <li>Helpers: '$helpers >> $explore
-	echo '                                       <li>Helpers With Context: '$helperswc >> $explore
-	echo '                                       <li>Rule Inheritance Trees: '$inhTress >> $explore
-	echo '                                       <li>Inheriting Transformation Rules: '$inhRules >> $explore
+	echo '                                      <li>Rules: <span>'$rules'</span>' >> $explore
+	echo '                                       <li>Matched Rules: <span>'$mrules'</span>' >> $explore
+	echo '                                       <li>Lazy Rules: <span>'$lrules'</span>' >> $explore
+	echo '                                       <li>Helpers: <span>'$helpers'</span>' >> $explore
+	echo '                                       <li>Helpers With Context: <span>'$helperswc'</span>' >> $explore
+	echo '                                       <li>Rule Inheritance Trees: <span>'$inhTress'</span>' >> $explore
+	echo '                                       <li>Inheriting Transformation Rules: <span>'$inhRules'</span>' >> $explore
 	echo '                                   </ul>' >> $explore
 	echo '                               </div>' >> $explore
 	echo '                               <div class="col-lg-3">' >> $explore
