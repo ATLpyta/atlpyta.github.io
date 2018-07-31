@@ -148,12 +148,13 @@ echo '		<div class="col-sm-5"></div>' >> $filter
 
 echo '  </div>' >> $filter
 echo '</div>' >> $filter
+echo '</div>' >> $filter
+
+echo '' >> $filter
 
 
 #Count number of MTs and create a badge (nb)
 nbMts=$(tail -n+2 "../ATLzoo/output/"$1 | wc -l)
-
-echo '</div>' >> $filter
 
 echo '<br />' >> $filter
 
@@ -174,7 +175,7 @@ echo '   	</div>' >> $filter
 echo '  </div>' >> $filter
 
 echo '</div>' >> $filter
-
+echo '</div>' >> $filter
 # Begin model transformation print
 #
 echo '<div id="MT-container" class="container">' >> $filter
@@ -226,7 +227,7 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 	echo '                           </div>' >> $filter
 	echo '                           <div class="row titre">' >> $filter
 	echo '                               <div class="col-lg-2">' >> $filter
-	echo '                                   <a class="mtLink" href="ATLzoo/sources/'$nameMt'.tar.gz" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> source files</a>' >> $filter
+	echo '                                   <a href="ATLzoo/sources/'$nameMt'.tar.gz" class="mtLink btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> source files</a>' >> $filter
 	echo '                               </div>' >> $filter
 	echo '                               <div class="col-lg-2">' >> $filter
 	echo '                                   <a href="ATLzoo/ATLmetrics/'$nameMt'.metrics" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> metrics</a>' >> $filter
