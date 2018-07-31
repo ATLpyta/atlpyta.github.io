@@ -40,7 +40,7 @@ allMT=$output"/all-MT"
 allMTfull=$output"/all-MT-full"
 
 
-echo "...I'm trying to collect ALT metrics in folder: "$1	
+echo "...I'm trying to collect ATL metrics in folder: "$1	
 
 metricFile=$(ls $folder)
 
