@@ -8,6 +8,7 @@ function filterMTs(){
 
 	var nbMTs=0;
 	var MTs= document.getElementById("totalMT").innerHTML;
+	document.getElementsByClassName("download")[0].style.display = "none";
 
 	//Load range slider values
 	//
@@ -46,6 +47,9 @@ function filterMTs(){
 	//
 	var MTcontainer=document.getElementById("MT-container");
 
+	var divDowload=document.getElementById("download-btns");
+	divDowload.innerHTML="";
+
 	for (var i = 0; i<= MTcontainer.getElementsByClassName("row MT").length - 1; i++) {
 		
 		var criteriaList= MTcontainer.getElementsByClassName("row MT")[i].getElementsByTagName("span");
@@ -77,6 +81,14 @@ function filterMTs(){
 			
 			nbMTs++;
 		    MTcontainer.getElementsByClassName("row MT")[i].style.display = "block";
+
+
+		    var mtName="AZERTY";
+		    var mtLink="";
+
+		    //Add a download butoon for this MT
+		    divDowload.innerHTML= divDowload.innerHTML + "<a href=\""+mtLink+"\"><button class=\"btn btn-primary\">"+mtName+"</button></a>";
+
 		}else{
 			MTcontainer.getElementsByClassName("row MT")[i].style.display = "none";
 		}
@@ -85,4 +97,8 @@ function filterMTs(){
 	//Update the number of filtered MTs
 	//
 	document.getElementById("nbMT").innerHTML = nbMTs;	
+
+	if (nbMTs>0 && nbMTs<MTs){
+		document.getElementsByClassName("download")[0].style.display = "block";
+	}
 }

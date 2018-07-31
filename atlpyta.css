@@ -34,3 +34,7 @@ body {
 	border-top-right-radius:4px;
 	border-bottom-left-radius:0;
 }
+
+.download .btn{
+	margin: 5px;
+}
