@@ -1,7 +1,8 @@
 #!/bin/bash
 
 
-## This scripts sort the <all-MT-full> file in order to create 
+## This script sorts the <all-MT-full> file in order to create 
+#
 ## Three different versions: 
 #		default sorted by Transformation name
 #		all-MT-full-rules >> sorted by number of rules

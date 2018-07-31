@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script take the raw ATL zoo (https://github.com/ATLpyta/atlpyta.github.io/blob/master/raw-ATLzoo.zip)
+# This script takes the raw ATL zoo (https://github.com/ATLpyta/atlpyta.github.io/blob/master/raw-ATLzoo.zip)
 # and collects its important information
 # 
 # PARAMETERS
