@@ -1,14 +1,15 @@
 #!/bin/bash
 
 # This script takes the raw ATL zoo (https://github.com/ATLpyta/atlpyta.github.io/blob/master/raw-ATLzoo.zip)
-# and collects its important information
+# and collects important information
 # 
 # PARAMETERS
 #	$1: folder containing the raw ATL zoo
 #
 # OUTPUT
-#	The results are put in <ATLzoo> folder
+#	The results are saved in <ATLzoo> folder
 #   Data are gathered in 3 sub-folders
+#
 #		ATLmetrics: contains all the .metrics files
 #		sources: contains archive file for each Model transformation
 #		output: contains some csv files summarising the data
