@@ -93,7 +93,7 @@ echo '<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">' >> $explor
 echo '<script src="bootstrap/js/jquery-3.3.1.min.js"></script>' >> $explore
 echo '<script src="bootstrap/js/bootstrap.min.js"></script>' >> $explore
 echo '<!-- Custom styles for this template -->' >> $explore
-echo '<link href="atlpyta.css" rel="stylesheet">' >> $explore
+echo '<link href="css-js/atlpyta.css" rel="stylesheet">' >> $explore
 echo '</head>' >> $explore
 
 #begin body

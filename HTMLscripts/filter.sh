@@ -42,7 +42,7 @@ echo '<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">' >> $filter
 echo '<script src="bootstrap/js/jquery-3.3.1.min.js"></script>' >> $filter
 echo '<script src="bootstrap/js/bootstrap.min.js"></script>' >> $filter
 echo '<!-- Custom styles for this template -->' >> $filter
-echo '<link href="atlpyta.css" rel="stylesheet">' >> $filter
+echo '<link href="css-js/atlpyta.css" rel="stylesheet">' >> $filter
 echo '<link href="css-js/slider.css" rel="stylesheet">' >> $filter
 echo '<script src="css-js/slider.js"></script>' >> $filter
 echo '<script src="css-js/filter.js"></script>' >> $filter
