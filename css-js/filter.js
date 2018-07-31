@@ -52,7 +52,7 @@ function filterMTs(){
 
 	for (var i = 0; i<= MTcontainer.getElementsByClassName("row MT").length - 1; i++) {
 		
-		var criteriaList= MTcontainer.getElementsByClassName("row MT")[i].getElementsByTagName("span");
+		var criteriaList= MTcontainer.getElementsByClassName("row MT")[i].getElementsByTagName("ul")[0].getElementsByTagName("span");
 		
 		var nbRules= parseInt(criteriaList[0].innerHTML);
 		var nbMatchedRules = parseInt(criteriaList[1].innerHTML);
@@ -83,8 +83,8 @@ function filterMTs(){
 		    MTcontainer.getElementsByClassName("row MT")[i].style.display = "block";
 
 
-		    var mtName="AZERTY";
-		    var mtLink="";
+		    var mtName=MTcontainer.getElementsByClassName("row MT")[i].getElementsByClassName("mtName")[0].innerHTML;
+		    var mtLink=MTcontainer.getElementsByClassName("row MT")[i].getElementsByClassName("mtLink")[0].href;
 
 		    //Add a download butoon for this MT
 		    divDowload.innerHTML= divDowload.innerHTML + "<a href=\""+mtLink+"\"><button class=\"btn btn-primary\">"+mtName+"</button></a>";

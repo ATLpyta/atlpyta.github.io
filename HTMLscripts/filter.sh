@@ -164,6 +164,16 @@ echo '		<span id="nbMT" class="badge">'$nbMts'</span>' >> $filter
 echo ' 		/ ' >> $filter
 echo '		<span id="totalMT" class="badge">'$nbMts'</span>' >> $filter
 echo '	</div>' >> $filter
+
+echo '	<div class="col-lg-1"></div>' >> $filter
+
+echo '  <div class="col-lg-7 download" style="display:none;">' >> $filter
+echo '		<span style="font-size:20px;" >Download transformations</span> ' >> $filter
+echo '		<div id="download-btns">' >> $filter
+echo '' >> $filter
+echo '   	</div>' >> $filter
+echo '  </div>' >> $filter
+
 echo '</div>' >> $filter
 
 # Begin model transformation print
@@ -191,7 +201,7 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 	echo '            <div class="panel-group">' >> $filter
 	echo '                <div class="panel panel-default">' >> $filter
 	echo '                    <div class="panel-heading">' >> $filter
-	echo '                        <h4 class="panel-title"><a data-toggle="collapse" href="#collapse'$numMT'">+ '$nameMt'</a></h4>' >> $filter
+	echo '                        <h4 class="panel-title"><a data-toggle="collapse" href="#collapse'$numMT'">+ <span class="mtName">'$nameMt'</span></a></h4>' >> $filter
 	echo '                    </div>' >> $filter
 	echo '                    <div id="collapse'$numMT'" class="panel-collapse collapse">' >> $filter
 	echo '                        <div class="panel-body">' >> $filter
@@ -217,7 +227,7 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 	echo '                           </div>' >> $filter
 	echo '                           <div class="row titre">' >> $filter
 	echo '                               <div class="col-lg-2">' >> $filter
-	echo '                                   <a href="ATLzoo/sources/'$nameMt'.tar.gz" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> source files</a>' >> $filter
+	echo '                                   <a class="mtLink" href="ATLzoo/sources/'$nameMt'.tar.gz" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> source files</a>' >> $filter
 	echo '                               </div>' >> $filter
 	echo '                               <div class="col-lg-2">' >> $filter
 	echo '                                   <a href="ATLzoo/ATLmetrics/'$nameMt'.metrics" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> metrics</a>' >> $filter
