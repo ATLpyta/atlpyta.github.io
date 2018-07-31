@@ -1,87 +1,112 @@
 #!/bin/bash
 
-dir="ATLzoo"
-mkdir -p "$dir"
+# This script take the raw ATL zoo (https://github.com/ATLpyta/atlpyta.github.io/blob/master/raw-ATLzoo.zip)
+# and collects its important information
+# 
+# PARAMETERS
+#	$1: folder containing the raw ATL zoo
+#
+# OUTPUT
+#	The results are put in <ATLzoo> folder
+#   Data are gathered in 3 sub-folders
+#		ATLmetrics: contains all the .metrics files
+#		sources: contains archive file for each Model transformation
+#		output: contains some csv files summarising the data
+#
 
-metricsDir="$dir/ATLmetrics"
-mkdir -p $metricsDir
+if [ "$1" != "" ]; then
+	if [ -d $1 ]; then
+		dir="ATLzoo"
+		mkdir -p "$dir"
 
-mkdir -p "$dir/output"
-atlzoofile="$dir/output/ATLzoo.csv"
+		metricsDir="$dir/ATLmetrics"
+		mkdir -p $metricsDir
 
-sourceDir=$dir"/sources"
-mkdir -p $sourceDir
+		mkdir -p "$dir/output"
+		atlzoofile="$dir/output/ATLzoo.csv"
 
-listMT=$(ls *.atl)
-echo "MT,source,MMs" > $atlzoofile
+		sourceDir=$dir"/sources"
+		mkdir -p $sourceDir
 
-for mt in $listMT; do
+		#listMT=$(ls *.atl)
+		listMT=$(ls $1 | grep -e ".atl")
 
-	itsMM=""
-	mtName="${mt%%.*}"
+		echo "MT,source,MMs" > $atlzoofile
 
-    mtDir="$dir/$mtName"
-	
-	if [ -f $mtName".atl" -a -f $mtName".asm" -a -f $mtName".metrics" ]; then
-		
-		mkdir -p "$mtDir"
-		cp $mtName".atl" $mtDir
-		cp $mtName".asm" $mtDir
-		cp $mtName".metrics" $mtDir
+		for mt in $listMT; do
 
-		#cp .metrics file in metricsDir
-		cp $mtName".metrics" $metricsDir
+			itsMM=""
+			mtName="${mt%%.*}"
+			mtPath="$1/${mt%%.*}"
 
-		#Find meta-models (method 1: cut MM2MM)
-		mm1="${mtName%%2*}"
-		mm2=${mtName##*2}
-
-		#Copy 1st meta-model if exists
-		if [ -f $mm1".ecore" ]; then
-			cp $mm1".ecore" $mtDir
-			itsMM=$(echo $itsMM" "$mm1".ecore")
 			
-		fi
-		
-		#Copy 2nd meta-model if exists
-		if [ -f $mm2".ecore" ]; then 	
-			itsMM=$(echo $itsMM" "$mm2".ecore")
-			cp $mm2".ecore" $mtDir
+		    mtDir="$dir/$mtName"
+			
+			if [ -f "$mtPath.atl" -a -f "$mtPath.asm" -a -f "$mtPath.metrics" ]; then
+				
+				mkdir -p "$mtDir"
+				cp $mtPath".atl" $mtDir
+				cp $mtPath".asm" $mtDir
+				cp $mtPath".metrics" $mtDir
 
-		fi
+				#cp .metrics file in metricsDir
+				cp $mtPath".metrics" $metricsDir
 
-		#Find meta-models (method 2: in atl files)
-		if [ ! -f $mm1".ecore" -a ! -f $mm2".ecore" ]; then
+				#Find meta-models (method 1: cut MM2MM)
+				mm1="${mtName%%2*}"
+				mm2=${mtName##*2}
 
-			metamodels=$(grep -e ".ecore" $mt)
-			if [ "$metamodels" = "" ]; then
-				itsMM=""
-			else
-				for mm in $metamodels; do
+				#Copy 1st meta-model if exists
+				if [ -f "$1/$mm1.ecore" ]; then
+					cp "$1/$mm1.ecore" $mtDir
+					itsMM=$(echo $itsMM" "$mm1".ecore")					
+				fi
+				
+				#Copy 2nd meta-model if exists
+				if [ -f "$1/"$mm2".ecore" ]; then 	
+					itsMM=$(echo $itsMM" "$mm2".ecore")
+					cp "$1/$mm2.ecore" $mtDir
 
-					mmName=${mm##*/}
-					if [ -f $mmName ]; then 
-						itsMM=$(echo $itsMM" "$mmName)
-						cp $mmName $mtDir
+				fi
+
+				#Find meta-models (method 2: in atl files)
+				if [ ! -f "$1/$mm1.ecore" -a ! -f "$1/$mm2.ecore" ]; then
+
+					metamodels=$(grep -e ".ecore" $1/$mt)
+					if [ "$metamodels" = "" ]; then
+						itsMM=""
+					else
+						for mm in $metamodels; do
+
+							mmName=${mm##*/}
+							if [ -f $mmName ]; then 
+								itsMM=$(echo $itsMM" "$mmName)
+								cp "$1/$mmName" $mtDir
+							fi
+
+						done
 					fi
+				fi
 
-				done
+				echo $mtName
+				echo "    mms: "$itsMM
+
+				#Create Achives
+				mtZip=$(echo $mtDir".tar.gz")
+				tar -cvf $mtZip $mtDir > "/dev/null"
+
+				mv $mtZip $sourceDir
+
+				#Create csv file for gathering all these data (then generate HTML)
+				echo $mtName","$mtZip","$itsMM >> $atlzoofile
+
+				rm -r $mtDir
+
 			fi
-		fi
-
-		echo $mtName
-		echo "    mms: "$itsMM
-
-		#Create Achives
-		mtZip=$(echo $mtDir".tar.gz")
-		tar -cvf $mtZip $mtDir > "/dev/null"
-
-		mv $mtZip $sourceDir
-
-		#Create csv file for gathering all these data (then generate HTML)
-		echo $mtName","$mtZip","$itsMM >> $atlzoofile
-
-		rm -r $mtDir
-
+		done
+	else
+		echo "Please give an existing folder"
 	fi
-done
+else
+	echo "Please give a folder"
+fi
