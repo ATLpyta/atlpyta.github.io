@@ -117,9 +117,8 @@ echo '         <a class="navbar-brand" href="index.html">ATLpyta</a>' >> $explor
 echo '       </div>' >> $explore
 echo '       <div id="navbar" class="collapse navbar-collapse">' >> $explore
 echo '         <ul class="nav navbar-nav">' >> $explore
-echo '           <li class="active"><a href="index.html">Home</a></li>' >> $explore
-echo '           <li><a href="index.html#about">About</a></li>' >> $explore
-echo '           <li><a href="index.html#features">Features</a></li>' >> $explore
+echo '           <li><a href="index.html">Home</a></li>' >> $explore
+echo '           <li class="active"><a href="index.html#features">Features</a></li>' >> $explore
 echo '           <li><a href="index.html#resources">Resources</a></li>' >> $explore
 echo '           <li><a href="index.html#team">Team</a></li>' >> $explore
 echo '           <li><a href="index.html#contact">Contact</a></li>' >> $explore

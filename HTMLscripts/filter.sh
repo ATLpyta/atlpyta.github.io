@@ -69,9 +69,8 @@ echo '         <a class="navbar-brand" href="index.html">ATLpyta</a>' >> $filter
 echo '       </div>' >> $filter
 echo '       <div id="navbar" class="collapse navbar-collapse">' >> $filter
 echo '         <ul class="nav navbar-nav">' >> $filter
-echo '           <li class="active"><a href="index.html">Home</a></li>' >> $filter
-echo '           <li><a href="index.html#about">About</a></li>' >> $filter
-echo '           <li><a href="index.html#features">Features</a></li>' >> $filter
+echo '           <li><a href="index.html">Home</a></li>' >> $filter
+echo '           <li class="active"><a href="index.html#features">Features</a></li>' >> $filter
 echo '           <li><a href="index.html#resources">Resources</a></li>' >> $filter
 echo '           <li><a href="index.html#team">Team</a></li>' >> $filter
 echo '           <li><a href="index.html#contact">Contact</a></li>' >> $filter
