@@ -50,7 +50,7 @@ else
 
 		#begin body
 		#
-		echo '<body>' >> $compare
+		echo '<body onload="drawOnLoad();">' >> $compare
 
 		#begin menu
 		#
@@ -116,13 +116,15 @@ echo '' >> $compare
 echo '        <div class="row">' >> $compare
 echo '          <div class="col-sm-7"></div>' >> $compare
 echo '          <div class="col-sm-3">' >> $compare
-echo "            <button type\"button\" class=\"btn btn-lg btn-primary\" onclick=\"alert('compare');\">Compare</button>" >> $compare
+echo "            <button type\"button\" class=\"btn btn-lg btn-primary\" onclick=\"drawCharts();\">Compare</button>" >> $compare
 echo '          </div>' >> $compare
 echo '          <div class="col-sm-2"></div>' >> $compare
 echo '       </div>' >> $compare
 echo '' >> $compare
 
 nb=0
+
+echo '<div id="MTs">' >> $compare
 
 for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 
@@ -141,8 +143,8 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 	echo '        <div class="row">' >> $compare
 	echo '          <div class="col-sm-1"></div>' >> $compare
 	echo '          <div class="custom-control custom-checkbox">' >> $compare
-	echo '            <input type="checkbox" class="custom-control-input" id="'$nameMt'-'$nb'" onchange="updateSelectedMts(this);" >' >> $compare
-	echo '            <label class="custom-control-label" for="defaultChecked2">'$nameMt'</label>' >> $compare
+	echo '            <input type="checkbox" class="custom-control-input" id="'$nameMt'" onchange="updateSelectedMts(this);" >' >> $compare
+	echo '            <label class="custom-control-label" for="'$nameMt'">'$nameMt'</label>' >> $compare
 	echo '          </div>' >> $compare
 	echo '        </div>' >> $compare
 	echo '        ' >> $compare
@@ -151,6 +153,8 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 
 done
 
+echo '</div>' >> $compare
+
 echo '' >> $compare
 echo '      </div>' >> $compare
 echo '    </div>' >> $compare
@@ -158,10 +162,11 @@ echo '  </div>' >> $compare
 echo '' >> $compare
 echo '  <div class="col-sm-8">' >> $compare
 echo '    <div class="panel panel-default">' >> $compare
-echo '      <div id="team" class="panel-heading">Comparison area</div>' >> $compare
+echo '      <div class="panel-heading">Comparison area</div>' >> $compare
 echo '      <div class="panel-body">' >> $compare
 echo '      ' >> $compare
-echo '        Your chart here' >> $compare
+echo '			<p id="compare-p"></p>' >> $compare
+echo '          <canvas id="myChart" width="400" height="400"></canvas>' >> $compare
 echo '' >> $compare
 echo '      </div>' >> $compare
 echo '   </div> <!-- panel team -->' >> $compare
@@ -176,7 +181,7 @@ echo '<!--  -->' >> $compare
 		#close html tag
 		echo '</body>' >> $compare
 		echo '</html>' >> $compare
-		#mv $compare $comparePage
+		mv $compare $comparePage
 		echo "... OK"
 	fi
 fi 

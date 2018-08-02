@@ -15,10 +15,11 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="css-js/Chart.js"></script>
 <script type="text/javascript" src="css-js/Chart.min.js"></script>
+<script type="text/javascript" src="css-js/compare.js"></script>
 <!-- Custom styles for this template -->
 <link href="css-js/atlpyta.css" rel="stylesheet">
 </head>
-<body>
+<body onload="drawOnLoad();">
 
    <nav class="navbar navbar-inverse navbar-fixed-top">
      <div class="container">
@@ -59,8 +60,6 @@
 	</div>
 </div>
 
-
-<!--  -->
 <!--  -->
 <!--  -->
 <div class="container">
@@ -78,38 +77,872 @@
         <div class="row">
           <div class="col-sm-7"></div>
           <div class="col-sm-3">
-            <button type"button" class="btn btn-lg btn-primary" onclick="alert('compare');">Compare</button>
+            <button type"button" class="btn btn-lg btn-primary" onclick="drawCharts();">Compare</button>
           </div>
           <div class="col-sm-2"></div>
-        </div>
+       </div>
 
+<div id="MTs">
         <div class="row">
           <div class="col-sm-1"></div>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="mt1" checked>
-            <label class="custom-control-label" for="defaultChecked2">mt</label>
+            <input type="checkbox" class="custom-control-input" id="A2B" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="A2B">A2B</label>
           </div>
         </div>
         
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="AssertionModification" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="AssertionModification">AssertionModification</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="ATL2BindingDebugger" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="ATL2BindingDebugger">ATL2BindingDebugger</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="ATL2Tracer" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="ATL2Tracer">ATL2Tracer</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="ATLCopier" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="ATLCopier">ATLCopier</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="ATOM2RSS" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="ATOM2RSS">ATOM2RSS</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="ATOM2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="ATOM2XML">ATOM2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Book2Publication" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Book2Publication">Book2Publication</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="CloneDr2CodeClone" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="CloneDr2CodeClone">CloneDr2CodeClone</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="CodeClone2SVG2" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="CodeClone2SVG2">CodeClone2SVG2</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="CodeClone2SVG" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="CodeClone2SVG">CodeClone2SVG</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="conf4MADL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="conf4MADL">conf4MADL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="CPL2SPL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="CPL2SPL">CPL2SPL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Disaggregation" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Disaggregation">Disaggregation</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="DOT2Text" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="DOT2Text">DOT2Text</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="EMF2KM3" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="EMF2KM3">EMF2KM3</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="EMOOSE4KM3" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="EMOOSE4KM3">EMOOSE4KM3</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="EMOOSE4UML2" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="EMOOSE4UML2">EMOOSE4UML2</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="equivalenceOfAttributeAndAssociations" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="equivalenceOfAttributeAndAssociations">equivalenceOfAttributeAndAssociations</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Families2Persons" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Families2Persons">Families2Persons</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="FLAME4KM3" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="FLAME4KM3">FLAME4KM3</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="FLAME4UML2" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="FLAME4UML2">FLAME4UML2</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="ForeignKey" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="ForeignKey">ForeignKey</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="HTML2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="HTML2XML">HTML2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="IEEE1471_2_MoDAF" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="IEEE1471_2_MoDAF">IEEE1471_2_MoDAF</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="introducingAnInterface" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="introducingAnInterface">introducingAnInterface</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="JavaSource2Table" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="JavaSource2Table">JavaSource2Table</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="KM32ATLCopier" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="KM32ATLCopier">KM32ATLCopier</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="KM32CONFATL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="KM32CONFATL">KM32CONFATL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="KM32DOT" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="KM32DOT">KM32DOT</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="KM32EMF" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="KM32EMF">KM32EMF</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="KM32Measure" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="KM32Measure">KM32Measure</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="KM32OWL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="KM32OWL">KM32OWL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="KM32SimpleClass" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="KM32SimpleClass">KM32SimpleClass</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="KM32XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="KM32XML">KM32XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Lib4MMTree" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Lib4MMTree">Lib4MMTree</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="LibFQL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="LibFQL">LibFQL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="MADL2DOT" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="MADL2DOT">MADL2DOT</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Measure2Table" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Measure2Table">Measure2Table</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Measure2XHTML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Measure2XHTML">Measure2XHTML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="MeasureHelpers" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="MeasureHelpers">MeasureHelpers</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="MergingPartialClasses" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="MergingPartialClasses">MergingPartialClasses</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="MOOD4KM3" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="MOOD4KM3">MOOD4KM3</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="MOOD4UML2" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="MOOD4UML2">MOOD4UML2</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="MySQL2KM3" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="MySQL2KM3">MySQL2KM3</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="OCL2R2ML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="OCL2R2ML">OCL2R2ML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="OWL2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="OWL2XML">OWL2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="partial2totalRole" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="partial2totalRole">partial2totalRole</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="PartialRolesTotalB" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="PartialRolesTotalB">PartialRolesTotalB</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="PrimaryKey" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="PrimaryKey">PrimaryKey</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Public2Private" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Public2Private">Public2Private</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="QMOOD4KM3" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="QMOOD4KM3">QMOOD4KM3</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="QMOOD4UML2" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="QMOOD4UML2">QMOOD4UML2</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="R2ML2RDM" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="R2ML2RDM">R2ML2RDM</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="R2ML2WSDL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="R2ML2WSDL">R2ML2WSDL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="R2ML2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="R2ML2XML">R2ML2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="RaiseSupplier" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="RaiseSupplier">RaiseSupplier</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="RDM2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="RDM2XML">RDM2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="RedundantClassRemovable" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="RedundantClassRemovable">RedundantClassRemovable</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="RedundantInheritance" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="RedundantInheritance">RedundantInheritance</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="RefineAndMergeMeasure" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="RefineAndMergeMeasure">RefineAndMergeMeasure</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="RemovingAnAssociationClass" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="RemovingAnAssociationClass">RemovingAnAssociationClass</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Removing" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Removing">Removing</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Replace" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Replace">Replace</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="RSS2ATOM" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="RSS2ATOM">RSS2ATOM</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="RSS2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="RSS2XML">RSS2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Simian2CodeClone" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Simian2CodeClone">Simian2CodeClone</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="SimpleClass2SimpleRDBMS" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="SimpleClass2SimpleRDBMS">SimpleClass2SimpleRDBMS</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="SimpleSBVR2SimpleUML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="SimpleSBVR2SimpleUML">SimpleSBVR2SimpleUML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="SimScan2CodeClone" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="SimScan2CodeClone">SimScan2CodeClone</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="SVG2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="SVG2XML">SVG2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Syntax2SimpleSBVR" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Syntax2SimpleSBVR">Syntax2SimpleSBVR</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Table2SVGBarChart" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Table2SVGBarChart">Table2SVGBarChart</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Table2SVGPieChart" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Table2SVGPieChart">Table2SVGPieChart</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Table2TabularHTML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Table2TabularHTML">Table2TabularHTML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="TableHelpers" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="TableHelpers">TableHelpers</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Tree2List" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Tree2List">Tree2List</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="Tree2List_usingATLResolveAlgorithm" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="Tree2List_usingATLResolveAlgorithm">Tree2List_usingATLResolveAlgorithm</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="TT2BDD" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="TT2BDD">TT2BDD</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="TypeA2TypeB_v1" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="TypeA2TypeB_v1">TypeA2TypeB_v1</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="TypeA2TypeB_v2" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="TypeA2TypeB_v2">TypeA2TypeB_v2</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="TypeA2TypeB_v3_firstStep" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="TypeA2TypeB_v3_firstStep">TypeA2TypeB_v3_firstStep</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="TypeA2TypeB_v3" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="TypeA2TypeB_v3">TypeA2TypeB_v3</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="TypeA2TypeB_v3_secondStep" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="TypeA2TypeB_v3_secondStep">TypeA2TypeB_v3_secondStep</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="TypeA2TypeB_v4" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="TypeA2TypeB_v4">TypeA2TypeB_v4</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="UML22Measure" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="UML22Measure">UML22Measure</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="UML2KM3" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="UML2KM3">UML2KM3</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="UML2OWL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="UML2OWL">UML2OWL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="UMLDI2SVG" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="UMLDI2SVG">UMLDI2SVG</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="WSDL2R2ML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="WSDL2R2ML">WSDL2R2ML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="WSDL2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="WSDL2XML">WSDL2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XHTML2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XHTML2XML">XHTML2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2ATOM" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2ATOM">XML2ATOM</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2CPL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2CPL">XML2CPL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2KML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2KML">XML2KML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2MySQL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2MySQL">XML2MySQL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2R2ML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2R2ML">XML2R2ML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2RSS" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2RSS">XML2RSS</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2Text" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2Text">XML2Text</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2WSDL" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2WSDL">XML2WSDL</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2XML" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2XML">XML2XML</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XML2XSLT" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XML2XSLT">XML2XSLT</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XMLHelpers" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XMLHelpers">XMLHelpers</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XQuery2Code" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XQuery2Code">XQuery2Code</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="XSLT2XQuery" onchange="updateSelectedMts(this);" >
+            <label class="custom-control-label" for="XSLT2XQuery">XSLT2XQuery</label>
+          </div>
+        </div>
+        
+</div>
 
       </div>
-    </div> <!-- panel team -->
+    </div>
   </div>
 
   <div class="col-sm-8">
     <div class="panel panel-default">
-      <div id="team" class="panel-heading">Comparison area</div>
+      <div class="panel-heading">Comparison area</div>
       <div class="panel-body">
-       
-        Your chart here
+      
+			<p id="compare-p"></p>
+          <canvas id="myChart" width="400" height="400"></canvas>
 
       </div>
-    </div> <!-- panel team -->
+   </div> <!-- panel team -->
   </div>
 
 </div>
 <!--  -->
 <!--  -->
-
 </body>
 </html>
