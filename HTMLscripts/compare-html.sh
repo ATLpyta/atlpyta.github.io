@@ -102,7 +102,7 @@ echo '<!--  -->' >> $compare
 echo '<!--  -->' >> $compare
 echo '<div class="container">' >> $compare
 echo '' >> $compare
-echo '  <div class="col-sm-4">' >> $compare
+echo '  <div class="col-sm-5">' >> $compare
 echo '    <div class="panel panel-primary">' >> $compare
 echo '      <div id="team" class="panel-heading">' >> $compare
 echo '        <span style="font-size:20px;">Model Transformations</span> ' >> $compare
@@ -114,11 +114,11 @@ echo '      <div class="panel-body">' >> $compare
 echo '' >> $compare
 
 echo '        <div class="row">' >> $compare
-echo '          <div class="col-sm-7"></div>' >> $compare
-echo '          <div class="col-sm-3">' >> $compare
-echo "            <button type\"button\" class=\"btn btn-lg btn-primary\" onclick=\"drawCharts();\">Compare</button>" >> $compare
+echo '          <div class="col-sm-3"></div>' >> $compare
+echo '          <div class="col-sm-5">' >> $compare
+echo "            <button type\"button\" class=\"btn btn-lg btn-primary\" onclick=\"drawCharts();\">Generate comparison</button>" >> $compare
 echo '          </div>' >> $compare
-echo '          <div class="col-sm-2"></div>' >> $compare
+echo '          <div class="col-sm-3"></div>' >> $compare
 echo '       </div>' >> $compare
 echo '' >> $compare
 
@@ -158,7 +158,7 @@ echo '      </div>' >> $compare
 echo '    </div>' >> $compare
 echo '  </div>' >> $compare
 echo '' >> $compare
-echo '  <div class="col-sm-8">' >> $compare
+echo '  <div class="col-sm-7">' >> $compare
 echo '    <div class="panel panel-default">' >> $compare
 echo '      <div class="panel-heading">Comparison area</div>' >> $compare
 echo '      <div class="panel-body">' >> $compare
