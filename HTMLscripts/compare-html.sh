@@ -140,15 +140,6 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 	inhTress="$(echo $line | cut -d, -f8)"
 	inhRules="$(echo $line | cut -d, -f9)"
 
-	# echo '        <div class="row">' >> $compare
-	# echo '          <div class="col-sm-1"></div>' >> $compare
-	# echo '          <div class="custom-control custom-checkbox">' >> $compare
-	# echo '            <input type="checkbox" class="custom-control-input" id="'$nameMt'" onchange="updateSelectedMts(this);" >' >> $compare
-	# echo '            <label class="custom-control-label" for="'$nameMt'">'$nameMt'</label>' >> $compare
-	# echo '          </div>' >> $compare
-	# echo '        </div>' >> $compare
-	# echo '        ' >> $compare
-
 	echo '<div class="row">' >> $compare
 	echo '	<label class="checkbox">'$nameMt >> $compare
   	echo '		<input type="checkbox" id="'$nameMt'" onchange="updateSelectedMts(this);">' >> $compare
