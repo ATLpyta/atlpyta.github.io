@@ -254,3 +254,4 @@ echo '</body>' >> $filter
 echo '</html>' >> $filter
 
 mv $filter $filterPage
+echo "...OK"

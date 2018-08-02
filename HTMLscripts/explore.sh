@@ -244,3 +244,4 @@ echo '</body>' >> $explore
 echo '</html>' >> $explore
 
 mv $explore $explorePage
+echo "...OK"

@@ -2,7 +2,7 @@
 
 ##PARAMETERS
 #
-#	$1=all, explore, filter
+#	$1=all, explore, filter, compare
 #		Which html page to generate
 #
 
@@ -13,6 +13,7 @@ if [ "$1" = "all" ]; then
 ./explore.sh all-MT-full-helpers helpers
 
 ./filter.sh all-MT-full
+./compare-html.sh all-MT-full
 
 else
 	if [ "$1" = "explore" ]; then
@@ -23,7 +24,11 @@ else
 		if [ "$1" = "filter" ]; then
 			./filter.sh all-MT-full	
     	else
-    		echo "No .html file was generated"
+    		if [ "$1" = "compare" ]; then
+				./compare-html.sh all-MT-full	
+    		else
+    			echo "No .html file was generated"
+    		fi 
     	fi    	
     fi
 
