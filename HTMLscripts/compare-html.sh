@@ -44,6 +44,7 @@ else
 		echo '<script src="css-js/Chart.js"></script>' >> $compare
 		echo '<script src="css-js/Chart.min.js"></script>' >> $compare
 		echo '<script src="css-js/compare.js"></script>' >> $compare
+		echo '<script src="css-js/compare-data.js"></script>' >> $compare
 
 		echo '<!-- Custom styles for this template -->' >> $compare
 		echo '<link href="css-js/atlpyta.css" rel="stylesheet">' >> $compare
