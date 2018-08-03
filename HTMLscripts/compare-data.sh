@@ -38,23 +38,41 @@ else
 
 		#datasest vars
 		echo '' >> $compare
-		echo '	chartData.datasets= [];' >> $compare
+		echo 'chartData.datasets= [];' >> $compare
 		echo '' >> $compare
 
-		echo '	x = Math.floor((Math.random() * (bgColors.length)) + 0);' >> $compare
-		echo '	mt= {"label":"Azerty","data":[1,2,3,4,5,6,7],"fill":true,"backgroundColor":bgColors[x],"borderColor":fgColors[x]};' >> $compare
-		echo '	chartData.datasets.push(mt);' >> $compare
-		echo '' >> $compare
+		# echo '	x = Math.floor((Math.random() * (bgColors.length)) + 0);' >> $compare
+		# echo '	mt= {"label":"Azerty","data":[1,2,3,4,5,6,7],"fill":true,"backgroundColor":bgColors[x],"borderColor":fgColors[x]};' >> $compare
+		# echo '	chartData.datasets.push(mt);' >> $compare
+		# echo '' >> $compare
 
-		echo '	x = Math.floor((Math.random() * (bgColors.length)) + 0);' >> $compare
-		echo '	mt= {"label":"UML","data":[5,6,7,8,9,10,11],"backgroundColor":bgColors[x],"borderColor":fgColors[x]};' >> $compare
-		echo '	chartData.datasets.push(mt);' >> $compare
-		echo '' >> $compare
 
-		echo '	x = Math.floor((Math.random() * (bgColors.length)) + 0);' >> $compare
-		echo '	mt= {"label":"Ecore","data":[15,16,17,18,19,10,11],"backgroundColor":bgColors[x],"borderColor":fgColors[x]};' >> $compare
-		echo '	chartData.datasets.push(mt);' >> $compare
-		echo '' >> $compare
+		nb=0
+
+		#Data for All MTs
+		for line in $(tail -n+2 "../ATLzoo/output/"$1); do
+
+			#Collect info on the MT (name criteria)
+			nameMt="$(echo $line | cut -d, -f1)"
+			rules="$(echo $line | cut -d, -f3)"
+			mrules="$(echo $line | cut -d, -f4)"
+			lrules="$(echo $line | cut -d, -f5)"
+			helpers="$(echo $line | cut -d, -f6)"
+			helperswc="$(echo $line | cut -d, -f7)"
+			inhTress="$(echo $line | cut -d, -f8)"
+			inhRules="$(echo $line | cut -d, -f9)"
+
+			x=$(($nb % 10))
+			data="[$rules,$mrules,$lrules,$helpers,$helperswc,$inhTress,$inhRules]"
+
+			echo 'x='$x >> $compare
+			echo 'mt= {"label":"'$nameMt'","data":'$data',"fill":true,"backgroundColor":bgColors[x],"borderColor":fgColors[x]};' >> $compare		
+			echo 'chartData.datasets.push(mt);' >> $compare
+			echo '' >> $compare
+
+			nb=$(($nb+1))
+
+		done
 
 		mv $compare $comparePage
 		echo "...OK"

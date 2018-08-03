@@ -14,11 +14,11 @@ function updateSelectedMts(obj){
 }
 
 function drawOnLoad(){
-	var A2B= document.getElementById("A2B");
+	var A2B= document.getElementById("R2ML2RDM");
 	A2B.checked=true;
 	updateSelectedMts(A2B);
 	
-	var ATLCopier= document.getElementById("ATLCopier");
+	var ATLCopier= document.getElementById("R2ML2WSDL");
 	ATLCopier.checked=true;
 	updateSelectedMts(ATLCopier);
 	
@@ -30,11 +30,13 @@ function drawCharts(){
 
 	//List of selested MTs
 	var selected=0;
+	var selectedMts=[];
 
 	var Mtsinputs= document.getElementsByClassName("MTCheckBox");
 	for (var i = Mtsinputs.length - 1; i >= 0; i--) {
 		if(Mtsinputs[i].checked){
 			selected++;
+			selectedMts.push(Mtsinputs[i].id);
 			console.log(Mtsinputs[i].id);
 		}
 	}
@@ -45,12 +47,24 @@ function drawCharts(){
 	if( selected > 0){
 		//Begin draw radar chart
 
+		var subSetData= new Object();
+		subSetData.labels= chartData.labels;
 
-		var ctx = document.getElementById("myChart").getContext('2d');
+		subSetData.datasets= [];
+
+		for (var i = 0; i < selected; i++) {
+			var mt=searchMT(selectedMts[i]);
+			subSetData.datasets.push(mt);
+		}
+
+		var canvas= document.getElementById("myChart");
+		var ctx = canvas.getContext('2d');
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+
 		var myRadarChart = new Chart(ctx,
 		    {
 		        "type":"radar",
-		        "data": chartData,
+		        "data": subSetData,
 		        "options":{
 		            "elements":{
 		                "line":{
@@ -61,4 +75,14 @@ function drawCharts(){
 		);
 	}
 
+}
+
+function searchMT(name) {
+	
+	for (var i = chartData.datasets.length - 1; i >= 0; i--) {
+		if(chartData.datasets[i].label==name)
+			return chartData.datasets[i];
+	}
+
+	return null;
 }
