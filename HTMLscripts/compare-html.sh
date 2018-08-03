@@ -41,9 +41,9 @@ else
 		echo '<script src="bootstrap/js/jquery-3.3.1.min.js"></script>' >> $compare
 		echo '<script src="bootstrap/js/bootstrap.min.js"></script>' >> $compare
 		
-		echo '<script type="text/javascript" src="css-js/Chart.js"></script>' >> $compare
-		echo '<script type="text/javascript" src="css-js/Chart.min.js"></script>' >> $compare
-		echo '<script type="text/javascript" src="css-js/compare.js"></script>' >> $compare
+		echo '<script src="css-js/Chart.js"></script>' >> $compare
+		echo '<script src="css-js/Chart.min.js"></script>' >> $compare
+		echo '<script src="css-js/compare.js"></script>' >> $compare
 
 		echo '<!-- Custom styles for this template -->' >> $compare
 		echo '<link href="css-js/atlpyta.css" rel="stylesheet">' >> $compare
@@ -111,7 +111,7 @@ echo '' >> $compare
 #
 echo '  <div class="col-sm-3">' >> $compare
 echo '    <div class="panel panel-primary">' >> $compare
-echo '      <div id="team" class="panel-heading">' >> $compare
+echo '      <div class="panel-heading">' >> $compare
 echo '        <span style="font-size:20px;">Model Transformations</span> ' >> $compare
 echo '      </div>' >> $compare
 echo '      <div class="panel-body">' >> $compare
@@ -119,7 +119,7 @@ echo '' >> $compare
 
 nb=0
 
-echo '<div id="MTs">' >> $compare
+echo '<div id="MTs1">' >> $compare
 
 for line in $(tail -n+2 "../ATLzoo/output/"$1 | head -n+52); do
 
@@ -137,7 +137,7 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1 | head -n+52); do
 
 	echo '<div class="row">' >> $compare
 	echo '	<label class="checkbox">'$nameMt >> $compare
-  	echo '		<input type="checkbox" id="'$nameMt'" onchange="updateSelectedMts(this);">' >> $compare
+  	echo '		<input type="checkbox" class="MTCheckBox" id="'$nameMt'" onchange="updateSelectedMts(this);">' >> $compare
   	echo '		<span class="checkmark"></span>' >> $compare
 	echo '	</label>' >> $compare
 	echo '</div>' >> $compare
@@ -171,7 +171,7 @@ echo '        		<span id="totalMT" class="badge">'$nbMts'</span>' >> $compare
 echo '      	</div>' >> $compare
 echo '      	<div class="col-sm-2"></div>' >> $compare
 echo '      	<div class="col-sm-3">' >> $compare
-echo "				<button type\"button\" class=\"btn btn-default\" onclick=\"drawCharts();\">Compare</button>" >> $compare
+echo "				<button type=\"button\" class=\"btn btn-default\" onclick=\"drawCharts();\">Compare</button>" >> $compare
 echo '      	</div>' >> $compare
 
 echo '      	</div>' >> $compare
@@ -182,7 +182,7 @@ echo '      <div class="panel-body">' >> $compare
 echo '			<p id="compare-p"></p>' >> $compare
 echo '      	<canvas id="myChart" width="400" height="400"></canvas>' >> $compare
 echo '      </div>' >> $compare
-echo '   </div> <!-- panel team -->' >> $compare
+echo '   </div> <!-- panel-->' >> $compare
 
 echo '</div>' >> $compare
 
@@ -191,14 +191,14 @@ echo '</div>' >> $compare
 #
 echo '<div class="col-sm-3">' >> $compare
 echo '	<div class="panel panel-primary">' >> $compare
-echo '		<div id="team" class="panel-heading">' >> $compare
+echo '		<div class="panel-heading">' >> $compare
 echo '			<span style="font-size:20px;">Model Transformations</span> ' >> $compare
 echo '		</div>' >> $compare
 echo '		<div class="panel-body">' >> $compare
 
 nb=0
 
-echo '			<div id="MTs">' >> $compare
+echo '			<div id="MTs2">' >> $compare
 
 for line in $(tail -n+2 "../ATLzoo/output/"$1 | tail -n+53); do
 
@@ -216,7 +216,7 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1 | tail -n+53); do
 
 	echo '<div class="row">' >> $compare
 	echo '	<label class="checkbox">'$nameMt >> $compare
-  	echo '		<input type="checkbox" id="'$nameMt'" onchange="updateSelectedMts(this);">' >> $compare
+  	echo '		<input type="checkbox" class="MTCheckBox" id="'$nameMt'" onchange="updateSelectedMts(this);">' >> $compare
   	echo '		<span class="checkmark"></span>' >> $compare
 	echo '	</label>' >> $compare
 	echo '</div>' >> $compare

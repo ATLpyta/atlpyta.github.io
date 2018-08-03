@@ -13,9 +13,9 @@
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/jquery-3.3.1.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="css-js/Chart.js"></script>
-<script type="text/javascript" src="css-js/Chart.min.js"></script>
-<script type="text/javascript" src="css-js/compare.js"></script>
+<script src="css-js/Chart.js"></script>
+<script src="css-js/Chart.min.js"></script>
+<script src="css-js/compare.js"></script>
 <!-- Custom styles for this template -->
 <link href="css-js/atlpyta.css" rel="stylesheet">
 </head>
@@ -66,321 +66,321 @@
 
   <div class="col-sm-3">
     <div class="panel panel-primary">
-      <div id="team" class="panel-heading">
+      <div class="panel-heading">
         <span style="font-size:20px;">Model Transformations</span> 
       </div>
       <div class="panel-body">
 
-<div id="MTs">
+<div id="MTs1">
 <div class="row">
 	<label class="checkbox">A2B
-		<input type="checkbox" id="A2B" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="A2B" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">AssertionModification
-		<input type="checkbox" id="AssertionModification" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="AssertionModification" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">ATL2BindingDebugger
-		<input type="checkbox" id="ATL2BindingDebugger" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="ATL2BindingDebugger" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">ATL2Tracer
-		<input type="checkbox" id="ATL2Tracer" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="ATL2Tracer" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">ATLCopier
-		<input type="checkbox" id="ATLCopier" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="ATLCopier" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">ATOM2RSS
-		<input type="checkbox" id="ATOM2RSS" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="ATOM2RSS" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">ATOM2XML
-		<input type="checkbox" id="ATOM2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="ATOM2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Book2Publication
-		<input type="checkbox" id="Book2Publication" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Book2Publication" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">CloneDr2CodeClone
-		<input type="checkbox" id="CloneDr2CodeClone" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="CloneDr2CodeClone" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">CodeClone2SVG2
-		<input type="checkbox" id="CodeClone2SVG2" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="CodeClone2SVG2" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">CodeClone2SVG
-		<input type="checkbox" id="CodeClone2SVG" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="CodeClone2SVG" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">conf4MADL
-		<input type="checkbox" id="conf4MADL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="conf4MADL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">CPL2SPL
-		<input type="checkbox" id="CPL2SPL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="CPL2SPL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Disaggregation
-		<input type="checkbox" id="Disaggregation" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Disaggregation" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">DOT2Text
-		<input type="checkbox" id="DOT2Text" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="DOT2Text" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">EMF2KM3
-		<input type="checkbox" id="EMF2KM3" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="EMF2KM3" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">EMOOSE4KM3
-		<input type="checkbox" id="EMOOSE4KM3" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="EMOOSE4KM3" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">EMOOSE4UML2
-		<input type="checkbox" id="EMOOSE4UML2" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="EMOOSE4UML2" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">equivalenceOfAttributeAndAssociations
-		<input type="checkbox" id="equivalenceOfAttributeAndAssociations" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="equivalenceOfAttributeAndAssociations" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Families2Persons
-		<input type="checkbox" id="Families2Persons" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Families2Persons" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">FLAME4KM3
-		<input type="checkbox" id="FLAME4KM3" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="FLAME4KM3" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">FLAME4UML2
-		<input type="checkbox" id="FLAME4UML2" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="FLAME4UML2" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">ForeignKey
-		<input type="checkbox" id="ForeignKey" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="ForeignKey" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">HTML2XML
-		<input type="checkbox" id="HTML2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="HTML2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">IEEE1471_2_MoDAF
-		<input type="checkbox" id="IEEE1471_2_MoDAF" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="IEEE1471_2_MoDAF" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">introducingAnInterface
-		<input type="checkbox" id="introducingAnInterface" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="introducingAnInterface" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">JavaSource2Table
-		<input type="checkbox" id="JavaSource2Table" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="JavaSource2Table" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">KM32ATLCopier
-		<input type="checkbox" id="KM32ATLCopier" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="KM32ATLCopier" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">KM32CONFATL
-		<input type="checkbox" id="KM32CONFATL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="KM32CONFATL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">KM32DOT
-		<input type="checkbox" id="KM32DOT" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="KM32DOT" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">KM32EMF
-		<input type="checkbox" id="KM32EMF" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="KM32EMF" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">KM32Measure
-		<input type="checkbox" id="KM32Measure" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="KM32Measure" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">KM32OWL
-		<input type="checkbox" id="KM32OWL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="KM32OWL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">KM32SimpleClass
-		<input type="checkbox" id="KM32SimpleClass" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="KM32SimpleClass" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">KM32XML
-		<input type="checkbox" id="KM32XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="KM32XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Lib4MMTree
-		<input type="checkbox" id="Lib4MMTree" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Lib4MMTree" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">LibFQL
-		<input type="checkbox" id="LibFQL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="LibFQL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">MADL2DOT
-		<input type="checkbox" id="MADL2DOT" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="MADL2DOT" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Measure2Table
-		<input type="checkbox" id="Measure2Table" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Measure2Table" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Measure2XHTML
-		<input type="checkbox" id="Measure2XHTML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Measure2XHTML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">MeasureHelpers
-		<input type="checkbox" id="MeasureHelpers" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="MeasureHelpers" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">MergingPartialClasses
-		<input type="checkbox" id="MergingPartialClasses" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="MergingPartialClasses" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">MOOD4KM3
-		<input type="checkbox" id="MOOD4KM3" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="MOOD4KM3" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">MOOD4UML2
-		<input type="checkbox" id="MOOD4UML2" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="MOOD4UML2" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">MySQL2KM3
-		<input type="checkbox" id="MySQL2KM3" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="MySQL2KM3" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">OCL2R2ML
-		<input type="checkbox" id="OCL2R2ML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="OCL2R2ML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">OWL2XML
-		<input type="checkbox" id="OWL2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="OWL2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">partial2totalRole
-		<input type="checkbox" id="partial2totalRole" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="partial2totalRole" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">PartialRolesTotalB
-		<input type="checkbox" id="PartialRolesTotalB" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="PartialRolesTotalB" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">PrimaryKey
-		<input type="checkbox" id="PrimaryKey" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="PrimaryKey" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Public2Private
-		<input type="checkbox" id="Public2Private" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Public2Private" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">QMOOD4KM3
-		<input type="checkbox" id="QMOOD4KM3" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="QMOOD4KM3" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
@@ -402,7 +402,7 @@
       	</div>
       	<div class="col-sm-2"></div>
       	<div class="col-sm-3">
-				<button type"button" class="btn btn-default" onclick="drawCharts();">Compare</button>
+				<button type="button" class="btn btn-default" onclick="drawCharts();">Compare</button>
       	</div>
       	</div>
       </div>
@@ -410,330 +410,330 @@
 			<p id="compare-p"></p>
       	<canvas id="myChart" width="400" height="400"></canvas>
       </div>
-   </div> <!-- panel team -->
+   </div> <!-- panel-->
 </div>
 <div class="col-sm-3">
 	<div class="panel panel-primary">
-		<div id="team" class="panel-heading">
+		<div class="panel-heading">
 			<span style="font-size:20px;">Model Transformations</span> 
 		</div>
 		<div class="panel-body">
-			<div id="MTs">
+			<div id="MTs2">
 <div class="row">
 	<label class="checkbox">QMOOD4UML2
-		<input type="checkbox" id="QMOOD4UML2" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="QMOOD4UML2" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">R2ML2RDM
-		<input type="checkbox" id="R2ML2RDM" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="R2ML2RDM" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">R2ML2WSDL
-		<input type="checkbox" id="R2ML2WSDL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="R2ML2WSDL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">R2ML2XML
-		<input type="checkbox" id="R2ML2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="R2ML2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">RaiseSupplier
-		<input type="checkbox" id="RaiseSupplier" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="RaiseSupplier" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">RDM2XML
-		<input type="checkbox" id="RDM2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="RDM2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">RedundantClassRemovable
-		<input type="checkbox" id="RedundantClassRemovable" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="RedundantClassRemovable" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">RedundantInheritance
-		<input type="checkbox" id="RedundantInheritance" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="RedundantInheritance" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">RefineAndMergeMeasure
-		<input type="checkbox" id="RefineAndMergeMeasure" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="RefineAndMergeMeasure" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">RemovingAnAssociationClass
-		<input type="checkbox" id="RemovingAnAssociationClass" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="RemovingAnAssociationClass" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Removing
-		<input type="checkbox" id="Removing" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Removing" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Replace
-		<input type="checkbox" id="Replace" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Replace" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">RSS2ATOM
-		<input type="checkbox" id="RSS2ATOM" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="RSS2ATOM" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">RSS2XML
-		<input type="checkbox" id="RSS2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="RSS2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Simian2CodeClone
-		<input type="checkbox" id="Simian2CodeClone" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Simian2CodeClone" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">SimpleClass2SimpleRDBMS
-		<input type="checkbox" id="SimpleClass2SimpleRDBMS" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="SimpleClass2SimpleRDBMS" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">SimpleSBVR2SimpleUML
-		<input type="checkbox" id="SimpleSBVR2SimpleUML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="SimpleSBVR2SimpleUML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">SimScan2CodeClone
-		<input type="checkbox" id="SimScan2CodeClone" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="SimScan2CodeClone" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">SVG2XML
-		<input type="checkbox" id="SVG2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="SVG2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Syntax2SimpleSBVR
-		<input type="checkbox" id="Syntax2SimpleSBVR" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Syntax2SimpleSBVR" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Table2SVGBarChart
-		<input type="checkbox" id="Table2SVGBarChart" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Table2SVGBarChart" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Table2SVGPieChart
-		<input type="checkbox" id="Table2SVGPieChart" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Table2SVGPieChart" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Table2TabularHTML
-		<input type="checkbox" id="Table2TabularHTML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Table2TabularHTML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">TableHelpers
-		<input type="checkbox" id="TableHelpers" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="TableHelpers" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Tree2List
-		<input type="checkbox" id="Tree2List" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Tree2List" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">Tree2List_usingATLResolveAlgorithm
-		<input type="checkbox" id="Tree2List_usingATLResolveAlgorithm" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="Tree2List_usingATLResolveAlgorithm" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">TT2BDD
-		<input type="checkbox" id="TT2BDD" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="TT2BDD" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">TypeA2TypeB_v1
-		<input type="checkbox" id="TypeA2TypeB_v1" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="TypeA2TypeB_v1" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">TypeA2TypeB_v2
-		<input type="checkbox" id="TypeA2TypeB_v2" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="TypeA2TypeB_v2" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">TypeA2TypeB_v3_firstStep
-		<input type="checkbox" id="TypeA2TypeB_v3_firstStep" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="TypeA2TypeB_v3_firstStep" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">TypeA2TypeB_v3
-		<input type="checkbox" id="TypeA2TypeB_v3" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="TypeA2TypeB_v3" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">TypeA2TypeB_v3_secondStep
-		<input type="checkbox" id="TypeA2TypeB_v3_secondStep" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="TypeA2TypeB_v3_secondStep" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">TypeA2TypeB_v4
-		<input type="checkbox" id="TypeA2TypeB_v4" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="TypeA2TypeB_v4" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">UML22Measure
-		<input type="checkbox" id="UML22Measure" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="UML22Measure" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">UML2KM3
-		<input type="checkbox" id="UML2KM3" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="UML2KM3" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">UML2OWL
-		<input type="checkbox" id="UML2OWL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="UML2OWL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">UMLDI2SVG
-		<input type="checkbox" id="UMLDI2SVG" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="UMLDI2SVG" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">WSDL2R2ML
-		<input type="checkbox" id="WSDL2R2ML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="WSDL2R2ML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">WSDL2XML
-		<input type="checkbox" id="WSDL2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="WSDL2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XHTML2XML
-		<input type="checkbox" id="XHTML2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XHTML2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2ATOM
-		<input type="checkbox" id="XML2ATOM" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2ATOM" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2CPL
-		<input type="checkbox" id="XML2CPL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2CPL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2KML
-		<input type="checkbox" id="XML2KML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2KML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2MySQL
-		<input type="checkbox" id="XML2MySQL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2MySQL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2R2ML
-		<input type="checkbox" id="XML2R2ML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2R2ML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2RSS
-		<input type="checkbox" id="XML2RSS" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2RSS" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2Text
-		<input type="checkbox" id="XML2Text" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2Text" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2WSDL
-		<input type="checkbox" id="XML2WSDL" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2WSDL" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2XML
-		<input type="checkbox" id="XML2XML" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2XML" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XML2XSLT
-		<input type="checkbox" id="XML2XSLT" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XML2XSLT" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XMLHelpers
-		<input type="checkbox" id="XMLHelpers" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XMLHelpers" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XQuery2Code
-		<input type="checkbox" id="XQuery2Code" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XQuery2Code" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
 <div class="row">
 	<label class="checkbox">XSLT2XQuery
-		<input type="checkbox" id="XSLT2XQuery" onchange="updateSelectedMts(this);">
+		<input type="checkbox" class="MTCheckBox" id="XSLT2XQuery" onchange="updateSelectedMts(this);">
 		<span class="checkmark"></span>
 	</label>
 </div>
