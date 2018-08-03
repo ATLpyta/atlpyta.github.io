@@ -159,6 +159,11 @@ echo '' >> $compare
 #Chart zone
 #
 echo '<div class="col-sm-6">' >> $compare
+
+
+echo '<div class="row">' >> $compare
+
+
 echo '    <div class="panel panel-primary">' >> $compare
 echo '      <div class="panel-heading">' >> $compare
 
@@ -185,6 +190,22 @@ echo '			<p id="compare-p"></p>' >> $compare
 echo '      	<canvas id="myChart" width="400" height="400"></canvas>' >> $compare
 echo '      </div>' >> $compare
 echo '   </div> <!-- panel-->' >> $compare
+echo '</div>' >> $compare
+
+
+echo '<div class="row">' >> $compare
+echo '    <div class="panel panel-warning">' >> $compare
+echo '      <div class="panel-heading">' >> $compare
+echo '      	Tips' >> $compare
+echo '      </div>' >> $compare
+echo '      <div class="panel-body">' >> $compare
+echo '			<ul>' >> $compare
+echo '				<li>ddddd' >> $compare
+echo '				<li>ddddd' >> $compare
+echo '			</ul>' >> $compare
+echo '      </div>' >> $compare
+echo '   </div> <!-- panel-->' >> $compare
+echo '</div>' >> $compare
 
 echo '</div>' >> $compare
 
