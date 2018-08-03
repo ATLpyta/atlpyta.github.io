@@ -25,7 +25,8 @@ else
 			./filter.sh all-MT-full	
     	else
     		if [ "$1" = "compare" ]; then
-				./compare-html.sh all-MT-full	
+				./compare-html.sh all-MT-full
+                ./compare-data.sh all-MT-full	
     		else
     			echo "No .html file was generated"
     		fi 
