@@ -86,9 +86,7 @@ function drawCharts(){
 		        "options":{
 		            "elements":{
 		                "line":{"tension":0,"borderWidth":3}
-		                },
-		              "tooltips": {"enabled": false},
-		              "hover":{"mode": null}
+		            }		              		              
 		        }
 		    }
 		);
