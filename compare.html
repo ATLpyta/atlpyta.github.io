@@ -393,6 +393,22 @@
 
 <div class="col-sm-6">
 <div class="row">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+      	Tips
+      </div>
+      <div class="panel-body">
+			<ul>
+				<li>Select the model transformations you want to compare.
+				<li>Once a chart is produced, you can click on labels to hide/show the corresponding MT
+				<li>For a better comparison, select only few transformations (less than 10)
+				<li>Save the produced radar chart: right click -> Save image as
+				<li>Clear the canvas: click on the basket icon
+			</ul>
+      </div>
+   </div> <!-- panel-->
+</div>
+<div class="row">
     <div class="panel panel-primary">
       <div class="panel-heading">
       	<div class="row">
@@ -405,26 +421,13 @@
       	<div class="col-sm-1"></div>
       	<div class="col-sm-4">
 				<button type="button" class="btn btn-default" onclick="drawCharts();">Compare</button>
-				<button type="button" class="btn btn-default" onclick="deselectAll();"><img src="img/mull.png" style="width:15px;" /></button>
+				<button type="button" class="btn btn-default" onclick="deselectAll();"><img src="img/mull.png" alt="basket" style="width:15px;" /></button>
       	</div>
       	</div>
       </div>
       <div class="panel-body" id="chartDiv">
 			<p id="compare-p"></p>
       	<canvas id="myChart" width="400" height="400"></canvas>
-      </div>
-   </div> <!-- panel-->
-</div>
-<div class="row">
-    <div class="panel panel-warning">
-      <div class="panel-heading">
-      	Tips
-      </div>
-      <div class="panel-body">
-			<ul>
-				<li>ddddd
-				<li>ddddd
-			</ul>
       </div>
    </div> <!-- panel-->
 </div>

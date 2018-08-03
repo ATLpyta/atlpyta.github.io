@@ -160,6 +160,22 @@ echo '' >> $compare
 #
 echo '<div class="col-sm-6">' >> $compare
 
+echo '<div class="row">' >> $compare
+echo '    <div class="panel panel-warning">' >> $compare
+echo '      <div class="panel-heading">' >> $compare
+echo '      	Tips' >> $compare
+echo '      </div>' >> $compare
+echo '      <div class="panel-body">' >> $compare
+echo '			<ul>' >> $compare
+echo '				<li>Select the model transformations you want to compare.' >> $compare
+echo '				<li>Once a chart is produced, you can click on labels to hide/show the corresponding MT' >> $compare
+echo '				<li>For a better comparison, select only few transformations (less than 10)' >> $compare
+echo '				<li>Save the produced radar chart: right click -> Save image as' >> $compare
+echo '				<li>Clear the canvas: click on the basket icon' >> $compare
+echo '			</ul>' >> $compare
+echo '      </div>' >> $compare
+echo '   </div> <!-- panel-->' >> $compare
+echo '</div>' >> $compare
 
 echo '<div class="row">' >> $compare
 
@@ -168,7 +184,6 @@ echo '    <div class="panel panel-primary">' >> $compare
 echo '      <div class="panel-heading">' >> $compare
 
 echo '      	<div class="row">' >> $compare
-
 echo '      	<div class="col-sm-7">' >> $compare
 echo '				<span style="font-size:16px;">Selected Model Transformations</span> ' >> $compare
 echo '        		<span id="nbMT" class="badge">0</span>' >> $compare
@@ -178,7 +193,7 @@ echo '      	</div>' >> $compare
 echo '      	<div class="col-sm-1"></div>' >> $compare
 echo '      	<div class="col-sm-4">' >> $compare
 echo "				<button type=\"button\" class=\"btn btn-default\" onclick=\"drawCharts();\">Compare</button>" >> $compare
-echo "				<button type=\"button\" class=\"btn btn-default\" onclick=\"deselectAll();\"><img src=\"img/mull.png\" style=\"width:15px;\" /></button>" >> $compare
+echo "				<button type=\"button\" class=\"btn btn-default\" onclick=\"deselectAll();\"><img src=\"img/mull.png\" alt=\"basket\" style=\"width:15px;\" /></button>" >> $compare
 echo '      	</div>' >> $compare
 
 echo '      	</div>' >> $compare
@@ -192,20 +207,6 @@ echo '      </div>' >> $compare
 echo '   </div> <!-- panel-->' >> $compare
 echo '</div>' >> $compare
 
-
-echo '<div class="row">' >> $compare
-echo '    <div class="panel panel-warning">' >> $compare
-echo '      <div class="panel-heading">' >> $compare
-echo '      	Tips' >> $compare
-echo '      </div>' >> $compare
-echo '      <div class="panel-body">' >> $compare
-echo '			<ul>' >> $compare
-echo '				<li>ddddd' >> $compare
-echo '				<li>ddddd' >> $compare
-echo '			</ul>' >> $compare
-echo '      </div>' >> $compare
-echo '   </div> <!-- panel-->' >> $compare
-echo '</div>' >> $compare
 
 echo '</div>' >> $compare
 
