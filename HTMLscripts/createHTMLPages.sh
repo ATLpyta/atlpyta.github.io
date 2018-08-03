@@ -13,8 +13,9 @@ if [ "$1" = "all" ]; then
 ./explore.sh all-MT-full-helpers helpers
 
 ./filter.sh all-MT-full
-./compare-html.sh all-MT-full
 
+./compare-html.sh all-MT-full
+./compare-data.sh all-MT-full   
 else
 	if [ "$1" = "explore" ]; then
 		./explore.sh all-MT-full default
