@@ -25,9 +25,25 @@ function drawOnLoad(){
 	drawCharts();
 }
 
+function removeCreateCanvas(){
+	var canvas= document.getElementById("myChart");
+	var ctx;
+	
+	var chartDiv= document.getElementById("chartDiv");
+	chartDiv.removeChild(canvas);
+
+	var newCanvas = document.createElement("canvas");
+	newCanvas.setAttribute('id', "myChart");
+	newCanvas.setAttribute('height', "400");
+	newCanvas.setAttribute('width', "400");
+	chartDiv.appendChild(newCanvas);	
+}
+
 
 function drawCharts(){
 
+	removeCreateCanvas();
+	
 	//List of selested MTs
 	var selected=0;
 	var selectedMts=[];
@@ -37,14 +53,14 @@ function drawCharts(){
 		if(Mtsinputs[i].checked){
 			selected++;
 			selectedMts.push(Mtsinputs[i].id);
-			console.log(Mtsinputs[i].id);
+			//console.log(Mtsinputs[i].id);
 		}
 	}
 
 	var compareSpan= document.getElementById("compare-p");
 	compareSpan.innerHTML= selected+" transfomation(s) are selected for comparison";
 
-	if( selected > 0){
+	if( selected >= 0){
 		//Begin draw radar chart
 
 		var subSetData= new Object();
@@ -57,21 +73,24 @@ function drawCharts(){
 			subSetData.datasets.push(mt);
 		}
 
-		var canvas= document.getElementById("myChart");
-		var ctx = canvas.getContext('2d');
+		console.log("eeee");
+
+		canvas= document.getElementById("myChart");
+		ctx = canvas.getContext('2d');
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-		var myRadarChart = new Chart(ctx,
+		myRadarChart = new Chart(ctx,
 		    {
 		        "type":"radar",
 		        "data": subSetData,
 		        "options":{
 		            "elements":{
-		                "line":{
-		                    "tension":0,"borderWidth":3}
-		                }
-		            }
+		                "line":{"tension":0,"borderWidth":3}
+		                },
+		              "tooltips": {"enabled": false},
+		              "hover":{"mode": null}
 		        }
+		    }
 		);
 	}
 
@@ -85,4 +104,28 @@ function searchMT(name) {
 	}
 
 	return null;
+}
+
+function deselectAll(){
+
+	removeCreateCanvas();
+
+	var nbMTSpan=document.getElementById("nbMT");
+	var nbMT= parseInt(nbMTSpan.innerHTML);
+
+	var compareSpan= document.getElementById("compare-p");
+	compareSpan.innerHTML= "0 transfomation(s) are selected for comparison";
+	nbMTSpan.innerHTML=0;
+
+	if(nbMT == 0)
+		return;
+	else{
+		var Mtsinputs= document.getElementsByClassName("MTCheckBox");
+		for (var i = Mtsinputs.length - 1; i >= 0; i--) {
+			if(Mtsinputs[i].checked){
+				Mtsinputs[i].checked=false;
+			}
+		}
+		
+	}
 }

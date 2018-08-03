@@ -401,13 +401,14 @@
 		    	/ 
         		<span id="totalMT" class="badge">105</span>
       	</div>
-      	<div class="col-sm-2"></div>
-      	<div class="col-sm-3">
+      	<div class="col-sm-1"></div>
+      	<div class="col-sm-4">
 				<button type="button" class="btn btn-default" onclick="drawCharts();">Compare</button>
+				<button type="button" class="btn btn-default" onclick="deselectAll();"><img src="img/mull.png" style="width:15px;" /></button>
       	</div>
       	</div>
       </div>
-      <div class="panel-body">
+      <div class="panel-body" id="chartDiv">
 			<p id="compare-p"></p>
       	<canvas id="myChart" width="400" height="400"></canvas>
       </div>

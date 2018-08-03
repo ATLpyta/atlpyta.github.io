@@ -170,16 +170,17 @@ echo '        		<span id="nbMT" class="badge">0</span>' >> $compare
 echo '		    	/ ' >> $compare
 echo '        		<span id="totalMT" class="badge">'$nbMts'</span>' >> $compare
 echo '      	</div>' >> $compare
-echo '      	<div class="col-sm-2"></div>' >> $compare
-echo '      	<div class="col-sm-3">' >> $compare
+echo '      	<div class="col-sm-1"></div>' >> $compare
+echo '      	<div class="col-sm-4">' >> $compare
 echo "				<button type=\"button\" class=\"btn btn-default\" onclick=\"drawCharts();\">Compare</button>" >> $compare
+echo "				<button type=\"button\" class=\"btn btn-default\" onclick=\"deselectAll();\"><img src=\"img/mull.png\" style=\"width:15px;\" /></button>" >> $compare
 echo '      	</div>' >> $compare
 
 echo '      	</div>' >> $compare
 
 echo '      </div>' >> $compare
 
-echo '      <div class="panel-body">' >> $compare
+echo '      <div class="panel-body" id="chartDiv">' >> $compare
 echo '			<p id="compare-p"></p>' >> $compare
 echo '      	<canvas id="myChart" width="400" height="400"></canvas>' >> $compare
 echo '      </div>' >> $compare

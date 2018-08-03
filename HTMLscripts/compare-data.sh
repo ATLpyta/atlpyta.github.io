@@ -21,6 +21,7 @@ else
 		echo "Genrate <"$comparePage"> page ..."
 
 		echo 'var chartData= new Object();' >> $compare
+		echo 'var myRadarChart;' >> $compare
 
 		echo '' >> $compare
 
