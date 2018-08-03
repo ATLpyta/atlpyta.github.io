@@ -18,7 +18,7 @@ function drawOnLoad(){
 	A2B.checked=true;
 	updateSelectedMts(A2B);
 	
-	var ATLCopier= document.getElementById("R2ML2WSDL");
+	var ATLCopier= document.getElementById("AssertionModification");
 	ATLCopier.checked=true;
 	updateSelectedMts(ATLCopier);
 	
