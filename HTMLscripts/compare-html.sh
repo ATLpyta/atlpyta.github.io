@@ -20,6 +20,8 @@ else
 		:> $compare
 		echo "Genrate <"$comparePage"> page ..."
 
+		nbMts=$(tail -n+2 "../ATLzoo/output/"$1 | wc -l)
+
 		#begin head
 		#
 		echo '<!DOCTYPE html>' >> $compare
@@ -100,33 +102,26 @@ else
 
 echo '<!--  -->' >> $compare
 echo '<!--  -->' >> $compare
+
 echo '<div class="container">' >> $compare
 echo '' >> $compare
-echo '  <div class="col-sm-5">' >> $compare
+
+#MTs zone 1
+#
+#
+echo '  <div class="col-sm-3">' >> $compare
 echo '    <div class="panel panel-primary">' >> $compare
 echo '      <div id="team" class="panel-heading">' >> $compare
 echo '        <span style="font-size:20px;">Model Transformations</span> ' >> $compare
-echo '        <span id="nbMT" class="badge">0</span>' >> $compare
-echo '        / ' >> $compare
-echo '        <span id="totalMT" class="badge">105</span>' >> $compare
 echo '      </div>' >> $compare
 echo '      <div class="panel-body">' >> $compare
-echo '' >> $compare
-
-echo '        <div class="row">' >> $compare
-echo '          <div class="col-sm-3"></div>' >> $compare
-echo '          <div class="col-sm-5">' >> $compare
-echo "            <button type\"button\" class=\"btn btn-lg btn-primary\" onclick=\"drawCharts();\">Generate comparison</button>" >> $compare
-echo '          </div>' >> $compare
-echo '          <div class="col-sm-3"></div>' >> $compare
-echo '       </div>' >> $compare
 echo '' >> $compare
 
 nb=0
 
 echo '<div id="MTs">' >> $compare
 
-for line in $(tail -n+2 "../ATLzoo/output/"$1); do
+for line in $(tail -n+2 "../ATLzoo/output/"$1 | head -n+52); do
 
 	#echo $numMT
 
@@ -158,21 +153,84 @@ echo '      </div>' >> $compare
 echo '    </div>' >> $compare
 echo '  </div>' >> $compare
 echo '' >> $compare
-echo '  <div class="col-sm-7">' >> $compare
-echo '    <div class="panel panel-default">' >> $compare
-echo '      <div class="panel-heading">Comparison area</div>' >> $compare
+
+#Compare button
+#Chart zone
+#
+echo '<div class="col-sm-6">' >> $compare
+echo '    <div class="panel panel-primary">' >> $compare
+echo '      <div class="panel-heading">' >> $compare
+
+echo '      	<div class="row">' >> $compare
+
+echo '      	<div class="col-sm-7">' >> $compare
+echo '				<span style="font-size:16px;">Selected Model Transformations</span> ' >> $compare
+echo '        		<span id="nbMT" class="badge">0</span>' >> $compare
+echo '		    	/ ' >> $compare
+echo '        		<span id="totalMT" class="badge">'$nbMts'</span>' >> $compare
+echo '      	</div>' >> $compare
+echo '      	<div class="col-sm-2"></div>' >> $compare
+echo '      	<div class="col-sm-3">' >> $compare
+echo "				<button type\"button\" class=\"btn btn-default\" onclick=\"drawCharts();\">Compare</button>" >> $compare
+echo '      	</div>' >> $compare
+
+echo '      	</div>' >> $compare
+
+echo '      </div>' >> $compare
+
 echo '      <div class="panel-body">' >> $compare
-echo '      ' >> $compare
 echo '			<p id="compare-p"></p>' >> $compare
-echo '          <canvas id="myChart" width="400" height="400"></canvas>' >> $compare
-echo '' >> $compare
+echo '      	<canvas id="myChart" width="400" height="400"></canvas>' >> $compare
 echo '      </div>' >> $compare
 echo '   </div> <!-- panel team -->' >> $compare
-echo '  </div>' >> $compare
-echo '' >> $compare
+
 echo '</div>' >> $compare
-echo '<!--  -->' >> $compare
-echo '<!--  -->' >> $compare
+
+
+#2nd MTs zone
+#
+echo '<div class="col-sm-3">' >> $compare
+echo '	<div class="panel panel-primary">' >> $compare
+echo '		<div id="team" class="panel-heading">' >> $compare
+echo '			<span style="font-size:20px;">Model Transformations</span> ' >> $compare
+echo '		</div>' >> $compare
+echo '		<div class="panel-body">' >> $compare
+
+nb=0
+
+echo '			<div id="MTs">' >> $compare
+
+for line in $(tail -n+2 "../ATLzoo/output/"$1 | tail -n+53); do
+
+	#echo $numMT
+
+	#Collect info on the MT (name criteria)
+	nameMt="$(echo $line | cut -d, -f1)"
+	rules="$(echo $line | cut -d, -f3)"
+	mrules="$(echo $line | cut -d, -f4)"
+	lrules="$(echo $line | cut -d, -f5)"
+	helpers="$(echo $line | cut -d, -f6)"
+	helperswc="$(echo $line | cut -d, -f7)"
+	inhTress="$(echo $line | cut -d, -f8)"
+	inhRules="$(echo $line | cut -d, -f9)"
+
+	echo '<div class="row">' >> $compare
+	echo '	<label class="checkbox">'$nameMt >> $compare
+  	echo '		<input type="checkbox" id="'$nameMt'" onchange="updateSelectedMts(this);">' >> $compare
+  	echo '		<span class="checkmark"></span>' >> $compare
+	echo '	</label>' >> $compare
+	echo '</div>' >> $compare
+
+	nb=$(($nb+1))
+
+done
+
+echo '			</div>' >> $compare
+echo '		</div>' >> $compare
+echo '	</div><!--panel MTs 2-->' >> $compare
+echo '</div><!--col-sm-3 MTs 2-->' >> $compare
+
+echo '</div><!-- container div -->' >> $compare
 
 
 		#Close body tag

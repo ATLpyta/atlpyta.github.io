@@ -51,10 +51,10 @@ body {
 .checkbox {
   display: block;
   position: relative;
-  padding-left: 50px;
-  margin-bottom: 12px;
+  padding-left: 30px;
+  margin-bottom: 5px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 13px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -72,9 +72,9 @@ body {
 .checkmark {
   position: absolute;
   top: 0;
-  left: 15px;
-  height: 25px;
-  width: 25px;
+  left: 5px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
 }
 

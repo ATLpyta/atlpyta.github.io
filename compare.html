@@ -64,23 +64,12 @@
 <!--  -->
 <div class="container">
 
-  <div class="col-sm-5">
+  <div class="col-sm-3">
     <div class="panel panel-primary">
       <div id="team" class="panel-heading">
         <span style="font-size:20px;">Model Transformations</span> 
-        <span id="nbMT" class="badge">0</span>
-        / 
-        <span id="totalMT" class="badge">105</span>
       </div>
       <div class="panel-body">
-
-        <div class="row">
-          <div class="col-sm-3"></div>
-          <div class="col-sm-5">
-            <button type"button" class="btn btn-lg btn-primary" onclick="drawCharts();">Generate comparison</button>
-          </div>
-          <div class="col-sm-3"></div>
-       </div>
 
 <div id="MTs">
 <div class="row">
@@ -395,6 +384,41 @@
 		<span class="checkmark"></span>
 	</label>
 </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+<div class="col-sm-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+      	<div class="row">
+      	<div class="col-sm-7">
+				<span style="font-size:16px;">Selected Model Transformations</span> 
+        		<span id="nbMT" class="badge">0</span>
+		    	/ 
+        		<span id="totalMT" class="badge">105</span>
+      	</div>
+      	<div class="col-sm-2"></div>
+      	<div class="col-sm-3">
+				<button type"button" class="btn btn-default" onclick="drawCharts();">Compare</button>
+      	</div>
+      	</div>
+      </div>
+      <div class="panel-body">
+			<p id="compare-p"></p>
+      	<canvas id="myChart" width="400" height="400"></canvas>
+      </div>
+   </div> <!-- panel team -->
+</div>
+<div class="col-sm-3">
+	<div class="panel panel-primary">
+		<div id="team" class="panel-heading">
+			<span style="font-size:20px;">Model Transformations</span> 
+		</div>
+		<div class="panel-body">
+			<div id="MTs">
 <div class="row">
 	<label class="checkbox">QMOOD4UML2
 		<input type="checkbox" id="QMOOD4UML2" onchange="updateSelectedMts(this);">
@@ -713,26 +737,10 @@
 		<span class="checkmark"></span>
 	</label>
 </div>
-</div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-7">
-    <div class="panel panel-default">
-      <div class="panel-heading">Comparison area</div>
-      <div class="panel-body">
-      
-			<p id="compare-p"></p>
-          <canvas id="myChart" width="400" height="400"></canvas>
-
-      </div>
-   </div> <!-- panel team -->
-  </div>
-
-</div>
-<!--  -->
-<!--  -->
+			</div>
+		</div>
+	</div><!--panel MTs 2-->
+</div><!--col-sm-3 MTs 2-->
+</div><!-- container div -->
 </body>
 </html>
