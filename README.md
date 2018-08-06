@@ -1,12 +1,12 @@
-# Table of content
+# Table of contents
 
 1. [ATLpyta](#ATLpyta)
-	1. [How to use](#How-to-use-ATLpyta)
+	* [How to use](#How-to-use-ATLpyta)
 2. [Features](#Features)	
-	1. [Explore the zoo](#Explore-the-zoo)
-	2. [Graphical comparison](#Graphical-comparison)
-	3. [Manual filtering](#Manual-filtering)
-	4. Automated pick-up
+	* [Explore the zoo](#Explore-the-zoo)
+	* [Graphical comparison](#Graphical-comparison)
+	* [Manual filtering](#Manual-filtering)
+	* Automated pick-up
 3. Resources  	
 4. Team
 5. Contact
