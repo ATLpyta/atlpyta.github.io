@@ -72,7 +72,7 @@ ATLpyta allows you to add such filters.
 
 Then, you can download the source files of result model transformations.
 
-<mg src="screenshots/filter-result.png" alt="filter result" width="50%"/>
+<img src="screenshots/filter-result.png" alt="filter result" width="50%"/>
 
 <a name="Automatic-pick-up"></a>
 ## Automatic pick-up
