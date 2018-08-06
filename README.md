@@ -15,9 +15,9 @@
 <a name="ATLpyta"></a>
 # ATLpyta
 
-The main purpose of **ATLpyta** (**p**ick **y**ou **t**ransform**a**tions) is to allow ATL users to select Model Transformations for their experiment among the transformations of the ATL zoo.
+The main purpose of **ATLpyta** (**p**ick **y**ou **t**ransform**a**tions) is to help ATL users in selecting model transformations for their experiments, among all the transformations of the ATL zoo.
 
-Model Transformations are compared according to the following metrics: #rules, #matched rules, #lazy rules, #inherited rules, #helpers, #helpers with context and depth of rules inheritance tree ). Users have access to all comparison data and to a user-friendly data visualisation.
+Model Transformations are compared according to the following metrics: *#rules, #matched rules, #lazy rules, #inherited rules, #helpers, #helpers with context and depth of rules inheritance tree*. Users have access to all comparison data and to a user-friendly data visualisation.
 
 Once a set of model transformations is selected (manually or automatically), you can download the corresponding source files. 
 
@@ -29,7 +29,7 @@ Once a set of model transformations is selected (manually or automatically), you
 <a name="Features"></a>
 # Features
 
-The next sections describe the **4** main features of the tool.
+This section describes the **4** main features of the tool. Each feature has a devoted sub-section.
 
 <img src="screenshots/features.png" alt="features of ATLpyta" width="50%" />
 
@@ -38,7 +38,7 @@ The next sections describe the **4** main features of the tool.
 
 Here you are allowed to explore the *105* model transformations of the zoo. The MTs are viewed as a list.
 
-You can expand each item of this list to view the details about the corresponding MT. This consist of two different views for the metrics: gross and graphical. Moreover, you can download the source files and the 2 different views of the metrics.
+You can expand each item of this list to view the details about the corresponding MT. This consist of two different views for the metrics: raw and graphical. Moreover, you can download the source files and the 2 different views of the metrics.
 
 <img src="screenshots/mt-expand.png" alt="explanded view of MT" width="50%" />
 
@@ -59,7 +59,7 @@ First, the user selects a list of model transformation. Then the tool generates 
 
 * You should select only few transformation (less than 10). Otherwise, comparison became harder. 
 * Produced diagrams are interactive. You can click on the labels to display/hide the corresponding MT.
-
+* It is possible to save a comparison diagram on your computer as well.
 
 <a name="Manual-filtering"></a>
 ## Manual filtering 
@@ -91,9 +91,9 @@ TODO
 <a name="Team"></a>
 ## Team
 
-This work was done within ...
+TODO
 
 <a name="Contact-us"></a>
 ## Contact us
 
-You can easily contact us. We will be happy to help you.
+TODO
