@@ -1,7 +1,7 @@
 # Table of contents
 
 1. [ATLpyta](#ATLpyta)
-	* [How to use](#How-to-use-ATLpyta)
+	* [How to use ATLpyta](#How-to-use-ATLpyta)
 2. [Features](#Features)	
 	* [Explore the zoo](#Explore-the-zoo)
 	* [Graphical comparison](#Graphical-comparison)
