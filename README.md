@@ -23,11 +23,18 @@ You can expand each item of this list to view the details about the correspondin
 
 <img src="screenshots/mt-expand.png" alt="explanded view of MT" width="50%" />
 
-For more convenience, there are 3 different modes for sorting the model transformations while exploring the zoo: MT name, #rules, #helpers.
+For more convenience, there are 3 different modes for sorting the model transformations while exploring the zoo: by name, by #rules or by #helpers.
 
 <img src="screenshots/sort.png" alt="sort MTs" width="20%"/>
 
-## Visual comparison
+## graphical comparison
+
+[Kiviat diagrams](https://en.wikipedia.org/wiki/Radar_chart) (also called radar charts or spider web charts) are used to graphically compare the model transformations according the previous metrics.
+
+First, the user selects a list of model transformation. Then the tool generates an interractive Kiviat chart comparing the chosen MTs. 
+
+<img src="screenshots/kiviat-compare.png" alt="compare MTs" width="40%"/>
+
 
 ## Manual filtering
 
