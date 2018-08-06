@@ -64,6 +64,16 @@ First, the user selects a list of model transformation. Then the tool generates 
 <a name="Manual-filtering"></a>
 ## Manual filtering 
 
+The users can choose model transformations with specific constraints on the metrics. For example, one can say: "I want to select the MTs containing 40 to 60 rules and 20 to 40 helpers".
+
+ATLpyta allows you to add such filters.
+
+<img src="screenshots/filter-criteria.png" alt="filtering criteria" width="50%"/>
+
+Then, you can download the source files of result model transformations.
+
+<mg src="screenshots/filter-result.png" alt="filter result" width="50%"/>
+
 <a name="Automatic-pick-up"></a>
 ## Automatic pick-up
 TODO
