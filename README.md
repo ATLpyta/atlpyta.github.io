@@ -7,7 +7,7 @@
 	* [Graphical comparison](#Graphical-comparison)
 	* [Manual filtering](#Manual-filtering)
 	* Automated pick-up
-3. Resources  	
+3. [Resources](#Resources)  	
 4. Team
 5. Contact
 
