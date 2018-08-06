@@ -23,9 +23,9 @@ You can expand each item of this list to view the details about the correspondin
 
 <img src="screenshots/mt-expand.png" alt="explanded view of MT" width="50%" />
 
-For more convenience, there are 3 different modes of sorting the model transformations while exploring the zoo: MT name, #rules, #helpers.
+For more convenience, there are 3 different modes for sorting the model transformations while exploring the zoo: MT name, #rules, #helpers.
 
-<img src="screenshots/sort.png" alt="sort MTs" width="30%" height="30%" style="display:block; margin: 0 auto;" />
+<img src="screenshots/sort.png" alt="sort MTs" width="20%"/>
 
 ## Visual comparison
 
