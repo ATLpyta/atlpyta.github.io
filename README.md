@@ -6,7 +6,14 @@ Model Transformations are compared according to the following metrics: #rules, #
 
 Once a set of model transformations is selected (manually or automatically), you can download the corresponding source files. 
 
-[Use ATLpyta](https://atlpyta.github.io/)
+
+## How to use ATLpyta
+
+**ATLpyta** is a web application. You can quickly use all the features by simply visiting the web site: [ATLpyta web site](https://atlpyta.github.io/).
+
+The next sections describe the **4** main features of the tool.
+
+![features of ATLpyta](screenshots/features.png)
 
 ## Explore the zoo
 
