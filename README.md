@@ -15,6 +15,8 @@ The next sections describe the **4** main features of the tool.
 
 ![features of ATLpyta](screenshots/features.png)
 
+<img src="screenshots/features.png" alt="features of ATLpyta" width="50%" />
+
 ## Explore the zoo
 
 ## Visual comparison
