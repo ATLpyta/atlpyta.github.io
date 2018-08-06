@@ -53,7 +53,9 @@ First, the user selects a list of model transformation. Then the tool generates 
 <img src="screenshots/kiviat-compare.png" alt="compare MTs" width="40%"/>
 
 
-## Manual filtering <a name="Manual-filtering"></a>
+<a name="Manual-filtering"></a>
+
+## Manual filtering 
 
 ## Automatic pick-up
 TODO
