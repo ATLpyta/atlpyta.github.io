@@ -81,6 +81,8 @@ TODO
 <a name="Resources"></a>
 ## Resources
 
+<img src="screenshots/resources.png" alt="resources" width="50%"/>
+
 [Here](https://atlpyta.github.io/index.html#resources), you can find all the resources of this project:
 
 * Raw ATL zoo
