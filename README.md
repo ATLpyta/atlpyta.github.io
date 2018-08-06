@@ -3,13 +3,13 @@
 1. [ATLpyta](#atlpyta)
 	* [How to use ATLpyta](#how-to-use-atlpyta)
 2. [Features](#Features)	
-	* [Explore the zoo](#Explore-the-zoo)
-	* [Graphical comparison](#Graphical-comparison)
-	* [Manual filtering](#Manual-filtering)
-	* Automated pick-up
-3. [Resources](#Resources)  	
-4. Team
-5. Contact
+	* [Explore the zoo](#explore-the-zoo)
+	* [Graphical comparison](#graphical-comparison)
+	* [Manual filtering](#manual-filtering)
+	* [Automated pick-up](#automated-pick-up)
+3. [Resources](#resources)  	
+4. [Team](#team)
+5. [Contact](#contact)
 
 # ATLpyta
 
@@ -19,19 +19,18 @@ Model Transformations are compared according to the following metrics: *#rules, 
 
 Once a set of model transformations is selected (manually or automatically), you can download the corresponding source files. 
 
-<a name="How-to-use-ATLpyta"></a>
+
 ## How to use ATLpyta
 
 **ATLpyta** is a web application. You can quickly use all the features by simply visiting the web site: [ATLpyta web site](https://atlpyta.github.io/).
 
-<a name="Features"></a>
+
 # Features
 
 This section describes the **4** main features of the tool. Each feature has a devoted sub-section.
 
 <img src="screenshots/features.png" alt="features of ATLpyta" width="50%" />
 
-<a name="Explore-the-zoo"></a>
 ## Explore the zoo
 
 Here you are allowed to explore the *105* model transformations of the zoo. The MTs are viewed as a list.
@@ -44,7 +43,6 @@ For more convenience, there are 3 different modes for sorting the model transfor
 
 <img src="screenshots/sort.png" alt="sort MTs" width="20%"/>
 
-<a name="Graphical-comparison"></a>
 ## Graphical comparison
 
 [Kiviat diagrams](https://en.wikipedia.org/wiki/Radar_chart) (also called radar charts or spider web charts) are used to graphically compare the model transformations according the previous metrics.
@@ -59,7 +57,6 @@ First, the user selects a list of model transformation. Then the tool generates 
 * Produced diagrams are interactive. You can click on the labels to display/hide the corresponding MT.
 * It is possible to save a comparison diagram on your computer as well.
 
-<a name="Manual-filtering"></a>
 ## Manual filtering 
 
 The users can choose model transformations with specific constraints on the metrics. For example, one can say: "I want to select the MTs containing 40 to 60 rules and 20 to 40 helpers".
@@ -72,11 +69,9 @@ Then, you can download the source files of result model transformations.
 
 <img src="screenshots/filter-result.png" alt="filter result" width="50%"/>
 
-<a name="Automatic-pick-up"></a>
 ## Automatic pick-up
 TODO
 
-<a name="Resources"></a>
 ## Resources
 
 <img src="screenshots/resources.png" alt="resources" width="50%"/>
@@ -88,12 +83,10 @@ TODO
 * All the bash scripts used to process the zoo and the metrics
 * All the R scripts used to produce charts and statistics 
 
-<a name="Team"></a>
 ## Team
 
 TODO
 
-<a name="Contact-us"></a>
 ## Contact us
 
 TODO
