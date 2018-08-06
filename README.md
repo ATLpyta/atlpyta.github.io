@@ -81,7 +81,7 @@ TODO
 <a name="Resources"></a>
 ## Resources
 
-You can find all the resources of this project:
+[Here](https://atlpyta.github.io/index.html#resources), you can find all the resources of this project:
 
 * Raw ATL zoo
 * ATL metrics source code
