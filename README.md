@@ -13,7 +13,7 @@
 
 
 
-# ATLpyta
+# ATLpyta <a name="ATLpyta"></a>
 
 The main purpose of **ATLpyta** (**p**ick **y**ou **t**ransform**a**tions) is to allow ATL users to select Model Transformations for their experiment among the transformations of the ATL zoo.
 
@@ -53,7 +53,7 @@ First, the user selects a list of model transformation. Then the tool generates 
 <img src="screenshots/kiviat-compare.png" alt="compare MTs" width="40%"/>
 
 
-## Manual filtering
+## Manual filtering <a name="Manual-filtering"></a>
 
 ## Automatic pick-up
 TODO
