@@ -80,7 +80,13 @@ TODO
 
 <a name="Resources"></a>
 ## Resources
-TODO
+
+You can find all the resources of this project:
+
+* Raw ATL zoo
+* ATL metrics source code
+* All the bash scripts used to process the zoo and the metrics
+* All the R scripts used to produce charts and statistics 
 
 <a name="Team"></a>
 ## Team
