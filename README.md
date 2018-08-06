@@ -2,14 +2,14 @@
 
 1. [ATLpyta](#atlpyta)
 	* [How to use ATLpyta](#how-to-use-atlpyta)
-2. [Features](#Features)	
+2. [Features](#features)	
 	* [Explore the zoo](#explore-the-zoo)
 	* [Graphical comparison](#graphical-comparison)
 	* [Manual filtering](#manual-filtering)
-	* [Automated pick-up](#automated-pick-up)
+	* [Automated pick-up](#automatic-pick-up)
 3. [Resources](#resources)  	
 4. [Team](#team)
-5. [Contact](#contact)
+5. [Contact](#contact-us)
 
 # ATLpyta
 
