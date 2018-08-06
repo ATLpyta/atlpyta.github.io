@@ -1,6 +1,6 @@
 # Table of content
 
-1. [ATLpyta](#ATLPyta)
+1. [ATLpyta](#ATLpyta)
 	1. [How to use](#How-to-use-ATLpyta)
 2. [Features](#Features)	
 	1. [Explore the zoo](#Explore-the-zoo)
@@ -59,16 +59,20 @@ First, the user selects a list of model transformation. Then the tool generates 
 <a name="Manual-filtering"></a>
 ## Manual filtering 
 
+<a name="Automatic-pick-up"></a>
 ## Automatic pick-up
 TODO
 
+<a name="Resources"></a>
 ## Resources
 TODO
 
+<a name="Team"></a>
 ## Team
 
 This work was done within ...
 
+<a name="Contact-us"></a>
 ## Contact us
 
 You can easily contact us. We will be happy to help you.
