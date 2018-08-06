@@ -77,7 +77,6 @@ else
 		echo '<div class="page-header">' >> $pickup
 		echo '	<div class="jumbotron">' >> $pickup
 		echo '		<div class="container">' >> $pickup
-		echo '' >> $pickup
 		echo '			<div class="row titre">' >> $pickup
 		echo '   			<div class="col-sm-5"></div>' >> $pickup
 		echo '        		<div class="col-sm-2">' >> $pickup
@@ -85,7 +84,6 @@ else
 		echo '    			</div>' >> $pickup
 		echo '    			<div class="col-sm-5"></div>' >> $pickup
 		echo '      	</div>' >> $pickup
-		echo '' >> $pickup
 		echo ' 		</div>' >> $pickup
 		echo '	</div>' >> $pickup
 		echo '</div>' >> $pickup
@@ -96,6 +94,68 @@ else
 
 		echo '<div class="container">' >> $pickup
 		echo '' >> $pickup
+		echo '' >> $pickup
+
+		##Mono criteria strategies
+		#
+		#
+		#
+		echo '  <!-- Mono criteria strategies -->' >> $pickup
+		echo '  <div id="criteria" class="panel panel-default">' >> $pickup
+		echo '    <div class="panel-heading"><h1>Mono criterion strategies</h1></div>' >> $pickup
+		echo '    <div class="panel-body">' >> $pickup
+		echo '      <div class="row">' >> $pickup
+
+		monoStrategies=$(ls $1 | grep -e "mono-")
+		for strategy in $monoStrategies; do
+
+			info=$(head -n+1 $1/$strategy)
+			name=$(echo "$strategy" | cut -d"-" -f2-)
+
+			echo '        ' >> $pickup
+			echo '        <div class="col-sm-4" >' >> $pickup
+			echo '          <div class="panel-group">' >> $pickup
+			echo '           <div class="panel panel-default">' >> $pickup
+			echo '             <div class="panel-heading">' >> $pickup
+			echo '               <span class="panel-title" style="font-size: 20px;">'$name'</span>' >> $pickup
+			echo '               <a data-toggle="collapse" href="#'$name'-info">' >> $pickup
+			echo '               	<img src="img/info.png" class="right-icon first-icon" alt="explanation"/>' >> $pickup
+			echo '               </a>' >> $pickup
+			echo '               <a data-toggle="collapse" href="#'$name'-MTs">' >> $pickup
+			echo '               	<img src="img/list.png" class="right-icon second-icon" alt="expand"/>' >> $pickup
+			echo '               </a>' >> $pickup
+			echo '             </div>' >> $pickup
+			echo '             <div id="'$name'-info" class="panel-collapse collapse">' >> $pickup
+			echo '               <div class="panel-body">' >> $pickup
+			echo '                 '$info >> $pickup
+			echo '               </div>' >> $pickup
+			echo '             </div>' >> $pickup
+			echo '             <div id="'$name'-MTs" class="panel-collapse collapse">' >> $pickup
+			echo '               <div class="panel-body">' >> $pickup
+			echo '                 MTs' >> $pickup
+			echo '               </div>' >> $pickup
+			echo '             </div>' >> $pickup
+			echo '           </div>' >> $pickup
+			echo '         </div>' >> $pickup
+			echo '       </div> <!-- end strategy -->' >> $pickup
+			echo '        ' >> $pickup
+		
+		done
+
+		echo '     </div>' >> $pickup
+		echo '   </div>' >> $pickup
+		echo ' </div>' >> $pickup
+
+		#Multi criteria strategy
+		#
+		#
+  		echo '	<!-- Multi criteria strategies -->' >> $pickup
+  		echo '	<div id="criteria" class="panel panel-default">' >> $pickup
+  		echo '	  <div class="panel-heading"><h1>Multi criteria strategies</h1></div>' >> $pickup
+  		echo '	  <div class="panel-body">' >> $pickup
+  		echo '	      ' >> $pickup
+  		echo '	  </div>' >> $pickup
+  		echo '	</div>' >> $pickup
 
 
 
@@ -106,7 +166,7 @@ else
 		#
 		echo '</body>' >> $pickup
 		echo '</html>' >> $pickup
-		mv $pickup $pickupPage
+		#mv $pickup $pickupPage
 		echo "... OK"
 	fi
 fi

@@ -22,6 +22,21 @@ body {
    width: 80%;
 }
 
+.right-icon{
+   display: inline;
+   position: absolute;
+   right:20px;
+   width: 20px;
+}
+
+.first-icon{
+  right: 45px;
+}
+
+.second-icon{
+  right: 20px;
+}
+
 .titre{
 	text-align: center;
 }
