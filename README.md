@@ -1,8 +1,15 @@
 # Table of content
 
 1. [ATLpyta](#ATLPyta)
-2. [How to use](#How to use ATLpyta)
-3. []()
+	1. [How to use](#How-to-use-ATLpyta)
+2. [Features](#Features)	
+	1. [Explore the zoo](#Explore-the-zoo)
+	2. [Graphical comparison](#Graphical-comparison)
+	3. [Manual filtering](#Manual-filtering)
+	4. Automated pick-up
+3. Resources  	
+4. Team
+5. Contact
 
 
 
@@ -18,6 +25,8 @@ Once a set of model transformations is selected (manually or automatically), you
 ## How to use ATLpyta
 
 **ATLpyta** is a web application. You can quickly use all the features by simply visiting the web site: [ATLpyta web site](https://atlpyta.github.io/).
+
+# Features
 
 The next sections describe the **4** main features of the tool.
 
@@ -35,11 +44,11 @@ For more convenience, there are 3 different modes for sorting the model transfor
 
 <img src="screenshots/sort.png" alt="sort MTs" width="20%"/>
 
-## graphical comparison
+## Graphical comparison
 
 [Kiviat diagrams](https://en.wikipedia.org/wiki/Radar_chart) (also called radar charts or spider web charts) are used to graphically compare the model transformations according the previous metrics.
 
-First, the user selects a list of model transformation. Then the tool generates an interractive Kiviat chart comparing the chosen MTs. 
+First, the user selects a list of model transformation. Then the tool generates an interactive Kiviat chart comparing the chosen MTs. 
 
 <img src="screenshots/kiviat-compare.png" alt="compare MTs" width="40%"/>
 
@@ -47,8 +56,10 @@ First, the user selects a list of model transformation. Then the tool generates 
 ## Manual filtering
 
 ## Automatic pick-up
+TODO
 
 ## Resources
+TODO
 
 ## Team
 
