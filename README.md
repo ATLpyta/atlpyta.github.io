@@ -1,7 +1,7 @@
 # Table of contents
 
-1. [ATLpyta](#ATLpyta)
-	* [How to use ATLpyta](#How-to-use-ATLpyta)
+1. [ATLpyta](#atlpyta)
+	* [How to use ATLpyta](#how-to-use-atlpyta)
 2. [Features](#Features)	
 	* [Explore the zoo](#Explore-the-zoo)
 	* [Graphical comparison](#Graphical-comparison)
@@ -11,8 +11,6 @@
 4. Team
 5. Contact
 
-
-<a name="ATLpyta"></a>
 # ATLpyta
 
 The main purpose of **ATLpyta** (**p**ick **y**ou **t**ransform**a**tions) is to help ATL users in selecting model transformations for their experiments, among all the transformations of the ATL zoo.
