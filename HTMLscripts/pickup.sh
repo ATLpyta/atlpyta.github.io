@@ -166,7 +166,7 @@ else
 		#
 		echo '</body>' >> $pickup
 		echo '</html>' >> $pickup
-		#mv $pickup $pickupPage
+		mv $pickup $pickupPage
 		echo "... OK"
 	fi
 fi
