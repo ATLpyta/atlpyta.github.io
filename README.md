@@ -55,6 +55,11 @@ First, the user selects a list of model transformation. Then the tool generates 
 
 <img src="screenshots/kiviat-compare.png" alt="compare MTs" width="40%"/>
 
+#### Remarks
+
+* You should select only few transformation (less than 10). Otherwise, comparison became harder. 
+* Produced diagrams are interactive. You can click on the labels to display/hide the corresponding MT.
+
 
 <a name="Manual-filtering"></a>
 ## Manual filtering 
