@@ -212,9 +212,10 @@ fieldset[disabled] .btn-pyta.focus {
 
 
 .deco-title {
-  background-color: #f7ebec;
+  /*background-color: #efd7da;*/
+    background-color: #f7ebec;
 }
 
 .deco:hover{
-  background-color: #efd7da;
+  background-color: #f7ebec;
 }
