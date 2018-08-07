@@ -110,8 +110,10 @@ else
 		for strategy in $monoStrategies; do
 
 			info=$(head -n+1 $1/$strategy)
+			schema=$(head -n+2 $1/$strategy | tail -n+2)
 			name=$(echo "$strategy" | cut -d"-" -f2-)
-
+			MTs=$(tail -n+3 $1/$strategy)
+			
 			echo '        ' >> $pickup
 			echo '        <div class="col-sm-4" >' >> $pickup
 			echo '          <div class="panel-group">' >> $pickup
@@ -127,12 +129,18 @@ else
 			echo '             </div>' >> $pickup
 			echo '             <div id="'$name'-info" class="panel-collapse collapse">' >> $pickup
 			echo '               <div class="panel-body">' >> $pickup
-			echo '                 '$info >> $pickup
+			echo '                 <p>'$info'</p>' >> $pickup
+			echo "                 <img src=\"selection-strategies/img/$schema\" alt=\"$name\" width=\"95%\"/>" >> $pickup
 			echo '               </div>' >> $pickup
 			echo '             </div>' >> $pickup
 			echo '             <div id="'$name'-MTs" class="panel-collapse collapse">' >> $pickup
 			echo '               <div class="panel-body">' >> $pickup
-			echo '                 MTs' >> $pickup
+
+			#MTs for each strategy
+			for MT in $MTs; do
+				echo "<a href=\"ATLzoo/sources/$MT.tar.gz\" style=\"margin-bottom:5px;\" class=\"btn ntn-lg btn-primary\">$MT</a>" >> $pickup
+			done	
+
 			echo '               </div>' >> $pickup
 			echo '             </div>' >> $pickup
 			echo '           </div>' >> $pickup
@@ -158,9 +166,12 @@ else
   		multiStrategies=$(ls $1 | grep -e "multi-")
 		for strategy in $multiStrategies; do
 
-			info=$(head -n+1 $1/$strategy)
+     		info=$(head -n+1 $1/$strategy)
+			schema=$(head -n+2 $1/$strategy | tail -n+2)
 			name=$(echo "$strategy" | cut -d"-" -f2-)
+			MTs=$(tail -n+3 $1/$strategy)
 
+			
 			echo '        ' >> $pickup
 			echo '        <div class="col-sm-4" >' >> $pickup
 			echo '          <div class="panel-group">' >> $pickup
@@ -176,12 +187,17 @@ else
 			echo '             </div>' >> $pickup
 			echo '             <div id="'$name'-info" class="panel-collapse collapse">' >> $pickup
 			echo '               <div class="panel-body">' >> $pickup
-			echo '                 '$info >> $pickup
-			echo '               </div>' >> $pickup
+			echo '                 <p>'$info'</p>' >> $pickup
+			echo "                 <img src=\"selection-strategies/img/$schema\" alt=\"$name\" width=\"95%\"/>" >> $pickup			echo '               </div>' >> $pickup
 			echo '             </div>' >> $pickup
 			echo '             <div id="'$name'-MTs" class="panel-collapse collapse">' >> $pickup
 			echo '               <div class="panel-body">' >> $pickup
-			echo '                 MTs' >> $pickup
+
+			#MTs for each strategy
+			for MT in $MTs; do
+				echo "<a href=\"ATLzoo/sources/$MT.tar.gz\" style=\"margin-bottom:5px;\" class=\"btn ntn-lg btn-primary\">$MT</a>" >> $pickup
+			done	
+
 			echo '               </div>' >> $pickup
 			echo '             </div>' >> $pickup
 			echo '           </div>' >> $pickup
