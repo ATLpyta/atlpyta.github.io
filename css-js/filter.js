@@ -87,7 +87,7 @@ function filterMTs(){
 		    var mtLink=MTcontainer.getElementsByClassName("row MT")[i].getElementsByClassName("mtLink")[0].href;
 
 		    //Add a download butoon for this MT
-		    divDowload.innerHTML= divDowload.innerHTML + "<a href=\""+mtLink+"\" class=\"btn btn-primary\">"+mtName+"</a>";
+		    divDowload.innerHTML= divDowload.innerHTML + "<a href=\""+mtLink+"\" class=\"btn btn-pyta\">"+mtName+"</a>";
 
 		}else{
 			MTcontainer.getElementsByClassName("row MT")[i].style.display = "none";

@@ -34,7 +34,8 @@ body {
 	text-align: left;
 }
 
-.container h1{
+.panel-heading h1, .panel-heading h2, .panel-heading h3, 
+.row h1, .row h2, .row h3 {
 	text-align: center;
 }
 

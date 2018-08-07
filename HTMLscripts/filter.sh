@@ -110,7 +110,7 @@ echo '<div class="container">' >> $filter
 echo '<br />' >> $filter
 
 echo '<div id="criteria" class="panel panel-pyta">' >> $filter
-echo '  <div class="panel-heading"><h1>Filtering criteria</h1></div>' >> $filter
+echo '  <div class="panel-heading"><h3>Filtering criteria</h3></div>' >> $filter
 echo '  <div class="panel-body">' >> $filter
 echo '    <div class="row">' >> $filter
 
@@ -142,7 +142,7 @@ echo '    <div class="row">' >> $filter
 echo '    </div>' >> $filter
 echo '		<div class="col-sm-5"></div>' >> $filter			
 echo '		<div class="col-sm-2">' >> $filter
-echo "			<button type=\"button\" class=\"btn btn-lg btn-primary btn-block\" onclick=\"filterMTs();\">filter</button> " >> $filter  
+echo "			<button type=\"button\" class=\"btn btn-lg btn-pyta btn-block\" onclick=\"filterMTs();\">filter</button> " >> $filter  
 echo '		</div>' >> $filter
 echo '		<div class="col-sm-5"></div>' >> $filter			
 
@@ -227,13 +227,13 @@ for line in $(tail -n+2 "../ATLzoo/output/"$1); do
 	echo '                           </div>' >> $filter
 	echo '                           <div class="row titre">' >> $filter
 	echo '                               <div class="col-lg-2">' >> $filter
-	echo '                                   <a href="ATLzoo/sources/'$nameMt'.tar.gz" class="mtLink btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> source files</a>' >> $filter
+	echo '                                   <a href="ATLzoo/sources/'$nameMt'.tar.gz" class="mtLink btn btn-pyta btn-lg"><span class="glyphicon glyphicon-download-alt"></span> source files</a>' >> $filter
 	echo '                               </div>' >> $filter
 	echo '                               <div class="col-lg-2">' >> $filter
-	echo '                                   <a href="ATLzoo/ATLmetrics/'$nameMt'.metrics" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> metrics</a>' >> $filter
+	echo '                                   <a href="ATLzoo/ATLmetrics/'$nameMt'.metrics" class="btn btn-pyta btn-lg"><span class="glyphicon glyphicon-download-alt"></span> metrics</a>' >> $filter
 	echo '                               </div>' >> $filter
 	echo '                               <div class="col-lg-2">' >> $filter
-	echo '                                   <a href="ATLzoo/kiviatCharts/'$nameMt'.png" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-download-alt"></span> Kiviat chart</a>' >> $filter
+	echo '                                   <a href="ATLzoo/kiviatCharts/'$nameMt'.png" class="btn btn-pyta btn-lg"><span class="glyphicon glyphicon-download-alt"></span> Kiviat chart</a>' >> $filter
 	echo '                               </div>' >> $filter
 	echo '                           </div>' >> $filter
 	echo '                       </div>' >> $filter
