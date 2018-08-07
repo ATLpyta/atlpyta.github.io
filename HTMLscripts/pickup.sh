@@ -101,7 +101,7 @@ else
 		#
 		#
 		echo '  <!-- Mono criteria strategies -->' >> $pickup
-		echo '  <div id="criteria" class="panel panel-default">' >> $pickup
+		echo '  <div class="panel panel-default">' >> $pickup
 		echo '    <div class="panel-heading"><h1>Mono-metric strategies</h1></div>' >> $pickup
 		echo '    <div class="panel-body">' >> $pickup
 		echo '      <div class="row">' >> $pickup
@@ -130,7 +130,7 @@ else
 			echo '             <div id="'$name'-info" class="panel-collapse collapse">' >> $pickup
 			echo '               <div class="panel-body">' >> $pickup
 			echo '                 <p>'$info'</p>' >> $pickup
-			echo "                 <img src=\"selection-strategies/img/$schema\" alt=\"$name\" width=\"95%\"/>" >> $pickup
+			echo "                 <img src=\"selection-strategies/img/$schema\" alt=\"$name\" style=\"width:95%;\"/>" >> $pickup
 			echo '               </div>' >> $pickup
 			echo '             </div>' >> $pickup
 			echo '             <div id="'$name'-MTs" class="panel-collapse collapse">' >> $pickup
@@ -158,7 +158,7 @@ else
 		#
 		#
   		echo '	<!-- Multi criteria strategies -->' >> $pickup
-  		echo '	<div id="criteria" class="panel panel-default">' >> $pickup
+  		echo '	<div class="panel panel-default">' >> $pickup
   		echo '	  <div class="panel-heading"><h1>Poly-metric strategies</h1></div>' >> $pickup
   		echo '	  <div class="panel-body">' >> $pickup
   		echo '      <div class="row">' >> $pickup
@@ -188,7 +188,7 @@ else
 			echo '             <div id="'$name'-info" class="panel-collapse collapse">' >> $pickup
 			echo '               <div class="panel-body">' >> $pickup
 			echo '                 <p>'$info'</p>' >> $pickup
-			echo "                 <img src=\"selection-strategies/img/$schema\" alt=\"$name\" width=\"95%\"/>" >> $pickup			echo '               </div>' >> $pickup
+			echo "                 <img src=\"selection-strategies/img/$schema\" alt=\"$name\" style=\"width:95%;\"/>" >> $pickup			echo '               </div>' >> $pickup
 			echo '             </div>' >> $pickup
 			echo '             <div id="'$name'-MTs" class="panel-collapse collapse">' >> $pickup
 			echo '               <div class="panel-body">' >> $pickup
