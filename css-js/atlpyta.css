@@ -161,18 +161,18 @@ body {
 .btn-pyta.focus {
   color: #333;
   background-color: #e6e6e6;
-  border-color: #8c8c8c;
+  border-color: #B23A48;
 }
 .btn-pyta:hover {
   color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  background-color: #e0b0b5;
+  border-color: #B23A48;
 }
 .btn-pyta:active,
 .btn-pyta.active,
 .open > .dropdown-toggle.btn-pyta {
   color: #333;
-  background-color: #e6e6e6;
+  background-color: #e0b0b5;
   border-color: #adadad;
 }
 .btn-pyta:active:hover,
@@ -208,4 +208,13 @@ fieldset[disabled] .btn-pyta.focus {
 .btn-pyta .badge {
   color: #fff;
   background-color: #333;
+}
+
+
+.deco-title {
+  background-color: #f7ebec;
+}
+
+.deco:hover{
+  background-color: #efd7da;
 }
