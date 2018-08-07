@@ -195,7 +195,7 @@ else
 
 			#MTs for each strategy
 			for MT in $MTs; do
-				echo "<a href=\"ATLzoo/sources/$MT.tar.gz\" style=\"margin-bottom:5px;\" class=\"btn ntn-lg btn-primary\">$MT</a>" >> $pickup
+				echo "<a href=\"ATLzoo/sources/$MT.tar.gz\" style=\"margin-bottom:5px;\" class=\"btn btn-sm btn-primary\">$MT</a>" >> $pickup
 			done	
 
 			echo '               </div>' >> $pickup
