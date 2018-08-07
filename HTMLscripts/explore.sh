@@ -24,11 +24,16 @@ echo '<div class="container">' >> buttons
 
 echo '<br />' >> buttons
 
-echo '<div class="row">' >> buttons
-echo '	<div class="col-sm-3">' >> buttons
-echo '		Sort Model Transformations' >> buttons
-echo '	</div>' >> buttons
-echo '</div>' >> buttons
+
+echo '<div class="panel panel-pyta">' >> buttons
+echo '  <div class="panel-heading"><h4>Sort Model Transformations</h4></div>' >> buttons
+echo '  <div class="panel-body">' >> buttons
+
+# echo '<div class="row">' >> buttons
+# echo '	<div class="col-sm-3">' >> buttons
+# echo '		Sort Model Transformations' >> buttons
+# echo '	</div>' >> buttons
+# echo '</div>' >> buttons
 
 echo '<div class="row">' >> buttons
 echo '	<div class="list-group list-group-horizontal">' >> buttons
@@ -64,6 +69,10 @@ echo '	</div>' >> buttons
 echo '	</div>' >> buttons
 echo '</div>' >> buttons
 echo '</div> ' >> buttons
+
+echo '	</div>' >> buttons
+echo '</div>' >> buttons
+
 
 ## Begin page generation
 #
@@ -163,7 +172,6 @@ echo '<div class="container">' >> $explore
 nbMts=$(tail -n+2 "../ATLzoo/output/"$1 | wc -l)
 
 echo '<br />' >> $explore
-
 
 echo '<div class="row">' >> $explore
 echo '	<div class="col-lg-3"><span style="font-size:20px;">All Model Transformations</span> ' >> $explore

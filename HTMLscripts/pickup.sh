@@ -101,7 +101,7 @@ else
 		#
 		#
 		echo '  <!-- Mono criteria strategies -->' >> $pickup
-		echo '  <div class="panel panel-default">' >> $pickup
+		echo '  <div class="panel panel-pyta">' >> $pickup
 		echo '    <div class="panel-heading"><h1>Mono-metric strategies</h1></div>' >> $pickup
 		echo '    <div class="panel-body">' >> $pickup
 		echo '      <div class="row">' >> $pickup
@@ -158,7 +158,7 @@ else
 		#
 		#
   		echo '	<!-- Multi criteria strategies -->' >> $pickup
-  		echo '	<div class="panel panel-default">' >> $pickup
+  		echo '	<div class="panel panel-pyta">' >> $pickup
   		echo '	  <div class="panel-heading"><h1>Poly-metric strategies</h1></div>' >> $pickup
   		echo '	  <div class="panel-body">' >> $pickup
   		echo '      <div class="row">' >> $pickup

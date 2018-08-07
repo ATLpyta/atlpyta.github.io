@@ -111,7 +111,7 @@ echo '' >> $compare
 #
 #
 echo '  <div class="col-sm-3">' >> $compare
-echo '    <div class="panel panel-primary">' >> $compare
+echo '    <div class="panel panel-pyta">' >> $compare
 echo '      <div class="panel-heading">' >> $compare
 echo '        <span style="font-size:20px;">Model Transformations</span> ' >> $compare
 echo '      </div>' >> $compare
@@ -180,7 +180,7 @@ echo '</div>' >> $compare
 echo '<div class="row">' >> $compare
 
 
-echo '    <div class="panel panel-primary">' >> $compare
+echo '    <div class="panel panel-pyta">' >> $compare
 echo '      <div class="panel-heading">' >> $compare
 
 echo '      	<div class="row">' >> $compare
@@ -214,7 +214,7 @@ echo '</div>' >> $compare
 #2nd MTs zone
 #
 echo '<div class="col-sm-3">' >> $compare
-echo '	<div class="panel panel-primary">' >> $compare
+echo '	<div class="panel panel-pyta">' >> $compare
 echo '		<div class="panel-heading">' >> $compare
 echo '			<span style="font-size:20px;">Model Transformations</span> ' >> $compare
 echo '		</div>' >> $compare

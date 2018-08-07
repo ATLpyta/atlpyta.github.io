@@ -109,7 +109,7 @@ echo '<div class="container">' >> $filter
 
 echo '<br />' >> $filter
 
-echo '<div id="criteria" class="panel panel-default">' >> $filter
+echo '<div id="criteria" class="panel panel-pyta">' >> $filter
 echo '  <div class="panel-heading"><h1>Filtering criteria</h1></div>' >> $filter
 echo '  <div class="panel-body">' >> $filter
 echo '    <div class="row">' >> $filter

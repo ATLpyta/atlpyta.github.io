@@ -1,6 +1,29 @@
 body {
   padding-top: 0px;
   font-family: Bookman, URW Bookman L, serif;
+  min-height: 1000px;
+}
+
+.panel-pyta{
+  border-color: #B23A48;  
+}
+
+.panel-pyta > .panel-heading {
+  color: #fff;
+  background-color: #B23A48;
+  border-color: #ddd;
+}
+
+}
+.panel-pyta > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #ddd;
+}
+.panel-pyta > .panel-heading .badge {
+  color: #B23A48;
+  background-color: #fff;
+}
+.panel-pyta > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #ddd;
 }
 
 .left-h2 {
@@ -100,7 +123,7 @@ body {
 
 /* When the checkbox is checked, add a blue background */
 .checkbox input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #B23A48;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -126,4 +149,63 @@ body {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* custom button */
+.btn-pyta {
+  color: #fff;
+  background-color: #B23A48;
+  border-color: #ccc;
+}
+.btn-pyta:focus,
+.btn-pyta.focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.btn-pyta:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-pyta:active,
+.btn-pyta.active,
+.open > .dropdown-toggle.btn-pyta {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-pyta:active:hover,
+.btn-pyta.active:hover,
+.open > .dropdown-toggle.btn-pyta:hover,
+.btn-pyta:active:focus,
+.btn-pyta.active:focus,
+.open > .dropdown-toggle.btn-pyta:focus,
+.btn-pyta:active.focus,
+.btn-pyta.active.focus,
+.open > .dropdown-toggle.btn-pyta.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.btn-pyta:active,
+.btn-pyta.active,
+.open > .dropdown-toggle.btn-pyta {
+  background-image: none;
+}
+.btn-pyta.disabled:hover,
+.btn-pyta[disabled]:hover,
+fieldset[disabled] .btn-pyta:hover,
+.btn-pyta.disabled:focus,
+.btn-pyta[disabled]:focus,
+fieldset[disabled] .btn-pyta:focus,
+.btn-pyta.disabled.focus,
+.btn-pyta[disabled].focus,
+fieldset[disabled] .btn-pyta.focus {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-pyta .badge {
+  color: #fff;
+  background-color: #333;
 }
