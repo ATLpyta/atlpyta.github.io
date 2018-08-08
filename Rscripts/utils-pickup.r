@@ -58,16 +58,3 @@ readMTList <- function(folder){
 criteria<-readCriteriaList('../ATLzoo/')
 MTList<-readMTList('../ATLzoo/')
 metrics<-readMetrics('../ATLzoo/')
-
-#Unit tests
-#
-#
-#
-modelTransformations<- vector()
-modelTransformations<- c(modelTransformations, "A2B")
-modelTransformations<- c(modelTransformations, "ATLCopier")
-modelTransformations<- c(modelTransformations, "ATLCopier")
-createStrategyFile("mono-testStrategy","avg-schema.png",
-	"Model transformation containing the minimum number of Rules (between 0 and Decile 2) are selected"
-	,modelTransformations)
-
