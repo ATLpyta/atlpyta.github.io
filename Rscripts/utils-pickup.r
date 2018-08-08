@@ -24,8 +24,45 @@ createStrategyFile <- function(filePath,schemafilePath,description,modelTransfor
 	close(openedFile)
 }
 
+# These 3 functions read all the data from the ATLzoo folder
+# Data are: metrics, list of MTs and List of Criteria 
+#
+# PARAMETRS
+#	folder: the folder path that contains data.
+#				data is always located in folder/output/
+#
+
+readMetrics <- function(folder){
+
+	dataFile=paste0(folder,'output/all-MT')
+	data <-read.csv(dataFile, header=FALSE, sep=",")
+	data <- as.matrix(data)
+	return(data)	
+}
+
+readCriteriaList <-function(folder){
+	criteriaFile=paste0(folder,'output/criteria')
+	criteria <-readLines(criteriaFile) 
+	return(criteria)
+}
+
+readMTList <- function(folder){
+	listMTFile=paste0(folder,'output/MTs')
+	MTList <- readLines(listMTFile) 
+	return(MTList)
+}
+
+# function calls to get data
+#
+#
+criteria<-readCriteriaList('../ATLzoo/')
+MTList<-readMTList('../ATLzoo/')
+metrics<-readMetrics('../ATLzoo/')
 
 #Unit tests
+#
+#
+#
 modelTransformations<- vector()
 modelTransformations<- c(modelTransformations, "A2B")
 modelTransformations<- c(modelTransformations, "ATLCopier")
@@ -33,3 +70,4 @@ modelTransformations<- c(modelTransformations, "ATLCopier")
 createStrategyFile("mono-testStrategy","avg-schema.png",
 	"Model transformation containing the minimum number of Rules (between 0 and Decile 2) are selected"
 	,modelTransformations)
+
