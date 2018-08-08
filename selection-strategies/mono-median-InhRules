@@ -1,5 +1,5 @@
-Model transformations containing the minimum number of InhRules (between 0 and Decile 1) are selected
-min-schema.png
+Model transformations containing the median number of InhRules (between centile 45 and centile 55) are selected
+avg-schema.png
 A2B
 AssertionModification
 ATL2BindingDebugger

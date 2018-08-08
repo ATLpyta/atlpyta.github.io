@@ -1,4 +1,4 @@
-Model transformations containing the minimum number of InhRules (between 0 and Decile 1) are selected
+Model transformations containing the maximal number of InhRules (between Decile 9 and Decile 10) are selected
 min-schema.png
 A2B
 AssertionModification

@@ -1,7 +1,5 @@
-Model transformations containing the minimum number of RulesInhTrees (between 0 and Decile 2) are selected
+Model transformations containing the minimum number of RulesInhTrees (between 0 and Decile 1) are selected
 min-schema.png
-ATLCopier
-Book2Publication
 DOT2Text
 EMOOSE4KM3
 EMOOSE4UML2
@@ -10,3 +8,5 @@ FLAME4UML2
 Lib4MMTree
 LibFQL
 MeasureHelpers
+MOOD4KM3
+MOOD4UML2

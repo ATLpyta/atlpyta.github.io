@@ -1,4 +1,4 @@
-Model transformations containing the minimum number of HelpersWContext (between 0 and Decile 2) are selected
+Model transformations containing the minimum number of HelpersWContext (between 0 and Decile 1) are selected
 min-schema.png
 A2B
 ATL2BindingDebugger

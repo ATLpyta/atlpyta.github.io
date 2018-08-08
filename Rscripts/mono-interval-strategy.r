@@ -51,7 +51,25 @@ for (i in 1:length(criteria)) {
 
 	minFile=paste0("mono-min-",criteria[i])
 	minDesc=paste0("Model transformations containing the minimum number of ", 
-					criteria[i]," (between 0 and Decile 2) are selected")
-	minResult = monoDecilesIntervalStrategy(i,0.0,0.2)
+					criteria[i]," (between 0 and Decile 1) are selected")
+	minResult = monoDecilesIntervalStrategy(i,0.0,0.1)
 	createStrategyFile(minFile,"min-schema.png",minDesc,minResult)		
+}
+
+for (i in 1:length(criteria)) {
+
+	maxFile=paste0("mono-max-",criteria[i])
+	maxDesc=paste0("Model transformations containing the maximal number of ", 
+					criteria[i]," (between Decile 9 and Decile 10) are selected")
+	maxResult = monoDecilesIntervalStrategy(i,0.9,1.0)
+	createStrategyFile(maxFile,"min-schema.png",maxDesc,maxResult)		
+}
+
+for (i in 1:length(criteria)) {
+
+	medFile=paste0("mono-median-",criteria[i])
+	medDesc=paste0("Model transformations containing the median number of ", 
+					criteria[i]," (between centile 45 and centile 55) are selected")
+	medResult = monoDecilesIntervalStrategy(i,0.45,0.55)
+	createStrategyFile(medFile,"avg-schema.png",medDesc,medResult)		
 }
