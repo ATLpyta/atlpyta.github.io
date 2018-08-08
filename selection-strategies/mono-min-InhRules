@@ -1,0 +1,12 @@
+Model transformations containing the minimum number of InhRules (between 0 and Decile 2) are selected
+min-schema.png
+A2B
+AssertionModification
+ATL2BindingDebugger
+ATL2Tracer
+ATLCopier
+ATOM2RSS
+ATOM2XML
+Book2Publication
+CloneDr2CodeClone
+CodeClone2SVG2
