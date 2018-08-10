@@ -105,7 +105,7 @@ else
 		echo '    <div class="panel-heading"><h3>Mono-metric strategies</h3></div>' >> $pickup
 		echo '    <div class="panel-body">' >> $pickup
 		echo '      <div class="row">' >> $pickup
-		echo '			<div class="col-sm-4"><p class="bg-pyta">Min strategies</p></div>' >> $pickup
+		echo '			<div class="col-sm-3"><p class="bg-pyta">Min strategies</p></div>' >> $pickup
 
 		monoStrategies=$(ls $1 | grep -e "mono-min-")
 		for strategy in $monoStrategies; do
@@ -116,7 +116,7 @@ else
 			MTs=$(tail -n+3 $1/$strategy)
 			
 			echo '' >> $pickup
-			echo '        <div class="col-sm-4" >' >> $pickup
+			echo '        <div class="col-sm-3" >' >> $pickup
 			echo '          <div class="panel-group">' >> $pickup
 			echo '           <div class="panel panel-default">' >> $pickup
 			echo '             <div class="panel-heading">' >> $pickup
@@ -157,7 +157,7 @@ else
 		## mono-max
 		##
 		echo '      <div class="row">' >> $pickup
-		echo '			<div class="col-sm-4"><p class="bg-pyta">Max strategies</p></div>' >> $pickup
+		echo '			<div class="col-sm-3"><p class="bg-pyta">Max strategies</p></div>' >> $pickup
 
 		monoStrategies=$(ls $1 | grep -e "mono-max-")
 		for strategy in $monoStrategies; do
@@ -168,7 +168,7 @@ else
 			MTs=$(tail -n+3 $1/$strategy)
 			
 			echo '' >> $pickup
-			echo '        <div class="col-sm-4" >' >> $pickup
+			echo '        <div class="col-sm-3" >' >> $pickup
 			echo '          <div class="panel-group">' >> $pickup
 			echo '           <div class="panel panel-default">' >> $pickup
 			echo '             <div class="panel-heading">' >> $pickup
@@ -208,7 +208,7 @@ else
 		## mono-median
 		##
 		echo '      <div class="row">' >> $pickup
-		echo '			<div class="col-sm-4"><p class="bg-pyta">Median strategies</p></div>' >> $pickup
+		echo '			<div class="col-sm-3"><p class="bg-pyta">Median strategies</p></div>' >> $pickup
 
 		monoStrategies=$(ls $1 | grep -e "mono-median-")
 		for strategy in $monoStrategies; do
@@ -219,7 +219,7 @@ else
 			MTs=$(tail -n+3 $1/$strategy)
 			
 			echo '' >> $pickup
-			echo '        <div class="col-sm-4" >' >> $pickup
+			echo '        <div class="col-sm-3" >' >> $pickup
 			echo '          <div class="panel-group">' >> $pickup
 			echo '           <div class="panel panel-default">' >> $pickup
 			echo '             <div class="panel-heading">' >> $pickup
@@ -259,7 +259,7 @@ else
 		## mono-diverse
 		##
 		echo '      <div class="row">' >> $pickup
-		echo '			<div class="col-sm-4"><p class="bg-pyta">Diversity strategies</p></div>' >> $pickup
+		echo '			<div class="col-sm-3"><p class="bg-pyta">Diversity strategies</p></div>' >> $pickup
 
 		monoStrategies=$(ls $1 | grep -e "mono-div-")
 		for strategy in $monoStrategies; do
@@ -270,7 +270,7 @@ else
 			MTs=$(tail -n+3 $1/$strategy)
 			
 			echo '' >> $pickup
-			echo '        <div class="col-sm-4" >' >> $pickup
+			echo '        <div class="col-sm-3" >' >> $pickup
 			echo '          <div class="panel-group">' >> $pickup
 			echo '           <div class="panel panel-default">' >> $pickup
 			echo '             <div class="panel-heading">' >> $pickup
@@ -329,7 +329,7 @@ else
 
 			
 			echo '        ' >> $pickup
-			echo '        <div class="col-sm-4" >' >> $pickup
+			echo '        <div class="col-sm-3" >' >> $pickup
 			echo '          <div class="panel-group">' >> $pickup
 			echo '           <div class="panel panel-default">' >> $pickup
 			echo '             <div class="panel-heading">' >> $pickup

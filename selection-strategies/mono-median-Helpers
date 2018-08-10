@@ -1,12 +1,12 @@
 Model transformations containing the median number of Helpers (between centile 45 and centile 55) are selected
 avg-schema.png
-RedundantInheritance
-Syntax2SimpleSBVR
-JavaSource2Table
-XML2Text
-Book2Publication
-SimpleSBVR2SimpleUML
 WSDL2R2ML
-LibFQL
-MergingPartialClasses
 Removing
+Disaggregation
+MergingPartialClasses
+RedundantInheritance
+Lib4MMTree
+SimpleSBVR2SimpleUML
+LibFQL
+Families2Persons
+RedundantClassRemovable

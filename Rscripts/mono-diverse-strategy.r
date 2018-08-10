@@ -22,7 +22,7 @@ monoDiverseStrategy <- function(metric){
 
 # Generate all mono-diverse-strategies
 #
-for (i in 1:length(criteria)) {
+for (i in c(1,3,4)) {
 
 	File=paste0("mono-div-",criteria[i])
 	Desc=paste0("Model transformations containing the most diverse number of ", 

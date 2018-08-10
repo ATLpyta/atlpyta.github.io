@@ -1,12 +1,12 @@
 Model transformations containing the most diverse number of Helpers (1 MT in each decile) are selected
 div-schema.png
-A2B
-ATOM2RSS
-TypeA2TypeB_v4
-XML2CPL
-ForeignKey
 XSLT2XQuery
-Tree2List
+Replace
+Tree2List_usingATLResolveAlgorithm
 HTML2XML
-TypeA2TypeB_v3_firstStep
-RemovingAnAssociationClass
+ForeignKey
+TypeA2TypeB_v4
+ATOM2RSS
+A2B
+ATOM2XML
+RSS2ATOM

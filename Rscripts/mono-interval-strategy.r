@@ -1,7 +1,7 @@
 source('utils-pickup.r')
 
 #Generate All mono-Deciles-Interval-Strategies
-for (i in 1:length(criteria)) {
+for (i in c(1,3,4)) {
 
 	minFile=paste0("mono-min-",criteria[i])
 	minDesc=paste0("Model transformations containing the minimum number of ", 
@@ -10,7 +10,7 @@ for (i in 1:length(criteria)) {
 	createStrategyFile(minFile,"min-schema.png",minDesc,minResult)		
 }
 
-for (i in 1:length(criteria)) {
+for (i in c(1,3,4)) {
 
 	maxFile=paste0("mono-max-",criteria[i])
 	maxDesc=paste0("Model transformations containing the maximal number of ", 
@@ -19,7 +19,7 @@ for (i in 1:length(criteria)) {
 	createStrategyFile(maxFile,"min-schema.png",maxDesc,maxResult)		
 }
 
-for (i in 1:length(criteria)) {
+for (i in c(1,3,4)) {
 
 	medFile=paste0("mono-median-",criteria[i])
 	medDesc=paste0("Model transformations containing the median number of ", 

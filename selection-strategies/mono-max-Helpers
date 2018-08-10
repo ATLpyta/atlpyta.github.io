@@ -1,12 +1,12 @@
 Model transformations containing the maximal number of Helpers (between Decile 9 and Decile 10) are selected
 min-schema.png
-MySQL2KM3
-QMOOD4UML2
-QMOOD4KM3
-MeasureHelpers
-Table2SVGPieChart
 FLAME4KM3
-R2ML2RDM
-UMLDI2SVG
-FLAME4UML2
+QMOOD4KM3
+MySQL2KM3
+Table2SVGPieChart
 KM32DOT
+QMOOD4UML2
+FLAME4UML2
+KM32Measure
+XML2WSDL
+MeasureHelpers

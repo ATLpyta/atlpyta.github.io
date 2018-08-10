@@ -1,12 +1,12 @@
 Model transformations containing the median number of LazyRules (between centile 45 and centile 55) are selected
 avg-schema.png
+ATOM2XML
 MySQL2KM3
-UML2OWL
-CloneDr2CodeClone
-XQuery2Code
-PartialRolesTotalB
-XML2XML
-ForeignKey
+XML2CPL
+RSS2XML
+LibFQL
+XMLHelpers
+PrimaryKey
 KM32SimpleClass
-ATL2BindingDebugger
-KM32XML
+conf4MADL
+ATL2Tracer
