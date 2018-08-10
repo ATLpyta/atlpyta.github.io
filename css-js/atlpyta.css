@@ -219,3 +219,21 @@ fieldset[disabled] .btn-pyta.focus {
 .deco:hover{
   background-color: #f7ebec;
 }
+
+.bg-pyta{
+  background-color: #B23A48;
+  height: 50px;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  vertical-align: center;
+  text-align: center;
+  font-size: 18px;
+
+}
+
+hr{
+  background-color: black;
+  border-color: black;
+  width: 50%;
+}
