@@ -1,12 +1,12 @@
 Model transformations containing the minimum number of LazyRules (between 0 and Decile 1) are selected
 min-schema.png
-A2B
-ATL2BindingDebugger
-ATL2Tracer
-ATLCopier
+RSS2ATOM
+SimScan2CodeClone
+equivalenceOfAttributeAndAssociations
+XQuery2Code
+XML2XSLT
+KM32XML
+EMF2KM3
 ATOM2RSS
-ATOM2XML
-Book2Publication
-CloneDr2CodeClone
-CodeClone2SVG2
-CodeClone2SVG
+KM32SimpleClass
+MySQL2KM3

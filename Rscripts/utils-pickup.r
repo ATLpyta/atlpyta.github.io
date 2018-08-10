@@ -58,3 +58,28 @@ readMTList <- function(folder){
 criteria<-readCriteriaList('../ATLzoo/')
 MTList<-readMTList('../ATLzoo/')
 metrics<-readMetrics('../ATLzoo/')
+
+
+#Function that creates a vector of MT objects
+setClass("MT", representation(id = "numeric", Rules = "numeric", MatchedRules= "numeric", LazyRules = "numeric"
+	,Helpers = "numeric", HelpersWContext= "numeric", RulesInhTrees= "numeric", InhRules= "numeric"))
+
+createMTVector <- function(metrics){
+
+	result<-vector()
+
+	for (i in 1:nrow(metrics)) {
+
+		tmpMT=new("MT", id=i, Rules=metrics[i,1], MatchedRules= metrics[i,2], LazyRules= metrics[i,3]
+			, Helpers = metrics[i,4], HelpersWContext= metrics[i,5], RulesInhTrees= metrics[i,6],
+			InhRules= metrics[i,7])
+
+		result<- c(result,tmpMT)
+	}
+
+	return(result)
+}
+
+#
+#
+allMTs= createMTVector(metrics)

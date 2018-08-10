@@ -1,12 +1,12 @@
 Model transformations containing the median number of Rules (between centile 45 and centile 55) are selected
 avg-schema.png
-ATOM2XML
-CloneDr2CodeClone
-equivalenceOfAttributeAndAssociations
-ForeignKey
-KM32CONFATL
-KM32DOT
-KM32Measure
-PrimaryKey
-RedundantInheritance
+TypeA2TypeB_v2
 RemovingAnAssociationClass
+Simian2CodeClone
+SimScan2CodeClone
+TT2BDD
+RedundantInheritance
+PrimaryKey
+CloneDr2CodeClone
+Table2TabularHTML
+equivalenceOfAttributeAndAssociations

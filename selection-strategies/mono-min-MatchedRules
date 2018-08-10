@@ -1,12 +1,12 @@
 Model transformations containing the minimum number of MatchedRules (between 0 and Decile 1) are selected
 min-schema.png
-DOT2Text
+TableHelpers
+Measure2Table
 EMOOSE4KM3
-EMOOSE4UML2
+LibFQL
+DOT2Text
+Table2SVGBarChart
 FLAME4KM3
 FLAME4UML2
-Lib4MMTree
-LibFQL
-Measure2Table
-MeasureHelpers
-MOOD4KM3
+XML2Text
+MOOD4UML2

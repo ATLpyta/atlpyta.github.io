@@ -1,12 +1,12 @@
 Model transformations containing the maximal number of InhRules (between Decile 9 and Decile 10) are selected
 min-schema.png
-A2B
-AssertionModification
-ATL2BindingDebugger
+XML2XML
+partial2totalRole
+TypeA2TypeB_v1
+UMLDI2SVG
+KM32CONFATL
+PartialRolesTotalB
+FLAME4UML2
 ATL2Tracer
-ATLCopier
-ATOM2RSS
-ATOM2XML
-Book2Publication
-CloneDr2CodeClone
-CodeClone2SVG2
+Syntax2SimpleSBVR
+KM32DOT

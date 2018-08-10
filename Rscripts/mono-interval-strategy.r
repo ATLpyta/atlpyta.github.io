@@ -23,9 +23,20 @@ monoDecilesIntervalStrategy <- function(metric,min,max){
 	}
 	print(c("metric: ",metric," MTs: ",length(result)))
 
+	result= pickMfromNindices(result, 10)
 	result= indices2mtNames(result)
 	
 	return(result)
+}
+
+# this function takes a list of n indices and chooses m ones
+pickMfromNindices<- function(indices,m){
+
+	if(m< length(indices)){
+		result= indices[sample(1:length(indices), m)]
+		return(result)
+	}
+	return(indices)
 }
 
 
@@ -34,9 +45,9 @@ indices2mtNames <- function(indiceVector){
 
 	limit=length(indiceVector)
 
-	#Limit number of selected MTs to 10
-	if(length(indiceVector) > 10)
-		limit=10	
+	# #Limit number of selected MTs to 10
+	# if(length(indiceVector) > 10)
+	# 	limit=10	
 
 	for (i in 1:limit) {
 		names <- c(names,MTList[indiceVector[i]])
@@ -61,7 +72,7 @@ for (i in 1:length(criteria)) {
 	maxFile=paste0("mono-max-",criteria[i])
 	maxDesc=paste0("Model transformations containing the maximal number of ", 
 					criteria[i]," (between Decile 9 and Decile 10) are selected")
-	maxResult = monoDecilesIntervalStrategy(i,0.9,1.0)
+	maxResult = monoDecilesIntervalStrategy(i,0.90,1.0)
 	createStrategyFile(maxFile,"min-schema.png",maxDesc,maxResult)		
 }
 

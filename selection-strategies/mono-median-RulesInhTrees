@@ -1,12 +1,12 @@
 Model transformations containing the median number of RulesInhTrees (between centile 45 and centile 55) are selected
 avg-schema.png
-CloneDr2CodeClone
-equivalenceOfAttributeAndAssociations
-JavaSource2Table
-KM32Measure
-KM32SimpleClass
-Measure2XHTML
-RSS2XML
 Simian2CodeClone
+KM32SimpleClass
+Table2SVGPieChart
 SimpleSBVR2SimpleUML
+Syntax2SimpleSBVR
+XML2MySQL
 SimScan2CodeClone
+equivalenceOfAttributeAndAssociations
+Measure2XHTML
+CloneDr2CodeClone
