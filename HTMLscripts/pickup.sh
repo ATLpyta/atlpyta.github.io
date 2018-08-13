@@ -317,6 +317,15 @@ else
   		echo '	<div class="panel panel-pyta">' >> $pickup
   		echo '	  <div class="panel-heading"><h3>Poly-metric strategies</h3></div>' >> $pickup
   		echo '	  <div class="panel-body">' >> $pickup
+
+  		echo '      <div class="row">' >> $pickup
+		echo '			<div class="col-sm-3"><p class="bg-pyta">Diversity strategy</p></div>' >> $pickup
+		echo '			<div class="col-sm-3"><p class="bg-pyta">Max strategy</p></div>' >> $pickup
+		echo '			<div class="col-sm-3"><p class="bg-pyta">Median strategy</p></div>' >> $pickup
+		echo '			<div class="col-sm-3"><p class="bg-pyta">Min strategy</p></div>' >> $pickup
+		echo '		</div>' >> $pickup
+
+
   		echo '      <div class="row">' >> $pickup
 
   		multiStrategies=$(ls $1 | grep -e "poly-")
@@ -344,7 +353,8 @@ else
 			echo '             <div id="'$name'-info" class="panel-collapse collapse">' >> $pickup
 			echo '               <div class="panel-body">' >> $pickup
 			echo '                 <p>'$info'</p>' >> $pickup
-			echo "                 <img src=\"selection-strategies/img/$schema\" alt=\"$name\" style=\"width:95%;\"/>" >> $pickup			echo '               </div>' >> $pickup
+			echo "                 <img src=\"selection-strategies/img/$schema\" alt=\"$name\" style=\"width:95%;\"/>" >> $pickup
+			echo '               </div>' >> $pickup
 			echo '             </div>' >> $pickup
 			echo '             <div id="'$name'-MTs" class="panel-collapse collapse">' >> $pickup
 			echo '               <div class="panel-body">' >> $pickup
