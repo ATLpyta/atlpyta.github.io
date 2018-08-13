@@ -1,12 +1,12 @@
 Model transformations containing the maximal values for sum of metrics are selected
 max-schema.png
-R2ML2XML
 UMLDI2SVG
-XML2CPL
-XML2KML
-OCL2R2ML
 RDM2XML
 R2ML2RDM
-XML2R2ML
-XML2WSDL
+R2ML2XML
 FLAME4UML2
+XHTML2XML
+XML2CPL
+XML2KML
+XML2WSDL
+XML2R2ML

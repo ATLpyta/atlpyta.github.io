@@ -1,12 +1,12 @@
 Model transformations containing the minimal values for sum of metrics are selected
 min-schema.png
-A2B
+EMOOSE4UML2
+LibFQL
+ATL2Tracer
+TypeA2TypeB_v3_firstStep
+MOOD4KM3
+XML2Text
 TypeA2TypeB_v1
 Tree2List_usingATLResolveAlgorithm
-EMOOSE4UML2
-DOT2Text
-XML2Text
 ATLCopier
-EMOOSE4KM3
-ATL2Tracer
-ATL2BindingDebugger
+Lib4MMTree
