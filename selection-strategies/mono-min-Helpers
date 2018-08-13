@@ -1,12 +1,12 @@
 Model transformations containing the minimum number of Helpers (between 0 and Decile 1) are selected
 min-schema.png
-XHTML2XML
-KM32XML
-A2B
-TypeA2TypeB_v3_firstStep
-TypeA2TypeB_v3
-RSS2ATOM
-Tree2List
-XML2CPL
 Tree2List_usingATLResolveAlgorithm
-TypeA2TypeB_v3_secondStep
+RSS2ATOM
+ATOM2RSS
+TypeA2TypeB_v3_firstStep
+ATLCopier
+ATOM2XML
+ATL2Tracer
+RefineAndMergeMeasure
+A2B
+KM32XML
