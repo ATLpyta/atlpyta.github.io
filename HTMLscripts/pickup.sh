@@ -322,9 +322,7 @@ else
   		multiStrategies=$(ls $1 | grep -e "poly-")
 		for strategy in $multiStrategies; do
 
-			echo $strategy
-
-     		info=$(head -n+1 $1/$strategy)
+			info=$(head -n+1 $1/$strategy)
 			schema=$(head -n+2 $1/$strategy | tail -n+2)
 			name=$(echo "$strategy" | cut -d"-" -f2-)
 			MTs=$(tail -n+3 $1/$strategy)
