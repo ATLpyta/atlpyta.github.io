@@ -1,12 +1,12 @@
 Model transformations containing the maximal number of LazyRules (between Decile 9 and Decile 10) are selected
-min-schema.png
-WSDL2XML
-R2ML2WSDL
-RDM2XML
-Table2SVGPieChart
+max-schema.png
 Measure2XHTML
-R2ML2XML
-Table2TabularHTML
+WSDL2XML
+XML2R2ML
+Table2SVGPieChart
+KM32OWL
 OCL2R2ML
-Syntax2SimpleSBVR
-R2ML2RDM
+WSDL2R2ML
+RDM2XML
+Table2TabularHTML
+R2ML2WSDL

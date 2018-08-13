@@ -1,12 +1,12 @@
 Model transformations containing the most diverse sum of metrics are selected
 div-schema.png
-TypeA2TypeB_v3_firstStep
-Book2Publication
-XMLHelpers
-MeasureHelpers
-PrimaryKey
-RaiseSupplier
-IEEE1471_2_MoDAF
+DOT2Text
+TypeA2TypeB_v3
+XQuery2Code
+Simian2CodeClone
+ForeignKey
+introducingAnInterface
+HTML2XML
 AssertionModification
-UML2OWL
-R2ML2RDM
+WSDL2XML
+XML2KML

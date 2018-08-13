@@ -1,4 +1,4 @@
-source('poly-interval-strategies.r')
+source('poly-interval-strategy.r')
 
 #This function gathers the most diverse MTs for a sum of metrics.
 #
@@ -13,8 +13,6 @@ polyDiverseStrategy <- function(values){
 		tmp=  monoDecilesIntervalStrategy(values,(i+0.5)/10,(i+1)/10,1)
 		result<-c(result,tmp)
 	}
-
-	print(result)
 
 	return(result)
 }

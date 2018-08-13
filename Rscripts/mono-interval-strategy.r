@@ -16,7 +16,7 @@ for (i in c(1,3,4)) {
 	maxDesc=paste0("Model transformations containing the maximal number of ", 
 					criteria[i]," (between Decile 9 and Decile 10) are selected")
 	maxResult = monoDecilesIntervalStrategy(metrics[,i],0.90,1.0)
-	createStrategyFile(maxFile,"min-schema.png",maxDesc,maxResult)		
+	createStrategyFile(maxFile,"max-schema.png",maxDesc,maxResult)		
 }
 
 for (i in c(1,3,4)) {

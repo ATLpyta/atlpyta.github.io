@@ -1,12 +1,12 @@
 Model transformations containing the median values for sum of metrics are selected
 avg-schema.png
-KM32EMF
-RedundantInheritance
-PrimaryKey
-RaiseSupplier
-EMF2KM3
-SimpleSBVR2SimpleUML
 Table2SVGBarChart
-introducingAnInterface
 TT2BDD
+ATOM2XML
 QMOOD4KM3
+KM32EMF
+SimpleSBVR2SimpleUML
+ForeignKey
+RedundantInheritance
+PartialRolesTotalB
+PrimaryKey

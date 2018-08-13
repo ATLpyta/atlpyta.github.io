@@ -1,12 +1,12 @@
 Model transformations containing the minimum number of Rules (between 0 and Decile 1) are selected
 min-schema.png
-MOOD4KM3
-XML2Text
-EMOOSE4KM3
-FLAME4KM3
-QMOOD4UML2
-MOOD4UML2
+EMOOSE4UML2
 MeasureHelpers
 TableHelpers
-FLAME4UML2
-Lib4MMTree
+QMOOD4UML2
+EMOOSE4KM3
+MOOD4UML2
+FLAME4KM3
+XQuery2Code
+XML2Text
+QMOOD4KM3
