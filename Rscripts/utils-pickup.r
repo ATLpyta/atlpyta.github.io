@@ -105,7 +105,12 @@ indices2mtNames <- function(indiceVector){
 	# 	limit=10	
 
 	for (i in 1:limit) {
-		names <- c(names,MTList[indiceVector[i]])
+
+		name=MTList[indiceVector[i]]
+
+		names <- c(names,name)
+
+		#print(c(name,metrics[indiceVector[i],1]))
 	}
 	return(names)
 }
@@ -114,18 +119,21 @@ indices2mtNames <- function(indiceVector){
 # for a given metric [rules=1, ....]
 #	
 # PARAMETERS
-#     metric: [1,7] 1=rules, ...
+#
+#     values: vector containing the criteria values
 #     min: {0.0,0.1,0.2,0.3, ..., 1.0}
 #     max: {0.0,0.1,0.2,0.3, ..., 1.0}
-monoDecilesIntervalStrategy <- function(metric,min,max,n=10){
+#     n: number of indices (MTs) to select (default 10)
+#
+monoDecilesIntervalStrategy <- function(values,min,max,n=10){
 
-	minVal= quantile(metrics[,metric],min)
-	maxVal= quantile(metrics[,metric],max)
+	minVal= quantile(values,min)
+	maxVal= quantile(values,max)
 
 	result<-vector()
 
-	for (i in 1:length(metrics[,metric])) {
-		if(minVal <= metrics[i,metric] && metrics[i,metric] <= maxVal){
+	for (i in 1:length(values)) {
+		if(minVal <= values[i] && values[i] <= maxVal){
 			result<-c(result,i)
 			#print(i)
 		}

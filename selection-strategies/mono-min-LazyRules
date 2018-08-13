@@ -1,12 +1,12 @@
 Model transformations containing the minimum number of LazyRules (between 0 and Decile 1) are selected
 min-schema.png
-FLAME4KM3
+Lib4MMTree
 XML2CPL
-Removing
-XML2Text
-ATL2BindingDebugger
-ATOM2XML
-Families2Persons
 Book2Publication
-SimpleClass2SimpleRDBMS
-KM32XML
+conf4MADL
+equivalenceOfAttributeAndAssociations
+TypeA2TypeB_v1
+RedundantClassRemovable
+PrimaryKey
+UML2KM3
+MergingPartialClasses

@@ -1,12 +1,12 @@
 Model transformations containing the maximal number of Rules (between Decile 9 and Decile 10) are selected
 min-schema.png
-OWL2XML
-R2ML2RDM
-XHTML2XML
-OCL2R2ML
-R2ML2XML
-Measure2XHTML
-UML2OWL
+RDM2XML
 XML2KML
 XML2CPL
-RDM2XML
+OCL2R2ML
+XML2R2ML
+UML2OWL
+XHTML2XML
+R2ML2RDM
+OWL2XML
+R2ML2XML
