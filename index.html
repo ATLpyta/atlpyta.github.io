@@ -111,13 +111,28 @@ $(document).ready(function(){
 	<div class="col-lg-2"></div>
 	<div class="col-lg-2">
 		<a href="explore.html" class="btn btn-lg btn-pyta">Explore</a>
-		<button class="btn btn-lg btn-pyta" data-toggle="popover" title="Explore" data-content="Visualize, sort and download MTs" data-trigger="focus">
+		<button class="btn btn-lg btn-pyta" data-toggle="popover" data-container="body" title="Visualize, Sort and Download" data-content="Here you can view all the transformations of the zoo, sort them and download the source files. For each MT, visualize metric measures and a radar chart as well." data-trigger="focus">
 			<span class="glyphicon glyphicon-info-sign"></span>
 		</button>
 	</div>
-	<div class="col-lg-2"><a href="compare.html" class="btn btn-lg btn-pyta">Compare</a></div>
-	<div class="col-lg-2"><a href="filter.html" class="btn btn-lg btn-pyta">Filter</a></div>
-	<div class="col-lg-2"><a href="pickup.html" class="btn btn-lg btn-pyta">Pick-up</a></div>
+	<div class="col-lg-2">
+		<a href="compare.html" class="btn btn-lg btn-pyta">Compare</a>
+		<button class="btn btn-lg btn-pyta" data-toggle="popover" data-container="body" title="Graphical comparison" data-content="Select 2, 3 or more transformations and the web interface will produce a spiderweb diagram that compares the MTs according to the metrics. Erase, re-select and start it again ! " data-trigger="focus">
+			<span class="glyphicon glyphicon-info-sign"></span>
+		</button>
+	</div>
+	<div class="col-lg-2">
+		<a href="filter.html" class="btn btn-lg btn-pyta">Filter</a>
+		<button class="btn btn-lg btn-pyta" data-toggle="popover" data-container="body" title="Manual filtering" data-content="Adjust the intervals of values for metrics in order to filter the ATL zoo and select only desired transformations, then download the chosen transformations." data-trigger="focus">
+			<span class="glyphicon glyphicon-info-sign"></span>
+		</button>
+	</div>
+	<div class="col-lg-2">
+		<a href="pickup.html" class="btn btn-lg btn-pyta">Pick-up</a>
+		<button class="btn btn-lg btn-pyta" data-toggle="popover" data-container="body" title="Automatic pick-up" data-content="We implemented selection strategies for picking up a set of model transformations. Choose you desired strategy (reading the description, viewing the illustrative schemas) and download the elected transformations" data-trigger="focus">
+			<span class="glyphicon glyphicon-info-sign"></span>
+		</button>
+	</div>
 	<div class="col-lg-2"></div>
 </div>
 
