@@ -70,7 +70,19 @@ Then, you can download the source files of result model transformations.
 <img src="screenshots/filter-result.png" alt="filter result" width="50%"/>
 
 ## Automatic pick-up
-TODO
+
+If a manual filtering is not wished, then the user can choose the automatic pick-up mode. In this case, the tool picks up a set of model transformations, according to some selection strategies. The user only says which strategy he wishes to use.
+
+Our selection strategies are divided into two categories:
+
+- Mono-metric strategies
+- Poly-metric strategies
+
+### Mono-metric selection
+
+In this case, the selection is performed according to one and only one metric. All the other metrics are ignored. For example, we can try to pick-up the set of transformations having the most diverse number of rules or helpers. In ATLpyta website, we implemented 4 mono-metric strategies for 3 metrics (rules, lazy rules and helpers). The strategies are: min, max, median and diverse.
+
+<img src="selection-strategies/img/min-schema.png" alt="min-schema-strategies" width="50%"/>
 
 ## Resources
 
@@ -81,7 +93,7 @@ TODO
 * Raw ATL zoo
 * ATL metrics source code
 * All the bash scripts used to process the zoo and the metrics
-* All the R scripts used to produce charts and statistics 
+* All the R scripts used to produce charts, statistics and selection strategies
 
 ## Team
 
