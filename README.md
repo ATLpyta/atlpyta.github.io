@@ -82,7 +82,7 @@ Our selection strategies are divided into two categories:
 
 In this case, the selection is performed according to one and only one metric. All the other metrics are ignored. For example, we can try to pick-up the set of transformations having the most diverse number of rules or helpers. In ATLpyta website, we implemented 4 mono-metric strategies for 3 metrics (rules, lazy rules and helpers). The strategies are: min, max, median and diverse.
 
-<img src="selection-strategies/img/min-schema.png" alt="min-schema-strategies" width="50%"/>
+<img src="selection-strategies/img/min-schema.png" alt="min-schema-strategies" width="30%"/>
 
 ## Resources
 
