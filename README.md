@@ -99,7 +99,13 @@ When the number of selected model transformations is too high (>10), random data
 
 ### Poly-metric selection
 
+In this case, the selection is not performed according to one metric but to all of them simultaneously.
 
+The first step in ordering the vector of metrics for each model transformations. This is done but summing the values of metrics. We then obtain a new vector with only one single value for each model transformation.
+
+The selection step becomes then similar the the mono-metric strategies. The same 4 strategies are used: min, max, median and diverse.
+
+<img src="screenshots/poly-div.png" alt="oly-div-strategy" width="20%"/>
 
 ## Resources
 
