@@ -82,7 +82,22 @@ Our selection strategies are divided into two categories:
 
 In this case, the selection is performed according to one and only one metric. All the other metrics are ignored. For example, we can try to pick-up the set of transformations having the most diverse number of rules or helpers. In ATLpyta website, we implemented 4 mono-metric strategies for 3 metrics (rules, lazy rules and helpers). The strategies are: min, max, median and diverse.
 
+The following schema illustrates the idea behind a mono-metric strategy. First, the sample of model transformations is divided in many blocks according to the selected metric and using the [centiles](https://en.wikipedia.org/wiki/Percentile) (C10, C20, ...). 
+
 <img src="selection-strategies/img/min-schema.png" alt="min-schema-strategies" width="30%"/>
+
+Then, 4 different selections are done:
+
+- **Min** all the transformations having their value for the metric between 0 and C10 are selected
+- **Max** all the transformations having their value for the metric between C90 and C100 are selected
+- **Median** all the transformations having their value for the metric between C45 and C55 (around the median) are selected
+- **Diverse** One model transformation is selected in each [decile](https://en.wikipedia.org/wiki/Decile)
+
+When the number of selected model transformations is too high (>10), random data reduction is done in order to select at most 10 transformations.
+
+### Poly-metric selection
+
+
 
 ## Resources
 
