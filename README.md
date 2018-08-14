@@ -95,7 +95,7 @@ Then, 4 different selections are done:
 
 When the number of selected model transformations is too high (>10), random data reduction is done in order to select at most 10 transformations.
 
-<img src="screenshots/median-lazy-rules.png" alt="min-schema-strategies" width="30%"/>
+<img src="screenshots/median-lazy-rules.png" alt="min-schema-strategies" width="20%"/>
 
 ### Poly-metric selection
 
