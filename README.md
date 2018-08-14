@@ -103,14 +103,14 @@ When the number of selected model transformations is too high (>10), random data
 
 ## Resources
 
-<img src="screenshots/resources.png" alt="resources" width="50%"/>
-
 [Here](https://atlpyta.github.io/index.html#resources), you can find all the resources of this project:
 
 * Raw ATL zoo
 * ATL metrics source code
 * All the bash scripts used to process the zoo and the metrics
 * All the R scripts used to produce charts, statistics and selection strategies
+
+<img src="screenshots/resources.png" alt="resources" width="50%"/>
 
 ## Team
 
