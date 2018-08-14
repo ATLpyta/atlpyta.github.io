@@ -21,6 +21,12 @@
 <!-- Custom styles for this template -->
 <link href="css-js/atlpyta.css" rel="stylesheet">
 
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+</script>
+
 </head>
 
 <body>
@@ -101,15 +107,26 @@
 	<div class="col-lg-2"></div>
 </div>
 
+<br />
 
 <div class="row titre">
 	<div class="col-lg-2"></div>
-	<div class="col-lg-2"><a href="explore.html" class="btn btn-lg btn-pyta">Explore</a></div>
+	<div class="col-lg-2">
+		<a href="explore.html" class="btn btn-lg btn-pyta">Explore</a>
+		<button class="btn btn-lg btn-pyta" data-toggle="popover" title="Explore" data-content="Visualize, sort and download MTs" data-trigger="focus">
+			<span class="glyphicon glyphicon-info-sign"></span>
+		</button>
+	</div>
 	<div class="col-lg-2"><a href="compare.html" class="btn btn-lg btn-pyta">Compare</a></div>
 	<div class="col-lg-2"><a href="filter.html" class="btn btn-lg btn-pyta">Filter</a></div>
 	<div class="col-lg-2"><a href="pickup.html" class="btn btn-lg btn-pyta">Pick-up</a></div>
 	<div class="col-lg-2"></div>
 </div>
+
+
+
+
+<button data-toggle="popover" title="Popover Header" data-content="Some content inside the popover" data-trigger="focus">Toggle popover</button>
 
 <br />
 <br />
